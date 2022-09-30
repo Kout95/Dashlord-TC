@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Fri Sep 30 14:05:54 2022 as: nmap -sV --script vulners --script-args mincvss=5.0 -oA /data/nmapvuln telescoop.fr
+Host: 51.210.109.110 (vps-170f9001.vps.ovh.net)	Status: Up
+Host: 51.210.109.110 (vps-170f9001.vps.ovh.net)	Ports: 80/open/tcp//http//nginx 1.18.0 (Ubuntu)/, 443/open/tcp//ssl|http//nginx 1.18.0 (Ubuntu)/	Ignored State: closed (998)
+# Nmap done at Fri Sep 30 14:06:13 2022 -- 1 IP address (1 host up) scanned in 18.83 seconds
