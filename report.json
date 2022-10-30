@@ -5,7 +5,7 @@
     "http": {
       "url": "https://telescoop.fr",
       "algorithm_version": 2,
-      "end_time": "Sun, 23 Oct 2022 02:10:09 GMT",
+      "end_time": "Sun, 30 Oct 2022 02:08:15 GMT",
       "grade": "F",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -13,15 +13,15 @@
         "Connection": "keep-alive",
         "Content-Encoding": "gzip",
         "Content-Type": "text/html",
-        "Date": "Sun, 23 Oct 2022 02:10:08 GMT",
+        "Date": "Sun, 30 Oct 2022 02:08:13 GMT",
         "ETag": "W/\"61c49380-20305\"",
         "Last-Modified": "Thu, 23 Dec 2021 15:19:28 GMT",
         "Server": "nginx/1.18.0 (Ubuntu)",
         "Transfer-Encoding": "chunked"
       },
-      "scan_id": 30323034,
+      "scan_id": 30494126,
       "score": 20,
-      "start_time": "Sun, 23 Oct 2022 02:10:04 GMT",
+      "start_time": "Sun, 30 Oct 2022 02:08:09 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 5,
@@ -600,7 +600,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "47 >= 30 days"
+        "finding": "40 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -803,7 +803,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "1666491127"
+        "finding": "1667095816"
       },
       {
         "id": "HSTS",
@@ -1359,7 +1359,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "155"
+        "finding": "154"
       }
     ],
     "thirdparties": {
@@ -1470,7 +1470,7 @@
         },
         {
           "type": "unknown",
-          "url": "https://client.crisp.chat/settings/website/0b6840fd-d9db-4a7a-85b2-6b678ee35d64/prelude/?callback=window.%24__CRISP_INSTANCE.__spool.website_handler&2022-9-23-2-10"
+          "url": "https://client.crisp.chat/settings/website/0b6840fd-d9db-4a7a-85b2-6b678ee35d64/prelude/?callback=window.%24__CRISP_INSTANCE.__spool.website_handler&2022-9-30-2-8"
         },
         {
           "type": "unknown",
@@ -1486,7 +1486,7 @@
         "connection": "keep-alive",
         "content-encoding": "gzip",
         "content-type": "text/html",
-        "date": "Sun, 23 Oct 2022 02:10:43 GMT",
+        "date": "Sun, 30 Oct 2022 02:08:51 GMT",
         "etag": "W/\"61c49380-20305\"",
         "last-modified": "Thu, 23 Dec 2021 15:19:28 GMT",
         "server": "nginx/1.18.0 (Ubuntu)",
@@ -1607,7 +1607,7 @@
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "142.251.32.42",
+          "ip": "142.251.116.95",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1681,7 +1681,7 @@
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "142.251.32.35",
+          "ip": "142.251.45.35",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1911,8 +1911,8 @@
       ]
     },
     "zap": {
-      "@version": "2.11.1",
-      "@generated": "Sun, 23 Oct 2022 02:09:34",
+      "@version": "2.12.0",
+      "@generated": "Sun, 30 Oct 2022 02:07:38",
       "site": [
         {
           "@name": "https://telescoop.fr",
@@ -2006,9 +2006,10 @@
       {
         "requestedUrl": "https://telescoop.fr/",
         "finalUrl": "https://www.telescoop.fr/",
-        "fetchTime": "2022-10-23T02:09:51.995Z",
+        "fetchTime": "2022-10-30T02:07:57.255Z",
         "runWarnings": [
-          "The page may not be loading as expected because your test URL (https://telescoop.fr/) was redirected to https://www.telescoop.fr/. Try testing the second URL directly."
+          "The page may not be loading as expected because your test URL (https://telescoop.fr/) was redirected to https://www.telescoop.fr/. Try testing the second URL directly.",
+          "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#cpu-throttling)."
         ],
         "categories": {
           "performance": {
@@ -2071,53 +2072,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 5223,
+            "numericValue": 5060,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 4630,
-                  "firstMeaningfulPaint": 5223,
-                  "largestContentfulPaint": 4778,
-                  "interactive": 5223,
-                  "speedIndex": 5329,
+                  "firstContentfulPaint": 4488,
+                  "firstMeaningfulPaint": 5060,
+                  "largestContentfulPaint": 4631,
+                  "interactive": 5060,
+                  "speedIndex": 5173,
                   "totalBlockingTime": 0,
-                  "maxPotentialFID": 16,
+                  "maxPotentialFID": 41,
                   "cumulativeLayoutShift": 0.11735973358154297,
                   "cumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "totalCumulativeLayoutShift": 0.11735973358154297,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 405738782,
+                  "observedTimeOriginTs": 224872018,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 405738782,
-                  "observedFirstPaint": 1752,
-                  "observedFirstPaintTs": 407490794,
-                  "observedFirstContentfulPaint": 1752,
-                  "observedFirstContentfulPaintTs": 407490794,
-                  "observedFirstContentfulPaintAllFrames": 1752,
-                  "observedFirstContentfulPaintAllFramesTs": 407490794,
-                  "observedFirstMeaningfulPaint": 1802,
-                  "observedFirstMeaningfulPaintTs": 407540311,
-                  "observedLargestContentfulPaint": 1752,
-                  "observedLargestContentfulPaintTs": 407490794,
-                  "observedLargestContentfulPaintAllFrames": 1752,
-                  "observedLargestContentfulPaintAllFramesTs": 407490794,
-                  "observedTraceEnd": 4651,
-                  "observedTraceEndTs": 410390274,
-                  "observedLoad": 2336,
-                  "observedLoadTs": 408074827,
-                  "observedDomContentLoaded": 1867,
-                  "observedDomContentLoadedTs": 407605348,
+                  "observedNavigationStartTs": 224872018,
+                  "observedFirstPaint": 1711,
+                  "observedFirstPaintTs": 226582744,
+                  "observedFirstContentfulPaint": 1711,
+                  "observedFirstContentfulPaintTs": 226582744,
+                  "observedFirstContentfulPaintAllFrames": 1711,
+                  "observedFirstContentfulPaintAllFramesTs": 226582744,
+                  "observedFirstMeaningfulPaint": 1759,
+                  "observedFirstMeaningfulPaintTs": 226630579,
+                  "observedLargestContentfulPaint": 1711,
+                  "observedLargestContentfulPaintTs": 226582744,
+                  "observedLargestContentfulPaintAllFrames": 1711,
+                  "observedLargestContentfulPaintAllFramesTs": 226582744,
+                  "observedTraceEnd": 4584,
+                  "observedTraceEndTs": 229456261,
+                  "observedLoad": 2266,
+                  "observedLoadTs": 227137830,
+                  "observedDomContentLoaded": 1804,
+                  "observedDomContentLoadedTs": 226675568,
                   "observedCumulativeLayoutShift": 0.11735973358154297,
                   "observedCumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "observedTotalCumulativeLayoutShift": 0.11735973358154297,
-                  "observedFirstVisualChange": 1761,
-                  "observedFirstVisualChangeTs": 407499782,
-                  "observedLastVisualChange": 1828,
-                  "observedLastVisualChangeTs": 407566782,
-                  "observedSpeedIndex": 1766,
-                  "observedSpeedIndexTs": 407505199
+                  "observedFirstVisualChange": 1718,
+                  "observedFirstVisualChangeTs": 226590018,
+                  "observedLastVisualChange": 1785,
+                  "observedLastVisualChangeTs": 226657018,
+                  "observedSpeedIndex": 1724,
+                  "observedSpeedIndexTs": 226595769
                 },
                 {
                   "lcpInvalidated": false
@@ -2139,18 +2140,18 @@
                   "numScripts": 3,
                   "numStylesheets": 3,
                   "numFonts": 1,
-                  "numTasks": 287,
-                  "numTasksOver10ms": 3,
+                  "numTasks": 315,
+                  "numTasksOver10ms": 5,
                   "numTasksOver25ms": 2,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 1.963,
-                  "throughput": 7434529.030541758,
-                  "maxRtt": 148.36,
-                  "maxServerLatency": 28.434,
+                  "rtt": 8.533,
+                  "throughput": 7663930.509757021,
+                  "maxRtt": 149.875,
+                  "maxServerLatency": 24.64999999999999,
                   "totalByteWeight": 447315,
-                  "totalTaskTime": 171.52399999999975,
+                  "totalTaskTime": 211.2979999999997,
                   "mainDocumentTransferSize": 41361
                 }
               ]
