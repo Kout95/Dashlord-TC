@@ -22,11 +22,7 @@
     },
     {
       "type": "unknown",
-      "url": "https://www.telescoop.fr/js/telescoop.js"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/js/siema.min.js"
+      "url": "https://plausible.io/js/plausible.js"
     },
     {
       "type": "unknown",
@@ -78,7 +74,11 @@
     },
     {
       "type": "unknown",
-      "url": "https://client.crisp.chat/l.js"
+      "url": "https://www.telescoop.fr/js/telescoop.js"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/js/siema.min.js"
     },
     {
       "type": "google fonts",
@@ -95,26 +95,6 @@
         "id": "google fonts",
         "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
       }
-    },
-    {
-      "type": "unknown",
-      "url": "https://client.crisp.chat/static/javascripts/client.js?765735d"
-    },
-    {
-      "type": "unknown",
-      "url": "https://client.crisp.chat/static/stylesheets/client_default.css?765735d"
-    },
-    {
-      "type": "unknown",
-      "url": "https://client.crisp.chat/settings/website/0b6840fd-d9db-4a7a-85b2-6b678ee35d64/prelude/?callback=window.%24__CRISP_INSTANCE.__spool.website_handler&2022-9-30-2-8"
-    },
-    {
-      "type": "unknown",
-      "url": "https://client.crisp.chat/settings/website/0b6840fd-d9db-4a7a-85b2-6b678ee35d64/?callback=window.%24__CRISP_INSTANCE.__spool.website_handler&1611823853056"
-    },
-    {
-      "type": "unknown",
-      "url": "https://client.crisp.chat/static/javascripts/locales/en.js?765735d"
     }
   ],
   "cookies": [],
@@ -122,9 +102,9 @@
     "connection": "keep-alive",
     "content-encoding": "gzip",
     "content-type": "text/html",
-    "date": "Sun, 30 Oct 2022 02:08:51 GMT",
-    "etag": "W/\"61c49380-20305\"",
-    "last-modified": "Thu, 23 Dec 2021 15:19:28 GMT",
+    "date": "Sun, 06 Nov 2022 01:52:38 GMT",
+    "etag": "W/\"635f90f4-1f840\"",
+    "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
     "server": "nginx/1.18.0 (Ubuntu)",
     "transfer-encoding": "chunked"
   },
@@ -243,7 +223,7 @@
     },
     {
       "hostname": "fonts.googleapis.com",
-      "ip": "142.251.116.95",
+      "ip": "142.251.163.95",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -296,10 +276,36 @@
       }
     },
     {
-      "hostname": "client.crisp.chat",
-      "ip": "104.18.28.91",
+      "hostname": "plausible.io",
+      "ip": "138.199.40.58",
       "geoip": {
-        "registered_country": {
+        "city": {
+          "geoname_id": 5128581,
+          "names": {
+            "de": "New York City",
+            "en": "New York",
+            "es": "Nueva York",
+            "fr": "New York",
+            "ja": "ニューヨーク",
+            "pt-BR": "Nova Iorque",
+            "ru": "Нью-Йорк"
+          }
+        },
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
           "geoname_id": 6252001,
           "iso_code": "US",
           "names": {
@@ -312,12 +318,52 @@
             "ru": "США",
             "zh-CN": "美国"
           }
-        }
+        },
+        "location": {
+          "accuracy_radius": 20,
+          "latitude": 40.7425,
+          "longitude": -73.9877,
+          "metro_code": 501,
+          "time_zone": "America/New_York"
+        },
+        "postal": {
+          "code": "10118"
+        },
+        "registered_country": {
+          "geoname_id": 2635167,
+          "iso_code": "GB",
+          "names": {
+            "de": "Vereinigtes Königreich",
+            "en": "United Kingdom",
+            "es": "Reino Unido",
+            "fr": "Royaume Uni",
+            "ja": "英国",
+            "pt-BR": "Reino Unido",
+            "ru": "Британия",
+            "zh-CN": "英国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 5128638,
+            "iso_code": "NY",
+            "names": {
+              "de": "New York",
+              "en": "New York",
+              "es": "Nueva York",
+              "fr": "New York",
+              "ja": "ニューヨーク州",
+              "pt-BR": "Nova Iorque",
+              "ru": "Нью-Йорк",
+              "zh-CN": "纽约州"
+            }
+          }
+        ]
       }
     },
     {
       "hostname": "fonts.gstatic.com",
-      "ip": "142.251.45.35",
+      "ip": "142.251.163.94",
       "geoip": {
         "continent": {
           "code": "NA",
