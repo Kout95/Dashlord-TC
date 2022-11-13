@@ -2,7 +2,197 @@
   {
     "404": [],
     "url": "https://telescoop.fr",
-    "http": null,
+    "http": {
+      "url": "https://telescoop.fr",
+      "algorithm_version": 2,
+      "end_time": "Sun, 13 Nov 2022 01:46:00 GMT",
+      "grade": "F",
+      "hidden": false,
+      "likelihood_indicator": "MEDIUM",
+      "response_headers": {
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "text/html",
+        "Date": "Sun, 13 Nov 2022 01:45:58 GMT",
+        "ETag": "W/\"635f90f4-1f840\"",
+        "Last-Modified": "Mon, 31 Oct 2022 09:10:12 GMT",
+        "Server": "nginx/1.18.0 (Ubuntu)",
+        "Transfer-Encoding": "chunked"
+      },
+      "scan_id": 30866323,
+      "score": 15,
+      "start_time": "Sun, 13 Nov 2022 01:45:54 GMT",
+      "state": "FINISHED",
+      "status_code": 200,
+      "tests_failed": 6,
+      "tests_passed": 6,
+      "tests_quantity": 12,
+      "details": {
+        "content-security-policy": {
+          "expectation": "csp-implemented-with-no-unsafe",
+          "name": "content-security-policy",
+          "output": {
+            "data": null,
+            "http": false,
+            "meta": false,
+            "numPolicies": 0,
+            "policy": null
+          },
+          "pass": false,
+          "result": "csp-not-implemented",
+          "score_description": "Content Security Policy (CSP) header not implemented",
+          "score_modifier": -25
+        },
+        "contribute": {
+          "expectation": "contribute-json-only-required-on-mozilla-properties",
+          "name": "contribute",
+          "output": {
+            "data": null
+          },
+          "pass": true,
+          "result": "contribute-json-only-required-on-mozilla-properties",
+          "score_description": "Contribute.json isn't required on websites that don't belong to Mozilla",
+          "score_modifier": 0
+        },
+        "cookies": {
+          "expectation": "cookies-secure-with-httponly-sessions",
+          "name": "cookies",
+          "output": {
+            "data": null,
+            "sameSite": null
+          },
+          "pass": true,
+          "result": "cookies-not-found",
+          "score_description": "No cookies detected",
+          "score_modifier": 0
+        },
+        "cross-origin-resource-sharing": {
+          "expectation": "cross-origin-resource-sharing-not-implemented",
+          "name": "cross-origin-resource-sharing",
+          "output": {
+            "data": {
+              "acao": null,
+              "clientaccesspolicy": null,
+              "crossdomain": null
+            }
+          },
+          "pass": true,
+          "result": "cross-origin-resource-sharing-not-implemented",
+          "score_description": "Content is not visible via cross-origin resource sharing (CORS) files or headers",
+          "score_modifier": 0
+        },
+        "public-key-pinning": {
+          "expectation": "hpkp-not-implemented",
+          "name": "public-key-pinning",
+          "output": {
+            "data": null,
+            "includeSubDomains": false,
+            "max-age": null,
+            "numPins": null,
+            "preloaded": false
+          },
+          "pass": true,
+          "result": "hpkp-not-implemented",
+          "score_description": "HTTP Public Key Pinning (HPKP) header not implemented",
+          "score_modifier": 0
+        },
+        "redirection": {
+          "expectation": "redirection-to-https",
+          "name": "redirection",
+          "output": {
+            "destination": "https://www.telescoop.fr",
+            "redirects": true,
+            "route": [
+              "http://telescoop.fr/",
+              "https://telescoop.fr/",
+              "https://www.telescoop.fr"
+            ],
+            "status_code": 200
+          },
+          "pass": true,
+          "result": "redirection-to-https",
+          "score_description": "Initial redirection is to HTTPS on same host, final destination is HTTPS",
+          "score_modifier": 0
+        },
+        "referrer-policy": {
+          "expectation": "referrer-policy-private",
+          "name": "referrer-policy",
+          "output": {
+            "data": null,
+            "http": false,
+            "meta": false
+          },
+          "pass": true,
+          "result": "referrer-policy-not-implemented",
+          "score_description": "Referrer-Policy header not implemented",
+          "score_modifier": 0
+        },
+        "strict-transport-security": {
+          "expectation": "hsts-implemented-max-age-at-least-six-months",
+          "name": "strict-transport-security",
+          "output": {
+            "data": null,
+            "includeSubDomains": false,
+            "max-age": null,
+            "preload": false,
+            "preloaded": false
+          },
+          "pass": false,
+          "result": "hsts-not-implemented",
+          "score_description": "HTTP Strict Transport Security (HSTS) header not implemented",
+          "score_modifier": -20
+        },
+        "subresource-integrity": {
+          "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+          "name": "subresource-integrity",
+          "output": {
+            "data": {
+              "https://plausible.io/js/plausible.js": {
+                "crossorigin": null,
+                "integrity": null
+              }
+            }
+          },
+          "pass": false,
+          "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+          "score_description": "Subresource Integrity (SRI) not implemented, but all external scripts are loaded over HTTPS",
+          "score_modifier": -5
+        },
+        "x-content-type-options": {
+          "expectation": "x-content-type-options-nosniff",
+          "name": "x-content-type-options",
+          "output": {
+            "data": null
+          },
+          "pass": false,
+          "result": "x-content-type-options-not-implemented",
+          "score_description": "X-Content-Type-Options header not implemented",
+          "score_modifier": -5
+        },
+        "x-frame-options": {
+          "expectation": "x-frame-options-sameorigin-or-deny",
+          "name": "x-frame-options",
+          "output": {
+            "data": null
+          },
+          "pass": false,
+          "result": "x-frame-options-not-implemented",
+          "score_description": "X-Frame-Options (XFO) header not implemented",
+          "score_modifier": -20
+        },
+        "x-xss-protection": {
+          "expectation": "x-xss-protection-1-mode-block",
+          "name": "x-xss-protection",
+          "output": {
+            "data": null
+          },
+          "pass": false,
+          "result": "x-xss-protection-not-implemented",
+          "score_description": "X-XSS-Protection header not implemented",
+          "score_modifier": -10
+        }
+      }
+    },
     "updownio": null,
     "nmap": {
       "host": "telescoop.fr",
@@ -338,7 +528,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "030E346DA7C09D6B15ACB30819FC8E7FFDBB"
+        "finding": "03C83C40297DEE3489455AF31DCD95C4C830"
       },
       {
         "id": "cert_serialNumberLen",
@@ -352,21 +542,21 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "5DE55CE8A818A620E816DBF0DF6F5157A008B14B"
+        "finding": "3824C0C83743DF4E0F49216DE3E1FC9391587851"
       },
       {
         "id": "cert_fingerprintSHA256",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "94D25C8696EC5B1B0E971B3890B4E8313C9D5B0B537811496CE768A70435E557"
+        "finding": "B2264F71EF6735329B3A018BE9476EB2EC79E22CB0D5BD8D742F3DFFC9391698"
       },
       {
         "id": "cert",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "-----BEGIN CERTIFICATE----- MIIFHjCCBAagAwIBAgISAw40bafAnWsVrLMIGfyOf/27MA0GCSqGSIb3DQEBCwUA MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD EwJSMzAeFw0yMjA5MTAxNDMzMjBaFw0yMjEyMDkxNDMzMTlaMBcxFTATBgNVBAMT DHRlbGVzY29vcC5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALjm RpubXJcKteb632U1xEoOWAS88FfRyZ2Lksv6LDLVB4KDbCqlBm3lxNVuouj8EVg/ f5wYCL7z1qZDkgXmv8aWJlsrwywWCnibuDJkI7WS1FQwLaP1yQV0ZFptU7xKmzg5 zXPbGat7UNaiFQkcSjEWXREyPI5SIWQFEPPkHP2XOElFHFKeJtEraoIk/KEx/Dfw aL1uha0pROBm8qadyHGBrTtRqDIw4OTXnX7PcgBsMEk+wkBfjOrpwE5P586Xbl+n jQY9HkONrBFvE/nhOvhpl1ZFxOq+KAi2AIdUzVrJTVFFzdFHQM1LNbjmMcYSsav7 r5QtB7hZS/h+BppztekCAwEAAaOCAkcwggJDMA4GA1UdDwEB/wQEAwIFoDAdBgNV HSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4E FgQUgLUcGP26xGmSatUoK9M7ExICasYwHwYDVR0jBBgwFoAUFC6zF7dYVsuuUAlA 5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8vcjMu by5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9yZy8w FwYDVR0RBBAwDoIMdGVsZXNjb29wLmZyMEwGA1UdIARFMEMwCAYGZ4EMAQIBMDcG CysGAQQBgt8TAQEBMCgwJgYIKwYBBQUHAgEWGmh0dHA6Ly9jcHMubGV0c2VuY3J5 cHQub3JnMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHYA36Veq2iCTx9sre64X04+ WurNohKkal6OOxLAIERcKnMAAAGDKAisAAAABAMARzBFAiEA7H/u8GJ/gCd0OUHh ADF5Fr43WjJd8u1D105kFJ+WofsCIEH0d1N2mN7K1w7njGeRZznDqwKyIOZ3Uj0u A7/j5JpAAHYAKXm+8J45OSHwVnOfY6V35b5XfZxgCvj5TV0mXCVdx4QAAAGDKAir +AAABAMARzBFAiAc3XNRv68aZoQHInGAoonAgVeHPLh9ijoIDZoVi6M+UwIhAM4I 1aq0Ke5CdNjmNopwNGtgugdmkaZEWVHRyOTNwdazMA0GCSqGSIb3DQEBCwUAA4IB AQCwfKsIf9ENZXUly5Nc2gxagDFn6m975XqK1dPHL6cTt5+XRXNg+gVek7m8dvbl 0HukkPuRogDPnYveNlu6QohecECvVKzftSpE6CZhFA5us46s1Uj4bDySMsMPsx4E vFxEoj+yYIpMPkP04Dz7t6KOv/KFe1qjbZRntqNNKFprUCCJfg4Z6zYba7wiQWMH 0QrsKIIWE0RmYv3ktcp2Lppe8T8hb0SDYrtWIKgCaa6CpSSQsaV8eYL7DE5Wu8ZN E+v5Ev9jqeu6ZKr87g6QO2qK4CseXNAXzLlDFaCS7Mw1lscAFpRef5pAUmjtjdOH XrNVhwAOeqvkZ2TxvYzla59V -----END CERTIFICATE-----"
+        "finding": "-----BEGIN CERTIFICATE----- MIIFHjCCBAagAwIBAgISA8g8QCl97jSJRVrzHc2VxMgwMA0GCSqGSIb3DQEBCwUA MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD EwJSMzAeFw0yMjExMDkxODM1MjFaFw0yMzAyMDcxODM1MjBaMBcxFTATBgNVBAMT DHRlbGVzY29vcC5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMsX vBXl5cYYKudNWq7OjY+PkcQlR7UBDHyJA7eN1l53iseRuQ9sRWaTt9KR27K+Ib+X dn7JAzIFhFYXiEBczvehvLO4g+Tcflpl3HcaPXeBw2cpA4m3QMf86vvWq2t5Od18 gSk+1rvSbfLK3dWJWn5favJx8UYSJx/DANn6ssE5Xpbz8+LR2Hmlq7XrMVa4lMYO XfhO49NnTAHsT2Ttg2wsskHPHJ2hzdo4Br4LDOtR8DVHbfy9WoopzYiHftaikxW1 QP9bzxtRNfeJe0vZADJkNlZed6FxYfs2G45ac/Easklxgquk4MTyWV4vlcBht9oL 5yQ2On4ypI5U+f0j/tMCAwEAAaOCAkcwggJDMA4GA1UdDwEB/wQEAwIFoDAdBgNV HSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4E FgQUoo2FNRdw7InBcMaz4NMBH/PTlbswHwYDVR0jBBgwFoAUFC6zF7dYVsuuUAlA 5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8vcjMu by5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9yZy8w FwYDVR0RBBAwDoIMdGVsZXNjb29wLmZyMEwGA1UdIARFMEMwCAYGZ4EMAQIBMDcG CysGAQQBgt8TAQEBMCgwJgYIKwYBBQUHAgEWGmh0dHA6Ly9jcHMubGV0c2VuY3J5 cHQub3JnMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHYAejKMVNi3LbYg6jjgUh7p hBZwMhOFTTvSK8E6V6NS61IAAAGEXePOMwAABAMARzBFAiEA9N6iE5DiZsIk4+MU i92tAHi5KGL1w/hJ2bNesp4pa6wCIE4B2o/d7iP5lTE+mKQ4YuM3cMPSo6AMbnuq srn0cUkaAHYArfe++nz/EMiLnT2cHj4YarRnKV3PsQwkyoWGNOvcgooAAAGEXePO QAAABAMARzBFAiEA2PqX4b+elS8EXJ0jqyIxrOlB5XQd2SZWus+f9DcyHzQCIB++ JbGuymQK8RnB9jyeYKr7LBchjYTsirIJnxCMntclMA0GCSqGSIb3DQEBCwUAA4IB AQAUn2RyiSDVd9FBOmd0uNck5AdX9wXg3xwiVmKnHbJi8iY2UUjSaD9zga2aPSTP ZxYZl3EUnnJmuDyueIuEoYpRJDqjE1SVVbt+Q8HrNs4iLNCJ3tjNDJUSi5p8h7J7 PKUkVVQ5Y4epjeCW33n6De7AykjZqGPvu6IYuzt1nXAZyzFZr7Dg9LXLbxau6VGT cdJVkPhN+7cXANJIdDOfiPpoKl4yy7WmvdjCvizONe3L3lGCoDBBAM8cNTKQowTE xnPD/QpmDgZGuDIHBBgIOQDj8Ya6C8UZfHDZp4Ka/j7G9wE3w4BtHoV1wH0LLBaY +6J3Dd+kxEJRv6qV2MdmWIoj -----END CERTIFICATE-----"
       },
       {
         "id": "cert_commonName",
@@ -415,21 +605,21 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "33 >= 30 days"
+        "finding": "86 >= 30 days"
       },
       {
         "id": "cert_notBefore",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "2022-09-10 14:33"
+        "finding": "2022-11-09 18:35"
       },
       {
         "id": "cert_notAfter",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "2022-12-09 14:33"
+        "finding": "2023-02-07 18:35"
       },
       {
         "id": "cert_extlifeSpan",
@@ -618,7 +808,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "1667699628"
+        "finding": "1668304077"
       },
       {
         "id": "HSTS",
@@ -791,7 +981,7 @@
         "severity": "INFO",
         "cve": "CVE-2016-0800 CVE-2016-0703",
         "cwe": "CWE-310",
-        "finding": "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=94D25C8696EC5B1B0E971B3890B4E8313C9D5B0B537811496CE768A70435E557"
+        "finding": "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=B2264F71EF6735329B3A018BE9476EB2EC79E22CB0D5BD8D742F3DFFC9391698"
       },
       {
         "id": "LOGJAM-common_primes",
@@ -1174,7 +1364,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "96"
+        "finding": "145"
       }
     ],
     "thirdparties": {
@@ -1281,7 +1471,7 @@
         "connection": "keep-alive",
         "content-encoding": "gzip",
         "content-type": "text/html",
-        "date": "Sun, 06 Nov 2022 01:52:38 GMT",
+        "date": "Sun, 13 Nov 2022 01:46:36 GMT",
         "etag": "W/\"635f90f4-1f840\"",
         "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
         "server": "nginx/1.18.0 (Ubuntu)",
@@ -1402,8 +1592,16 @@
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "142.251.163.95",
+          "ip": "142.250.68.138",
           "geoip": {
+            "city": {
+              "geoname_id": 5118626,
+              "names": {
+                "en": "Glen Cove",
+                "ja": "グレンコーブ",
+                "ru": "Глен-Коув"
+              }
+            },
             "continent": {
               "code": "NA",
               "geoname_id": 6255149,
@@ -1434,9 +1632,13 @@
             },
             "location": {
               "accuracy_radius": 1000,
-              "latitude": 37.751,
-              "longitude": -97.822,
-              "time_zone": "America/Chicago"
+              "latitude": 40.8627,
+              "longitude": -73.6351,
+              "metro_code": 501,
+              "time_zone": "America/New_York"
+            },
+            "postal": {
+              "code": "11542"
             },
             "registered_country": {
               "geoname_id": 6252001,
@@ -1451,23 +1653,39 @@
                 "ru": "США",
                 "zh-CN": "美国"
               }
-            }
+            },
+            "subdivisions": [
+              {
+                "geoname_id": 5128638,
+                "iso_code": "NY",
+                "names": {
+                  "de": "New York",
+                  "en": "New York",
+                  "es": "Nueva York",
+                  "fr": "New York",
+                  "ja": "ニューヨーク州",
+                  "pt-BR": "Nova Iorque",
+                  "ru": "Нью-Йорк",
+                  "zh-CN": "纽约州"
+                }
+              }
+            ]
           }
         },
         {
           "hostname": "plausible.io",
-          "ip": "138.199.40.58",
+          "ip": "212.102.40.114",
           "geoip": {
             "city": {
-              "geoname_id": 5128581,
+              "geoname_id": 4684888,
               "names": {
-                "de": "New York City",
-                "en": "New York",
-                "es": "Nueva York",
-                "fr": "New York",
-                "ja": "ニューヨーク",
-                "pt-BR": "Nova Iorque",
-                "ru": "Нью-Йорк"
+                "de": "Dallas",
+                "en": "Dallas",
+                "es": "Dallas",
+                "fr": "Dallas",
+                "ja": "ダラス",
+                "pt-BR": "Dallas",
+                "ru": "Даллас"
               }
             },
             "continent": {
@@ -1500,13 +1718,13 @@
             },
             "location": {
               "accuracy_radius": 20,
-              "latitude": 40.7425,
-              "longitude": -73.9877,
-              "metro_code": 501,
-              "time_zone": "America/New_York"
+              "latitude": 32.7797,
+              "longitude": -96.8022,
+              "metro_code": 623,
+              "time_zone": "America/Chicago"
             },
             "postal": {
-              "code": "10118"
+              "code": "75270"
             },
             "registered_country": {
               "geoname_id": 2635167,
@@ -1524,17 +1742,15 @@
             },
             "subdivisions": [
               {
-                "geoname_id": 5128638,
-                "iso_code": "NY",
+                "geoname_id": 4736286,
+                "iso_code": "TX",
                 "names": {
-                  "de": "New York",
-                  "en": "New York",
-                  "es": "Nueva York",
-                  "fr": "New York",
-                  "ja": "ニューヨーク州",
-                  "pt-BR": "Nova Iorque",
-                  "ru": "Нью-Йорк",
-                  "zh-CN": "纽约州"
+                  "en": "Texas",
+                  "es": "Texas",
+                  "fr": "Texas",
+                  "ja": "テキサス州",
+                  "ru": "Техас",
+                  "zh-CN": "德克萨斯州"
                 }
               }
             ]
@@ -1542,7 +1758,7 @@
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "142.251.163.94",
+          "ip": "142.250.138.94",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1599,7 +1815,7 @@
     "wappalyzer": null,
     "zap": {
       "@version": "2.12.0",
-      "@generated": "Sun, 6 Nov 2022 01:51:33",
+      "@generated": "Sun, 13 Nov 2022 01:45:24",
       "site": [
         {
           "@name": "https://telescoop.fr",
@@ -1700,7 +1916,7 @@
       {
         "requestedUrl": "https://telescoop.fr/",
         "finalUrl": "https://www.telescoop.fr/",
-        "fetchTime": "2022-11-06T01:51:49.823Z",
+        "fetchTime": "2022-11-13T01:45:42.830Z",
         "runWarnings": [
           "The page may not be loading as expected because your test URL (https://telescoop.fr/) was redirected to https://www.telescoop.fr/. Try testing the second URL directly."
         ],
@@ -1765,53 +1981,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3689,
+            "numericValue": 4715,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3689,
-                  "firstMeaningfulPaint": 3689,
-                  "largestContentfulPaint": 3839,
-                  "interactive": 3689,
-                  "speedIndex": 3689,
+                  "firstContentfulPaint": 4715,
+                  "firstMeaningfulPaint": 4715,
+                  "largestContentfulPaint": 4861,
+                  "interactive": 4715,
+                  "speedIndex": 5283,
                   "totalBlockingTime": 0,
                   "maxPotentialFID": 16,
                   "cumulativeLayoutShift": 0.11735973358154297,
                   "cumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "totalCumulativeLayoutShift": 0.11735973358154297,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 404668552,
+                  "observedTimeOriginTs": 337694288,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 404668552,
-                  "observedFirstPaint": 1053,
-                  "observedFirstPaintTs": 405721227,
-                  "observedFirstContentfulPaint": 1053,
-                  "observedFirstContentfulPaintTs": 405721227,
-                  "observedFirstContentfulPaintAllFrames": 1053,
-                  "observedFirstContentfulPaintAllFramesTs": 405721227,
-                  "observedFirstMeaningfulPaint": 1053,
-                  "observedFirstMeaningfulPaintTs": 405721227,
-                  "observedLargestContentfulPaint": 1053,
-                  "observedLargestContentfulPaintTs": 405721227,
-                  "observedLargestContentfulPaintAllFrames": 1053,
-                  "observedLargestContentfulPaintAllFramesTs": 405721227,
-                  "observedTraceEnd": 3585,
-                  "observedTraceEndTs": 408253478,
-                  "observedLoad": 1271,
-                  "observedLoadTs": 405939775,
-                  "observedDomContentLoaded": 1105,
-                  "observedDomContentLoadedTs": 405773721,
+                  "observedNavigationStartTs": 337694288,
+                  "observedFirstPaint": 1748,
+                  "observedFirstPaintTs": 339442585,
+                  "observedFirstContentfulPaint": 1748,
+                  "observedFirstContentfulPaintTs": 339442585,
+                  "observedFirstContentfulPaintAllFrames": 1748,
+                  "observedFirstContentfulPaintAllFramesTs": 339442585,
+                  "observedFirstMeaningfulPaint": 1748,
+                  "observedFirstMeaningfulPaintTs": 339442585,
+                  "observedLargestContentfulPaint": 1748,
+                  "observedLargestContentfulPaintTs": 339442585,
+                  "observedLargestContentfulPaintAllFrames": 1748,
+                  "observedLargestContentfulPaintAllFramesTs": 339442585,
+                  "observedTraceEnd": 4308,
+                  "observedTraceEndTs": 342002492,
+                  "observedLoad": 1992,
+                  "observedLoadTs": 339686406,
+                  "observedDomContentLoaded": 1850,
+                  "observedDomContentLoadedTs": 339544755,
                   "observedCumulativeLayoutShift": 0.11735973358154297,
                   "observedCumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "observedTotalCumulativeLayoutShift": 0.11735973358154297,
-                  "observedFirstVisualChange": 1048,
-                  "observedFirstVisualChangeTs": 405716552,
-                  "observedLastVisualChange": 1098,
-                  "observedLastVisualChangeTs": 405766552,
-                  "observedSpeedIndex": 1053,
-                  "observedSpeedIndexTs": 405721104
+                  "observedFirstVisualChange": 1758,
+                  "observedFirstVisualChangeTs": 339452288,
+                  "observedLastVisualChange": 1808,
+                  "observedLastVisualChangeTs": 339502288,
+                  "observedSpeedIndex": 1763,
+                  "observedSpeedIndexTs": 339457088
                 },
                 {
                   "lcpInvalidated": false
@@ -1833,18 +2049,18 @@
                   "numScripts": 3,
                   "numStylesheets": 3,
                   "numFonts": 1,
-                  "numTasks": 277,
+                  "numTasks": 266,
                   "numTasksOver10ms": 2,
                   "numTasksOver25ms": 1,
                   "numTasksOver50ms": 1,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 3.572,
-                  "throughput": 12829729.671233246,
-                  "maxRtt": 91.991,
-                  "maxServerLatency": 84.358,
-                  "totalByteWeight": 444787,
-                  "totalTaskTime": 136.61699999999973,
+                  "rtt": 6.774000000000001,
+                  "throughput": 5747447.553238816,
+                  "maxRtt": 148.592,
+                  "maxServerLatency": 10.218000000000004,
+                  "totalByteWeight": 444786,
+                  "totalTaskTime": 174.7639999999996,
                   "mainDocumentTransferSize": 40958
                 }
               ]
@@ -1887,11 +2103,12 @@
     ],
     "summary": {
       "404": "A+",
+      "httpGrade": "F",
       "nmapGrade": "A",
       "nmapOpenPortsCount": 2,
       "nmapOpenPortsGrade": "A",
       "testsslExpireSoon": false,
-      "testsslExpireDate": "2022-12-09T14:33:00.000Z",
+      "testsslExpireDate": "2023-02-07T18:35:00.000Z",
       "testsslGrade": "A",
       "cookiesGrade": "A",
       "cookiesCount": 0,
