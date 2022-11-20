@@ -5,7 +5,7 @@
     "http": {
       "url": "https://telescoop.fr",
       "algorithm_version": 2,
-      "end_time": "Sun, 13 Nov 2022 01:46:00 GMT",
+      "end_time": "Sun, 20 Nov 2022 01:48:14 GMT",
       "grade": "F",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -13,15 +13,15 @@
         "Connection": "keep-alive",
         "Content-Encoding": "gzip",
         "Content-Type": "text/html",
-        "Date": "Sun, 13 Nov 2022 01:45:58 GMT",
+        "Date": "Sun, 20 Nov 2022 01:48:13 GMT",
         "ETag": "W/\"635f90f4-1f840\"",
         "Last-Modified": "Mon, 31 Oct 2022 09:10:12 GMT",
         "Server": "nginx/1.18.0 (Ubuntu)",
         "Transfer-Encoding": "chunked"
       },
-      "scan_id": 30866323,
+      "scan_id": 31044082,
       "score": 15,
-      "start_time": "Sun, 13 Nov 2022 01:45:54 GMT",
+      "start_time": "Sun, 20 Nov 2022 01:48:08 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 6,
@@ -398,20 +398,6 @@
         "finding": "NOT a cipher order configured"
       },
       {
-        "id": "protocol_negotiated",
-        "ip": "telescoop.fr/51.210.109.110",
-        "port": "443",
-        "severity": "OK",
-        "finding": "Default protocol TLS1.3"
-      },
-      {
-        "id": "cipher_negotiated",
-        "ip": "telescoop.fr/51.210.109.110",
-        "port": "443",
-        "severity": "OK",
-        "finding": "TLS_AES_256_GCM_SHA384, 253 bit ECDH (X25519)  (limited sense as client will pick)"
-      },
-      {
         "id": "FS",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
@@ -556,7 +542,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "-----BEGIN CERTIFICATE----- MIIFHjCCBAagAwIBAgISA8g8QCl97jSJRVrzHc2VxMgwMA0GCSqGSIb3DQEBCwUA MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD EwJSMzAeFw0yMjExMDkxODM1MjFaFw0yMzAyMDcxODM1MjBaMBcxFTATBgNVBAMT DHRlbGVzY29vcC5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMsX vBXl5cYYKudNWq7OjY+PkcQlR7UBDHyJA7eN1l53iseRuQ9sRWaTt9KR27K+Ib+X dn7JAzIFhFYXiEBczvehvLO4g+Tcflpl3HcaPXeBw2cpA4m3QMf86vvWq2t5Od18 gSk+1rvSbfLK3dWJWn5favJx8UYSJx/DANn6ssE5Xpbz8+LR2Hmlq7XrMVa4lMYO XfhO49NnTAHsT2Ttg2wsskHPHJ2hzdo4Br4LDOtR8DVHbfy9WoopzYiHftaikxW1 QP9bzxtRNfeJe0vZADJkNlZed6FxYfs2G45ac/Easklxgquk4MTyWV4vlcBht9oL 5yQ2On4ypI5U+f0j/tMCAwEAAaOCAkcwggJDMA4GA1UdDwEB/wQEAwIFoDAdBgNV HSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4E FgQUoo2FNRdw7InBcMaz4NMBH/PTlbswHwYDVR0jBBgwFoAUFC6zF7dYVsuuUAlA 5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8vcjMu by5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9yZy8w FwYDVR0RBBAwDoIMdGVsZXNjb29wLmZyMEwGA1UdIARFMEMwCAYGZ4EMAQIBMDcG CysGAQQBgt8TAQEBMCgwJgYIKwYBBQUHAgEWGmh0dHA6Ly9jcHMubGV0c2VuY3J5 cHQub3JnMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHYAejKMVNi3LbYg6jjgUh7p hBZwMhOFTTvSK8E6V6NS61IAAAGEXePOMwAABAMARzBFAiEA9N6iE5DiZsIk4+MU i92tAHi5KGL1w/hJ2bNesp4pa6wCIE4B2o/d7iP5lTE+mKQ4YuM3cMPSo6AMbnuq srn0cUkaAHYArfe++nz/EMiLnT2cHj4YarRnKV3PsQwkyoWGNOvcgooAAAGEXePO QAAABAMARzBFAiEA2PqX4b+elS8EXJ0jqyIxrOlB5XQd2SZWus+f9DcyHzQCIB++ JbGuymQK8RnB9jyeYKr7LBchjYTsirIJnxCMntclMA0GCSqGSIb3DQEBCwUAA4IB AQAUn2RyiSDVd9FBOmd0uNck5AdX9wXg3xwiVmKnHbJi8iY2UUjSaD9zga2aPSTP ZxYZl3EUnnJmuDyueIuEoYpRJDqjE1SVVbt+Q8HrNs4iLNCJ3tjNDJUSi5p8h7J7 PKUkVVQ5Y4epjeCW33n6De7AykjZqGPvu6IYuzt1nXAZyzFZr7Dg9LXLbxau6VGT cdJVkPhN+7cXANJIdDOfiPpoKl4yy7WmvdjCvizONe3L3lGCoDBBAM8cNTKQowTE xnPD/QpmDgZGuDIHBBgIOQDj8Ya6C8UZfHDZp4Ka/j7G9wE3w4BtHoV1wH0LLBaY +6J3Dd+kxEJRv6qV2MdmWIoj -----END CERTIFICATE-----"
+        "finding": "-----BEGIN CERTIFICATE-----\nMIIFHjCCBAagAwIBAgISA8g8QCl97jSJRVrzHc2VxMgwMA0GCSqGSIb3DQEBCwUAMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJSMzAeFw0yMjExMDkxODM1MjFaFw0yMzAyMDcxODM1MjBaMBcxFTATBgNVBAMTDHRlbGVzY29vcC5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMsXvBXl5cYYKudNWq7OjY+PkcQlR7UBDHyJA7eN1l53iseRuQ9sRWaTt9KR27K+Ib+Xdn7JAzIFhFYXiEBczvehvLO4g+Tcflpl3HcaPXeBw2cpA4m3QMf86vvWq2t5Od18gSk+1rvSbfLK3dWJWn5favJx8UYSJx/DANn6ssE5Xpbz8+LR2Hmlq7XrMVa4lMYOXfhO49NnTAHsT2Ttg2wsskHPHJ2hzdo4Br4LDOtR8DVHbfy9WoopzYiHftaikxW1QP9bzxtRNfeJe0vZADJkNlZed6FxYfs2G45ac/Easklxgquk4MTyWV4vlcBht9oL5yQ2On4ypI5U+f0j/tMCAwEAAaOCAkcwggJDMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUoo2FNRdw7InBcMaz4NMBH/PTlbswHwYDVR0jBBgwFoAUFC6zF7dYVsuuUAlA5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8vcjMuby5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9yZy8wFwYDVR0RBBAwDoIMdGVsZXNjb29wLmZyMEwGA1UdIARFMEMwCAYGZ4EMAQIBMDcGCysGAQQBgt8TAQEBMCgwJgYIKwYBBQUHAgEWGmh0dHA6Ly9jcHMubGV0c2VuY3J5cHQub3JnMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHYAejKMVNi3LbYg6jjgUh7phBZwMhOFTTvSK8E6V6NS61IAAAGEXePOMwAABAMARzBFAiEA9N6iE5DiZsIk4+MUi92tAHi5KGL1w/hJ2bNesp4pa6wCIE4B2o/d7iP5lTE+mKQ4YuM3cMPSo6AMbnuqsrn0cUkaAHYArfe++nz/EMiLnT2cHj4YarRnKV3PsQwkyoWGNOvcgooAAAGEXePOQAAABAMARzBFAiEA2PqX4b+elS8EXJ0jqyIxrOlB5XQd2SZWus+f9DcyHzQCIB++JbGuymQK8RnB9jyeYKr7LBchjYTsirIJnxCMntclMA0GCSqGSIb3DQEBCwUAA4IBAQAUn2RyiSDVd9FBOmd0uNck5AdX9wXg3xwiVmKnHbJi8iY2UUjSaD9zga2aPSTPZxYZl3EUnnJmuDyueIuEoYpRJDqjE1SVVbt+Q8HrNs4iLNCJ3tjNDJUSi5p8h7J7PKUkVVQ5Y4epjeCW33n6De7AykjZqGPvu6IYuzt1nXAZyzFZr7Dg9LXLbxau6VGTcdJVkPhN+7cXANJIdDOfiPpoKl4yy7WmvdjCvizONe3L3lGCoDBBAM8cNTKQowTExnPD/QpmDgZGuDIHBBgIOQDj8Ya6C8UZfHDZp4Ka/j7G9wE3w4BtHoV1wH0LLBaY+6J3Dd+kxEJRv6qV2MdmWIoj\n-----END CERTIFICATE-----"
       },
       {
         "id": "cert_commonName",
@@ -605,7 +591,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "86 >= 30 days"
+        "finding": "79 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -703,7 +689,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "-----BEGIN CERTIFICATE----- MIIFFjCCAv6gAwIBAgIRAJErCErPDBinU/bWLiWnX1owDQYJKoZIhvcNAQELBQAw TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjAwOTA0MDAwMDAw WhcNMjUwOTE1MTYwMDAwWjAyMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3Mg RW5jcnlwdDELMAkGA1UEAxMCUjMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK AoIBAQC7AhUozPaglNMPEuyNVZLD+ILxmaZ6QoinXSaqtSu5xUyxr45r+XXIo9cP R5QUVTVXjJ6oojkZ9YI8QqlObvU7wy7bjcCwXPNZOOftz2nwWgsbvsCUJCWH+jdx sxPnHKzhm+/b5DtFUkWWqcFTzjTIUu61ru2P3mBw4qVUq7ZtDpelQDRrK9O8Zutm NHz6a4uPVymZ+DAXXbpyb/uBxa3Shlg9F8fnCbvxK/eG3MHacV3URuPMrSXBiLxg Z3Vms/EY96Jc5lP/Ooi2R6X/ExjqmAl3P51T+c8B5fWmcBcUr2Ok/5mzk53cU6cG /kiFHaFpriV1uxPMUgP17VGhi9sVAgMBAAGjggEIMIIBBDAOBgNVHQ8BAf8EBAMC AYYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMBIGA1UdEwEB/wQIMAYB Af8CAQAwHQYDVR0OBBYEFBQusxe3WFbLrlAJQOYfr52LFMLGMB8GA1UdIwQYMBaA FHm0WeZ7tuXkAXOACIjIGlj26ZtuMDIGCCsGAQUFBwEBBCYwJDAiBggrBgEFBQcw AoYWaHR0cDovL3gxLmkubGVuY3Iub3JnLzAnBgNVHR8EIDAeMBygGqAYhhZodHRw Oi8veDEuYy5sZW5jci5vcmcvMCIGA1UdIAQbMBkwCAYGZ4EMAQIBMA0GCysGAQQB gt8TAQEBMA0GCSqGSIb3DQEBCwUAA4ICAQCFyk5HPqP3hUSFvNVneLKYY611TR6W PTNlclQtgaDqw+34IL9fzLdwALduO/ZelN7kIJ+m74uyA+eitRY8kc607TkC53wl ikfmZW4/RvTZ8M6UK+5UzhK8jCdLuMGYL6KvzXGRSgi3yLgjewQtCPkIVz6D2QQz CkcheAmCJ8MqyJu5zlzyZMjAvnnAT45tRAxekrsu94sQ4egdRCnbWSDtY7kh+BIm lJNXoB1lBMEKIq4QDUOXoRgffuDghje1WrG9ML+Hbisq/yFOGwXD9RiX8F6sw6W4 avAuvDszue5L3sz85K+EC4Y/wFVDNvZo4TYXao6Z0f+lQKc0t8DQYzk1OXVu8rp2 yJMC6alLbBfODALZvYH7n7do1AZls4I9d1P4jnkDrQoxB3UqQ9hVl3LEKQ73xF1O yK5GhDDX8oVfGKF5u+decIsH4YaTw7mP3GFxJSqv3+0lUFJoi5Lc5da149p90Ids hCExroL1+7mryIkXPeFM5TgO9r0rvZaBFOvV2z0gp35Z0+L4WPlbuEjN/lxPFin+ HlUjr8gRsI3qfJOQFy/9rKIJR0Y/8Omwt/8oTWgy1mdeHmmjk7j1nYsvC9JSQ6Zv MldlTTKB3zhThV1+XWYp6rjd5JW1zbVWEkLNxE7GJThEUG3szgBVGP7pSWTUTsqX nLRbwHOoq7hHwg== -----END CERTIFICATE-----"
+        "finding": "-----BEGIN CERTIFICATE-----\nMIIFFjCCAv6gAwIBAgIRAJErCErPDBinU/bWLiWnX1owDQYJKoZIhvcNAQELBQAwTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2VhcmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwHhcNMjAwOTA0MDAwMDAwWhcNMjUwOTE1MTYwMDAwWjAyMQswCQYDVQQGEwJVUzEWMBQGA1UEChMNTGV0J3MgRW5jcnlwdDELMAkGA1UEAxMCUjMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC7AhUozPaglNMPEuyNVZLD+ILxmaZ6QoinXSaqtSu5xUyxr45r+XXIo9cPR5QUVTVXjJ6oojkZ9YI8QqlObvU7wy7bjcCwXPNZOOftz2nwWgsbvsCUJCWH+jdxsxPnHKzhm+/b5DtFUkWWqcFTzjTIUu61ru2P3mBw4qVUq7ZtDpelQDRrK9O8ZutmNHz6a4uPVymZ+DAXXbpyb/uBxa3Shlg9F8fnCbvxK/eG3MHacV3URuPMrSXBiLxgZ3Vms/EY96Jc5lP/Ooi2R6X/ExjqmAl3P51T+c8B5fWmcBcUr2Ok/5mzk53cU6cG/kiFHaFpriV1uxPMUgP17VGhi9sVAgMBAAGjggEIMIIBBDAOBgNVHQ8BAf8EBAMCAYYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUFBwMBMBIGA1UdEwEB/wQIMAYBAf8CAQAwHQYDVR0OBBYEFBQusxe3WFbLrlAJQOYfr52LFMLGMB8GA1UdIwQYMBaAFHm0WeZ7tuXkAXOACIjIGlj26ZtuMDIGCCsGAQUFBwEBBCYwJDAiBggrBgEFBQcwAoYWaHR0cDovL3gxLmkubGVuY3Iub3JnLzAnBgNVHR8EIDAeMBygGqAYhhZodHRwOi8veDEuYy5sZW5jci5vcmcvMCIGA1UdIAQbMBkwCAYGZ4EMAQIBMA0GCysGAQQBgt8TAQEBMA0GCSqGSIb3DQEBCwUAA4ICAQCFyk5HPqP3hUSFvNVneLKYY611TR6WPTNlclQtgaDqw+34IL9fzLdwALduO/ZelN7kIJ+m74uyA+eitRY8kc607TkC53wlikfmZW4/RvTZ8M6UK+5UzhK8jCdLuMGYL6KvzXGRSgi3yLgjewQtCPkIVz6D2QQzCkcheAmCJ8MqyJu5zlzyZMjAvnnAT45tRAxekrsu94sQ4egdRCnbWSDtY7kh+BImlJNXoB1lBMEKIq4QDUOXoRgffuDghje1WrG9ML+Hbisq/yFOGwXD9RiX8F6sw6W4avAuvDszue5L3sz85K+EC4Y/wFVDNvZo4TYXao6Z0f+lQKc0t8DQYzk1OXVu8rp2yJMC6alLbBfODALZvYH7n7do1AZls4I9d1P4jnkDrQoxB3UqQ9hVl3LEKQ73xF1OyK5GhDDX8oVfGKF5u+decIsH4YaTw7mP3GFxJSqv3+0lUFJoi5Lc5da149p90IdshCExroL1+7mryIkXPeFM5TgO9r0rvZaBFOvV2z0gp35Z0+L4WPlbuEjN/lxPFin+HlUjr8gRsI3qfJOQFy/9rKIJR0Y/8Omwt/8oTWgy1mdeHmmjk7j1nYsvC9JSQ6ZvMldlTTKB3zhThV1+XWYp6rjd5JW1zbVWEkLNxE7GJThEUG3szgBVGP7pSWTUTsqXnLRbwHOoq7hHwg==\n-----END CERTIFICATE-----"
       },
       {
         "id": "intermediate_cert_fingerprintSHA256 <#1>",
@@ -745,7 +731,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "-----BEGIN CERTIFICATE----- MIIFYDCCBEigAwIBAgIQQAF3ITfU6UK47naqPGQKtzANBgkqhkiG9w0BAQsFADA/ MSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMT DkRTVCBSb290IENBIFgzMB4XDTIxMDEyMDE5MTQwM1oXDTI0MDkzMDE4MTQwM1ow TzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2Vh cmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwggIiMA0GCSqGSIb3DQEB AQUAA4ICDwAwggIKAoICAQCt6CRz9BQ385ueK1coHIe+3LffOJCMbjzmV6B493XC ov71am72AE8o295ohmxEk7axY/0UEmu/H9LqMZshftEzPLpI9d1537O4/xLxIZpL wYqGcWlKZmZsj348cL+tKSIG8+TA5oCu4kuPt5l+lAOf00eXfJlII1PoOK5PCm+D LtFJV4yAdLbaL9A4jXsDcCEbdfIwPPqPrt3aY6vrFk/CjhFLfs8L6P+1dy70sntK 4EwSJQxwjQMpoOFTJOwT2e4ZvxCzSow/iaNhUd6shweU9GNx7C7ib1uYgeGJXDR5 bHbvO5BieebbpJovJsXQEOEO3tkQjhb7t/eo98flAgeYjzYIlefiN5YNNnWe+w5y sR2bvAP5SQXYgd0FtCrWQemsAXaVCg/Y39W9Eh81LygXbNKYwagJZHduRze6zqxZ Xmidf3LWicUGQSk+WT7dJvUkyRGnWqNMQB9GoZm1pzpRboY7nn1ypxIFeFntPlF4 FQsDj43QLwWyPntKHEtzBRL8xurgUBN8Q5N0s8p0544fAQjQMNRbcTa0B7rBMDBc SLeCO5imfWCKoqMpgsy6vYMEG6KDA0Gh1gXxG8K28Kh8hjtGqEgqiNx2mna/H2ql PRmP6zjzZN7IKw0KKP/32+IVQtQi0Cdd4Xn+GOdwiK1O5tmLOsbdJ1Fu/7xk9TND TwIDAQABo4IBRjCCAUIwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYw SwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzAChi9odHRwOi8vYXBwcy5pZGVudHJ1 c3QuY29tL3Jvb3RzL2RzdHJvb3RjYXgzLnA3YzAfBgNVHSMEGDAWgBTEp7Gkeyxx +tvhS5B1/8QVYIWJEDBUBgNVHSAETTBLMAgGBmeBDAECATA/BgsrBgEEAYLfEwEB ATAwMC4GCCsGAQUFBwIBFiJodHRwOi8vY3BzLnJvb3QteDEubGV0c2VuY3J5cHQu b3JnMDwGA1UdHwQ1MDMwMaAvoC2GK2h0dHA6Ly9jcmwuaWRlbnRydXN0LmNvbS9E U1RST09UQ0FYM0NSTC5jcmwwHQYDVR0OBBYEFHm0WeZ7tuXkAXOACIjIGlj26Ztu MA0GCSqGSIb3DQEBCwUAA4IBAQAKcwBslm7/DlLQrt2M51oGrS+o44+/yQoDFVDC 5WxCu2+b9LRPwkSICHXM6webFGJueN7sJ7o5XPWioW5WlHAQU7G75K/QosMrAdSW 9MUgNTP52GE24HGNtLi1qoJFlcDyqSMo59ahy2cI2qBDLKobkx/J3vWraV0T9VuG WCLKTVXkcGdtwlfFRjlBz4pYg1htmf5X6DYO8A4jqv2Il9DjXA6USbW1FzXSLr9O he8Y4IWS6wY7bCkjCWDcRQJMEhg76fsO3txE+FiYruq9RUWhiF1myv4Q6W+CyBFC Dfvp7OOGAN6dEOM4+qR9sdjoSYKEBpsr6GtPAQw4dy753ec5 -----END CERTIFICATE-----"
+        "finding": "-----BEGIN CERTIFICATE-----\nMIIFYDCCBEigAwIBAgIQQAF3ITfU6UK47naqPGQKtzANBgkqhkiG9w0BAQsFADA/MSQwIgYDVQQKExtEaWdpdGFsIFNpZ25hdHVyZSBUcnVzdCBDby4xFzAVBgNVBAMTDkRTVCBSb290IENBIFgzMB4XDTIxMDEyMDE5MTQwM1oXDTI0MDkzMDE4MTQwM1owTzELMAkGA1UEBhMCVVMxKTAnBgNVBAoTIEludGVybmV0IFNlY3VyaXR5IFJlc2VhcmNoIEdyb3VwMRUwEwYDVQQDEwxJU1JHIFJvb3QgWDEwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCt6CRz9BQ385ueK1coHIe+3LffOJCMbjzmV6B493XCov71am72AE8o295ohmxEk7axY/0UEmu/H9LqMZshftEzPLpI9d1537O4/xLxIZpLwYqGcWlKZmZsj348cL+tKSIG8+TA5oCu4kuPt5l+lAOf00eXfJlII1PoOK5PCm+DLtFJV4yAdLbaL9A4jXsDcCEbdfIwPPqPrt3aY6vrFk/CjhFLfs8L6P+1dy70sntK4EwSJQxwjQMpoOFTJOwT2e4ZvxCzSow/iaNhUd6shweU9GNx7C7ib1uYgeGJXDR5bHbvO5BieebbpJovJsXQEOEO3tkQjhb7t/eo98flAgeYjzYIlefiN5YNNnWe+w5ysR2bvAP5SQXYgd0FtCrWQemsAXaVCg/Y39W9Eh81LygXbNKYwagJZHduRze6zqxZXmidf3LWicUGQSk+WT7dJvUkyRGnWqNMQB9GoZm1pzpRboY7nn1ypxIFeFntPlF4FQsDj43QLwWyPntKHEtzBRL8xurgUBN8Q5N0s8p0544fAQjQMNRbcTa0B7rBMDBcSLeCO5imfWCKoqMpgsy6vYMEG6KDA0Gh1gXxG8K28Kh8hjtGqEgqiNx2mna/H2qlPRmP6zjzZN7IKw0KKP/32+IVQtQi0Cdd4Xn+GOdwiK1O5tmLOsbdJ1Fu/7xk9TNDTwIDAQABo4IBRjCCAUIwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAQYwSwYIKwYBBQUHAQEEPzA9MDsGCCsGAQUFBzAChi9odHRwOi8vYXBwcy5pZGVudHJ1c3QuY29tL3Jvb3RzL2RzdHJvb3RjYXgzLnA3YzAfBgNVHSMEGDAWgBTEp7Gkeyxx+tvhS5B1/8QVYIWJEDBUBgNVHSAETTBLMAgGBmeBDAECATA/BgsrBgEEAYLfEwEBATAwMC4GCCsGAQUFBwIBFiJodHRwOi8vY3BzLnJvb3QteDEubGV0c2VuY3J5cHQub3JnMDwGA1UdHwQ1MDMwMaAvoC2GK2h0dHA6Ly9jcmwuaWRlbnRydXN0LmNvbS9EU1RST09UQ0FYM0NSTC5jcmwwHQYDVR0OBBYEFHm0WeZ7tuXkAXOACIjIGlj26ZtuMA0GCSqGSIb3DQEBCwUAA4IBAQAKcwBslm7/DlLQrt2M51oGrS+o44+/yQoDFVDC5WxCu2+b9LRPwkSICHXM6webFGJueN7sJ7o5XPWioW5WlHAQU7G75K/QosMrAdSW9MUgNTP52GE24HGNtLi1qoJFlcDyqSMo59ahy2cI2qBDLKobkx/J3vWraV0T9VuGWCLKTVXkcGdtwlfFRjlBz4pYg1htmf5X6DYO8A4jqv2Il9DjXA6USbW1FzXSLr9Ohe8Y4IWS6wY7bCkjCWDcRQJMEhg76fsO3txE+FiYruq9RUWhiF1myv4Q6W+CyBFCDfvp7OOGAN6dEOM4+qR9sdjoSYKEBpsr6GtPAQw4dy753ec5\n-----END CERTIFICATE-----"
       },
       {
         "id": "intermediate_cert_fingerprintSHA256 <#2>",
@@ -808,7 +794,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "1668304077"
+        "finding": "1668908995"
       },
       {
         "id": "HSTS",
@@ -1364,7 +1350,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "145"
+        "finding": "95"
       }
     ],
     "thirdparties": {
@@ -1471,7 +1457,7 @@
         "connection": "keep-alive",
         "content-encoding": "gzip",
         "content-type": "text/html",
-        "date": "Sun, 13 Nov 2022 01:46:36 GMT",
+        "date": "Sun, 20 Nov 2022 01:48:46 GMT",
         "etag": "W/\"635f90f4-1f840\"",
         "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
         "server": "nginx/1.18.0 (Ubuntu)",
@@ -1592,16 +1578,8 @@
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "142.250.68.138",
+          "ip": "172.253.115.95",
           "geoip": {
-            "city": {
-              "geoname_id": 5118626,
-              "names": {
-                "en": "Glen Cove",
-                "ja": "グレンコーブ",
-                "ru": "Глен-Коув"
-              }
-            },
             "continent": {
               "code": "NA",
               "geoname_id": 6255149,
@@ -1632,13 +1610,9 @@
             },
             "location": {
               "accuracy_radius": 1000,
-              "latitude": 40.8627,
-              "longitude": -73.6351,
-              "metro_code": 501,
-              "time_zone": "America/New_York"
-            },
-            "postal": {
-              "code": "11542"
+              "latitude": 37.751,
+              "longitude": -97.822,
+              "time_zone": "America/Chicago"
             },
             "registered_country": {
               "geoname_id": 6252001,
@@ -1653,39 +1627,24 @@
                 "ru": "США",
                 "zh-CN": "美国"
               }
-            },
-            "subdivisions": [
-              {
-                "geoname_id": 5128638,
-                "iso_code": "NY",
-                "names": {
-                  "de": "New York",
-                  "en": "New York",
-                  "es": "Nueva York",
-                  "fr": "New York",
-                  "ja": "ニューヨーク州",
-                  "pt-BR": "Nova Iorque",
-                  "ru": "Нью-Йорк",
-                  "zh-CN": "纽约州"
-                }
-              }
-            ]
+            }
           }
         },
         {
           "hostname": "plausible.io",
-          "ip": "212.102.40.114",
+          "ip": "185.93.1.251",
           "geoip": {
             "city": {
-              "geoname_id": 4684888,
+              "geoname_id": 4887398,
               "names": {
-                "de": "Dallas",
-                "en": "Dallas",
-                "es": "Dallas",
-                "fr": "Dallas",
-                "ja": "ダラス",
-                "pt-BR": "Dallas",
-                "ru": "Даллас"
+                "de": "Chicago",
+                "en": "Chicago",
+                "es": "Chicago",
+                "fr": "Chicago",
+                "ja": "シカゴ",
+                "pt-BR": "Chicago",
+                "ru": "Чикаго",
+                "zh-CN": "芝加哥"
               }
             },
             "continent": {
@@ -1718,39 +1677,41 @@
             },
             "location": {
               "accuracy_radius": 20,
-              "latitude": 32.7797,
-              "longitude": -96.8022,
-              "metro_code": 623,
+              "latitude": 41.8874,
+              "longitude": -87.6318,
+              "metro_code": 602,
               "time_zone": "America/Chicago"
             },
             "postal": {
-              "code": "75270"
+              "code": "60602"
             },
             "registered_country": {
-              "geoname_id": 2635167,
-              "iso_code": "GB",
+              "geoname_id": 3077311,
+              "is_in_european_union": true,
+              "iso_code": "CZ",
               "names": {
-                "de": "Vereinigtes Königreich",
-                "en": "United Kingdom",
-                "es": "Reino Unido",
-                "fr": "Royaume Uni",
-                "ja": "英国",
-                "pt-BR": "Reino Unido",
-                "ru": "Британия",
-                "zh-CN": "英国"
+                "de": "Tschechien",
+                "en": "Czechia",
+                "es": "Chequia",
+                "fr": "Tchéquie",
+                "ja": "チェコ共和国",
+                "pt-BR": "Chéquia",
+                "ru": "Чехия",
+                "zh-CN": "捷克"
               }
             },
             "subdivisions": [
               {
-                "geoname_id": 4736286,
-                "iso_code": "TX",
+                "geoname_id": 4896861,
+                "iso_code": "IL",
                 "names": {
-                  "en": "Texas",
-                  "es": "Texas",
-                  "fr": "Texas",
-                  "ja": "テキサス州",
-                  "ru": "Техас",
-                  "zh-CN": "德克萨斯州"
+                  "en": "Illinois",
+                  "es": "Illinois",
+                  "fr": "Illinois",
+                  "ja": "イリノイ州",
+                  "pt-BR": "Ilinóis",
+                  "ru": "Иллинойс",
+                  "zh-CN": "伊利诺伊州"
                 }
               }
             ]
@@ -1758,7 +1719,7 @@
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "142.250.138.94",
+          "ip": "142.250.31.94",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1812,10 +1773,193 @@
         }
       ]
     },
-    "wappalyzer": null,
+    "wappalyzer": {
+      "urls": {
+        "https://telescoop.fr/": {
+          "status": 301
+        },
+        "https://www.telescoop.fr/": {
+          "status": 200
+        }
+      },
+      "technologies": [
+        {
+          "slug": "ubuntu",
+          "name": "Ubuntu",
+          "description": "Ubuntu is a free and open-source operating system on Linux for the enterprise server, desktop, cloud, and IoT.",
+          "confidence": 100,
+          "version": null,
+          "icon": "Ubuntu.svg",
+          "website": "http://www.ubuntu.com/server",
+          "cpe": "cpe:2.3:o:canonical:ubuntu_linux:*:*:*:*:*:*:*:*",
+          "categories": [
+            {
+              "id": 28,
+              "slug": "operating-systems",
+              "name": "Operating systems"
+            }
+          ],
+          "rootPath": true
+        },
+        {
+          "slug": "bulma",
+          "name": "Bulma",
+          "description": "Bulma is a free class-based framework for CSS.",
+          "confidence": 100,
+          "version": null,
+          "icon": "Bulma.svg",
+          "website": "http://bulma.io",
+          "cpe": null,
+          "categories": [
+            {
+              "id": 66,
+              "slug": "ui-frameworks",
+              "name": "UI frameworks"
+            }
+          ],
+          "rootPath": true
+        },
+        {
+          "slug": "nginx",
+          "name": "Nginx",
+          "description": "Nginx is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache.",
+          "confidence": 100,
+          "version": "1.18.0",
+          "icon": "Nginx.svg",
+          "website": "http://nginx.org/en",
+          "cpe": "cpe:2.3:a:nginx:nginx:*:*:*:*:*:*:*:*",
+          "categories": [
+            {
+              "id": 22,
+              "slug": "web-servers",
+              "name": "Web servers"
+            },
+            {
+              "id": 64,
+              "slug": "reverse-proxies",
+              "name": "Reverse proxies"
+            }
+          ],
+          "rootPath": true
+        },
+        {
+          "slug": "plausible",
+          "name": "Plausible",
+          "description": "Plausible is an open-source alternative to Google Analytics.",
+          "confidence": 100,
+          "version": null,
+          "icon": "Plausible.svg",
+          "website": "https://plausible.io/",
+          "cpe": null,
+          "categories": [
+            {
+              "id": 10,
+              "slug": "analytics",
+              "name": "Analytics"
+            }
+          ],
+          "rootPath": true
+        },
+        {
+          "slug": "google-font-api",
+          "name": "Google Font API",
+          "description": "Google Font API is a web service that supports open-source font files that can be used on your web designs.",
+          "confidence": 100,
+          "version": null,
+          "icon": "Google Font API.png",
+          "website": "http://google.com/fonts",
+          "cpe": null,
+          "categories": [
+            {
+              "id": 17,
+              "slug": "font-scripts",
+              "name": "Font scripts"
+            }
+          ],
+          "rootPath": true
+        },
+        {
+          "slug": "ovhcloud",
+          "name": "OVHcloud",
+          "description": "OVHcloud is a global, cloud provider delivering hosted private cloud, public cloud, and dedicated server solutions.",
+          "confidence": 100,
+          "version": null,
+          "icon": "OVHcloud.svg",
+          "website": "https://www.ovhcloud.com",
+          "cpe": null,
+          "categories": [
+            {
+              "id": 62,
+              "slug": "paas",
+              "name": "PaaS"
+            },
+            {
+              "id": 88,
+              "slug": "hosting",
+              "name": "Hosting"
+            }
+          ],
+          "rootPath": true
+        },
+        {
+          "slug": "mailgun",
+          "name": "Mailgun",
+          "description": "Mailgun is a transactional email API service for developers.",
+          "confidence": 100,
+          "version": null,
+          "icon": "Mailgun.svg",
+          "website": "https://www.mailgun.com/",
+          "cpe": null,
+          "categories": [
+            {
+              "id": 75,
+              "slug": "email",
+              "name": "Email"
+            }
+          ],
+          "rootPath": true
+        },
+        {
+          "slug": "pwa",
+          "name": "PWA",
+          "description": "Progressive Web Apps (PWAs) are web apps built and enhanced with modern APIs to deliver enhanced capabilities, reliability, and installability while reaching anyone, anywhere, on any device, all with a single codebase.",
+          "confidence": 100,
+          "version": null,
+          "icon": "PWA.svg",
+          "website": "https://web.dev/progressive-web-apps/",
+          "cpe": null,
+          "categories": [
+            {
+              "id": 19,
+              "slug": "miscellaneous",
+              "name": "Miscellaneous"
+            }
+          ],
+          "rootPath": true
+        },
+        {
+          "slug": "open-graph",
+          "name": "Open Graph",
+          "description": "Open Graph is a protocol that is used to integrate any web page into the social graph.",
+          "confidence": 100,
+          "version": null,
+          "icon": "Open Graph.png",
+          "website": "https://ogp.me",
+          "cpe": null,
+          "categories": [
+            {
+              "id": 19,
+              "slug": "miscellaneous",
+              "name": "Miscellaneous"
+            }
+          ],
+          "rootPath": true
+        }
+      ]
+    },
     "zap": {
       "@version": "2.12.0",
-      "@generated": "Sun, 13 Nov 2022 01:45:24",
+      "@generated": "Sun, 20 Nov 2022 01:47:42",
       "site": [
         {
           "@name": "https://telescoop.fr",
@@ -1916,7 +2060,7 @@
       {
         "requestedUrl": "https://telescoop.fr/",
         "finalUrl": "https://www.telescoop.fr/",
-        "fetchTime": "2022-11-13T01:45:42.830Z",
+        "fetchTime": "2022-11-20T01:47:58.267Z",
         "runWarnings": [
           "The page may not be loading as expected because your test URL (https://telescoop.fr/) was redirected to https://www.telescoop.fr/. Try testing the second URL directly."
         ],
@@ -1981,53 +2125,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 4715,
+            "numericValue": 3774,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 4715,
-                  "firstMeaningfulPaint": 4715,
-                  "largestContentfulPaint": 4861,
-                  "interactive": 4715,
-                  "speedIndex": 5283,
+                  "firstContentfulPaint": 3774,
+                  "firstMeaningfulPaint": 3774,
+                  "largestContentfulPaint": 3933,
+                  "interactive": 3774,
+                  "speedIndex": 3774,
                   "totalBlockingTime": 0,
                   "maxPotentialFID": 16,
                   "cumulativeLayoutShift": 0.11735973358154297,
                   "cumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "totalCumulativeLayoutShift": 0.11735973358154297,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 337694288,
+                  "observedTimeOriginTs": 253843309,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 337694288,
-                  "observedFirstPaint": 1748,
-                  "observedFirstPaintTs": 339442585,
-                  "observedFirstContentfulPaint": 1748,
-                  "observedFirstContentfulPaintTs": 339442585,
-                  "observedFirstContentfulPaintAllFrames": 1748,
-                  "observedFirstContentfulPaintAllFramesTs": 339442585,
-                  "observedFirstMeaningfulPaint": 1748,
-                  "observedFirstMeaningfulPaintTs": 339442585,
-                  "observedLargestContentfulPaint": 1748,
-                  "observedLargestContentfulPaintTs": 339442585,
-                  "observedLargestContentfulPaintAllFrames": 1748,
-                  "observedLargestContentfulPaintAllFramesTs": 339442585,
-                  "observedTraceEnd": 4308,
-                  "observedTraceEndTs": 342002492,
-                  "observedLoad": 1992,
-                  "observedLoadTs": 339686406,
-                  "observedDomContentLoaded": 1850,
-                  "observedDomContentLoadedTs": 339544755,
+                  "observedNavigationStartTs": 253843309,
+                  "observedFirstPaint": 1035,
+                  "observedFirstPaintTs": 254878080,
+                  "observedFirstContentfulPaint": 1035,
+                  "observedFirstContentfulPaintTs": 254878080,
+                  "observedFirstContentfulPaintAllFrames": 1035,
+                  "observedFirstContentfulPaintAllFramesTs": 254878080,
+                  "observedFirstMeaningfulPaint": 1035,
+                  "observedFirstMeaningfulPaintTs": 254878080,
+                  "observedLargestContentfulPaint": 1035,
+                  "observedLargestContentfulPaintTs": 254878080,
+                  "observedLargestContentfulPaintAllFrames": 1035,
+                  "observedLargestContentfulPaintAllFramesTs": 254878080,
+                  "observedTraceEnd": 3442,
+                  "observedTraceEndTs": 257285384,
+                  "observedLoad": 1130,
+                  "observedLoadTs": 254973309,
+                  "observedDomContentLoaded": 1030,
+                  "observedDomContentLoadedTs": 254873627,
                   "observedCumulativeLayoutShift": 0.11735973358154297,
                   "observedCumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "observedTotalCumulativeLayoutShift": 0.11735973358154297,
-                  "observedFirstVisualChange": 1758,
-                  "observedFirstVisualChangeTs": 339452288,
-                  "observedLastVisualChange": 1808,
-                  "observedLastVisualChangeTs": 339502288,
-                  "observedSpeedIndex": 1763,
-                  "observedSpeedIndexTs": 339457088
+                  "observedFirstVisualChange": 1029,
+                  "observedFirstVisualChangeTs": 254872309,
+                  "observedLastVisualChange": 1079,
+                  "observedLastVisualChangeTs": 254922309,
+                  "observedSpeedIndex": 1034,
+                  "observedSpeedIndexTs": 254877138
                 },
                 {
                   "lcpInvalidated": false
@@ -2049,18 +2193,18 @@
                   "numScripts": 3,
                   "numStylesheets": 3,
                   "numFonts": 1,
-                  "numTasks": 266,
+                  "numTasks": 239,
                   "numTasksOver10ms": 2,
-                  "numTasksOver25ms": 1,
+                  "numTasksOver25ms": 2,
                   "numTasksOver50ms": 1,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 6.774000000000001,
-                  "throughput": 5747447.553238816,
-                  "maxRtt": 148.592,
-                  "maxServerLatency": 10.218000000000004,
-                  "totalByteWeight": 444786,
-                  "totalTaskTime": 174.7639999999996,
+                  "rtt": 1.9609999999999994,
+                  "throughput": 10283675.434360683,
+                  "maxRtt": 82.725,
+                  "maxServerLatency": 73.25500000000001,
+                  "totalByteWeight": 444788,
+                  "totalTaskTime": 162.95499999999964,
                   "mainDocumentTransferSize": 40958
                 }
               ]
