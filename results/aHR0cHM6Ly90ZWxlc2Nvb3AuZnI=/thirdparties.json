@@ -102,7 +102,7 @@
     "connection": "keep-alive",
     "content-encoding": "gzip",
     "content-type": "text/html",
-    "date": "Sun, 04 Dec 2022 01:26:02 GMT",
+    "date": "Sun, 11 Dec 2022 01:29:44 GMT",
     "etag": "W/\"635f90f4-1f840\"",
     "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
     "server": "nginx/1.18.0 (Ubuntu)",
@@ -223,7 +223,7 @@
     },
     {
       "hostname": "fonts.googleapis.com",
-      "ip": "142.250.189.170",
+      "ip": "142.251.163.95",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -277,19 +277,13 @@
     },
     {
       "hostname": "plausible.io",
-      "ip": "185.93.1.251",
+      "ip": "37.19.207.34",
       "geoip": {
         "city": {
-          "geoname_id": 4887398,
+          "geoname_id": 4744870,
           "names": {
-            "de": "Chicago",
-            "en": "Chicago",
-            "es": "Chicago",
-            "fr": "Chicago",
-            "ja": "シカゴ",
-            "pt-BR": "Chicago",
-            "ru": "Чикаго",
-            "zh-CN": "芝加哥"
+            "en": "Ashburn",
+            "ru": "Ашберн"
           }
         },
         "continent": {
@@ -322,41 +316,39 @@
         },
         "location": {
           "accuracy_radius": 20,
-          "latitude": 41.8874,
-          "longitude": -87.6318,
-          "metro_code": 602,
-          "time_zone": "America/Chicago"
+          "latitude": 39.0469,
+          "longitude": -77.4903,
+          "metro_code": 511,
+          "time_zone": "America/New_York"
         },
         "postal": {
-          "code": "60602"
+          "code": "20149"
         },
         "registered_country": {
-          "geoname_id": 3077311,
-          "is_in_european_union": true,
-          "iso_code": "CZ",
+          "geoname_id": 2635167,
+          "iso_code": "GB",
           "names": {
-            "de": "Tschechien",
-            "en": "Czechia",
-            "es": "Chequia",
-            "fr": "Tchéquie",
-            "ja": "チェコ共和国",
-            "pt-BR": "Chéquia",
-            "ru": "Чехия",
-            "zh-CN": "捷克"
+            "de": "Vereinigtes Königreich",
+            "en": "United Kingdom",
+            "es": "Reino Unido",
+            "fr": "Royaume Uni",
+            "ja": "英国",
+            "pt-BR": "Reino Unido",
+            "ru": "Британия",
+            "zh-CN": "英国"
           }
         },
         "subdivisions": [
           {
-            "geoname_id": 4896861,
-            "iso_code": "IL",
+            "geoname_id": 6254928,
+            "iso_code": "VA",
             "names": {
-              "en": "Illinois",
-              "es": "Illinois",
-              "fr": "Illinois",
-              "ja": "イリノイ州",
-              "pt-BR": "Ilinóis",
-              "ru": "Иллинойс",
-              "zh-CN": "伊利诺伊州"
+              "en": "Virginia",
+              "fr": "Virginie",
+              "ja": "バージニア州",
+              "pt-BR": "Virgínia",
+              "ru": "Вирджиния",
+              "zh-CN": "弗吉尼亚州"
             }
           }
         ]
@@ -364,7 +356,7 @@
     },
     {
       "hostname": "fonts.gstatic.com",
-      "ip": "142.250.191.67",
+      "ip": "142.251.163.94",
       "geoip": {
         "continent": {
           "code": "NA",
