@@ -102,7 +102,7 @@
     "connection": "keep-alive",
     "content-encoding": "gzip",
     "content-type": "text/html",
-    "date": "Sun, 25 Dec 2022 01:22:19 GMT",
+    "date": "Sun, 01 Jan 2023 01:30:36 GMT",
     "etag": "W/\"635f90f4-1f840\"",
     "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
     "server": "nginx/1.18.0 (Ubuntu)",
@@ -223,8 +223,16 @@
     },
     {
       "hostname": "fonts.googleapis.com",
-      "ip": "142.250.191.74",
+      "ip": "142.250.72.170",
       "geoip": {
+        "city": {
+          "geoname_id": 5118626,
+          "names": {
+            "en": "Glen Cove",
+            "ja": "グレンコーブ",
+            "ru": "Глен-Коув"
+          }
+        },
         "continent": {
           "code": "NA",
           "geoname_id": 6255149,
@@ -255,9 +263,13 @@
         },
         "location": {
           "accuracy_radius": 1000,
-          "latitude": 37.751,
-          "longitude": -97.822,
-          "time_zone": "America/Chicago"
+          "latitude": 40.8627,
+          "longitude": -73.6351,
+          "metro_code": 501,
+          "time_zone": "America/New_York"
+        },
+        "postal": {
+          "code": "11542"
         },
         "registered_country": {
           "geoname_id": 6252001,
@@ -272,24 +284,40 @@
             "ru": "США",
             "zh-CN": "美国"
           }
-        }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 5128638,
+            "iso_code": "NY",
+            "names": {
+              "de": "New York",
+              "en": "New York",
+              "es": "Nueva York",
+              "fr": "New York",
+              "ja": "ニューヨーク州",
+              "pt-BR": "Nova Iorque",
+              "ru": "Нью-Йорк",
+              "zh-CN": "纽约州"
+            }
+          }
+        ]
       }
     },
     {
       "hostname": "plausible.io",
-      "ip": "185.93.1.251",
+      "ip": "143.244.50.88",
       "geoip": {
         "city": {
-          "geoname_id": 4887398,
+          "geoname_id": 5368361,
           "names": {
-            "de": "Chicago",
-            "en": "Chicago",
-            "es": "Chicago",
-            "fr": "Chicago",
-            "ja": "シカゴ",
-            "pt-BR": "Chicago",
-            "ru": "Чикаго",
-            "zh-CN": "芝加哥"
+            "de": "Los Angeles",
+            "en": "Los Angeles",
+            "es": "Los Ángeles",
+            "fr": "Los Angeles",
+            "ja": "ロサンゼルス",
+            "pt-BR": "Los Angeles",
+            "ru": "Лос-Анджелес",
+            "zh-CN": "洛杉矶"
           }
         },
         "continent": {
@@ -322,41 +350,41 @@
         },
         "location": {
           "accuracy_radius": 20,
-          "latitude": 41.8874,
-          "longitude": -87.6318,
-          "metro_code": 602,
-          "time_zone": "America/Chicago"
+          "latitude": 34.0544,
+          "longitude": -118.2441,
+          "metro_code": 803,
+          "time_zone": "America/Los_Angeles"
         },
         "postal": {
-          "code": "60602"
+          "code": "90060"
         },
         "registered_country": {
-          "geoname_id": 3077311,
-          "is_in_european_union": true,
-          "iso_code": "CZ",
+          "geoname_id": 2635167,
+          "iso_code": "GB",
           "names": {
-            "de": "Tschechien",
-            "en": "Czechia",
-            "es": "Chequia",
-            "fr": "Tchéquie",
-            "ja": "チェコ共和国",
-            "pt-BR": "Chéquia",
-            "ru": "Чехия",
-            "zh-CN": "捷克"
+            "de": "Vereinigtes Königreich",
+            "en": "United Kingdom",
+            "es": "Reino Unido",
+            "fr": "Royaume Uni",
+            "ja": "英国",
+            "pt-BR": "Reino Unido",
+            "ru": "Британия",
+            "zh-CN": "英国"
           }
         },
         "subdivisions": [
           {
-            "geoname_id": 4896861,
-            "iso_code": "IL",
+            "geoname_id": 5332921,
+            "iso_code": "CA",
             "names": {
-              "en": "Illinois",
-              "es": "Illinois",
-              "fr": "Illinois",
-              "ja": "イリノイ州",
-              "pt-BR": "Ilinóis",
-              "ru": "Иллинойс",
-              "zh-CN": "伊利诺伊州"
+              "de": "Kalifornien",
+              "en": "California",
+              "es": "California",
+              "fr": "Californie",
+              "ja": "カリフォルニア州",
+              "pt-BR": "Califórnia",
+              "ru": "Калифорния",
+              "zh-CN": "加州"
             }
           }
         ]
@@ -364,7 +392,7 @@
     },
     {
       "hostname": "fonts.gstatic.com",
-      "ip": "142.250.191.35",
+      "ip": "142.251.40.35",
       "geoip": {
         "continent": {
           "code": "NA",
