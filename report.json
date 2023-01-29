@@ -5,7 +5,7 @@
     "http": {
       "url": "https://telescoop.fr",
       "algorithm_version": 2,
-      "end_time": "Sun, 22 Jan 2023 01:24:30 GMT",
+      "end_time": "Sun, 29 Jan 2023 01:26:57 GMT",
       "grade": "F",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -13,15 +13,15 @@
         "Connection": "keep-alive",
         "Content-Encoding": "gzip",
         "Content-Type": "text/html",
-        "Date": "Sun, 22 Jan 2023 01:24:24 GMT",
+        "Date": "Sun, 29 Jan 2023 01:26:56 GMT",
         "ETag": "W/\"635f90f4-1f840\"",
         "Last-Modified": "Mon, 31 Oct 2022 09:10:12 GMT",
         "Server": "nginx/1.18.0 (Ubuntu)",
         "Transfer-Encoding": "chunked"
       },
-      "scan_id": 33292190,
+      "scan_id": 33549554,
       "score": 15,
-      "start_time": "Sun, 22 Jan 2023 01:24:19 GMT",
+      "start_time": "Sun, 29 Jan 2023 01:26:51 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 6,
@@ -591,7 +591,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "76 >= 30 days"
+        "finding": "69 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -794,7 +794,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "1674350767"
+        "finding": "1674955737"
       },
       {
         "id": "HSTS",
@@ -1350,7 +1350,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "94"
+        "finding": "157"
       }
     ],
     "thirdparties": {
@@ -1457,7 +1457,7 @@
         "connection": "keep-alive",
         "content-encoding": "gzip",
         "content-type": "text/html",
-        "date": "Sun, 22 Jan 2023 01:24:57 GMT",
+        "date": "Sun, 29 Jan 2023 01:27:31 GMT",
         "etag": "W/\"635f90f4-1f840\"",
         "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
         "server": "nginx/1.18.0 (Ubuntu)",
@@ -1578,7 +1578,7 @@
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "142.251.163.95",
+          "ip": "142.250.189.170",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1632,13 +1632,18 @@
         },
         {
           "hostname": "plausible.io",
-          "ip": "37.19.207.34",
+          "ip": "156.146.53.227",
           "geoip": {
             "city": {
-              "geoname_id": 4744870,
+              "geoname_id": 5392171,
               "names": {
-                "en": "Ashburn",
-                "ru": "Ашберн"
+                "de": "San José",
+                "en": "San Jose",
+                "es": "San José",
+                "fr": "San José",
+                "ja": "サンノゼ",
+                "pt-BR": "San José",
+                "ru": "Сан-Хосе"
               }
             },
             "continent": {
@@ -1671,13 +1676,13 @@
             },
             "location": {
               "accuracy_radius": 20,
-              "latitude": 39.0469,
-              "longitude": -77.4903,
-              "metro_code": 511,
-              "time_zone": "America/New_York"
+              "latitude": 37.1835,
+              "longitude": -121.7714,
+              "metro_code": 807,
+              "time_zone": "America/Los_Angeles"
             },
             "postal": {
-              "code": "20149"
+              "code": "95141"
             },
             "registered_country": {
               "geoname_id": 2635167,
@@ -1695,15 +1700,17 @@
             },
             "subdivisions": [
               {
-                "geoname_id": 6254928,
-                "iso_code": "VA",
+                "geoname_id": 5332921,
+                "iso_code": "CA",
                 "names": {
-                  "en": "Virginia",
-                  "fr": "Virginie",
-                  "ja": "バージニア州",
-                  "pt-BR": "Virgínia",
-                  "ru": "Вирджиния",
-                  "zh-CN": "弗吉尼亚州"
+                  "de": "Kalifornien",
+                  "en": "California",
+                  "es": "California",
+                  "fr": "Californie",
+                  "ja": "カリフォルニア州",
+                  "pt-BR": "Califórnia",
+                  "ru": "Калифорния",
+                  "zh-CN": "加州"
                 }
               }
             ]
@@ -1711,7 +1718,7 @@
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "142.251.16.94",
+          "ip": "142.250.189.195",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1969,7 +1976,7 @@
     "zap": {
       "@programName": "OWASP ZAP",
       "@version": "2.12.0",
-      "@generated": "Sun, 22 Jan 2023 01:23:52",
+      "@generated": "Sun, 29 Jan 2023 01:26:19",
       "site": [
         {
           "@name": "https://telescoop.fr",
@@ -2070,9 +2077,10 @@
       {
         "requestedUrl": "https://telescoop.fr/",
         "finalUrl": "https://www.telescoop.fr/",
-        "fetchTime": "2023-01-22T01:24:08.557Z",
+        "fetchTime": "2023-01-29T01:26:38.958Z",
         "runWarnings": [
-          "The page may not be loading as expected because your test URL (https://telescoop.fr/) was redirected to https://www.telescoop.fr/. Try testing the second URL directly."
+          "The page may not be loading as expected because your test URL (https://telescoop.fr/) was redirected to https://www.telescoop.fr/. Try testing the second URL directly.",
+          "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#cpu-throttling)."
         ],
         "categories": {
           "performance": {
@@ -2135,53 +2143,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3767,
+            "numericValue": 4128,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3767,
-                  "firstMeaningfulPaint": 3767,
-                  "largestContentfulPaint": 4092,
-                  "interactive": 3767,
-                  "speedIndex": 3797,
+                  "firstContentfulPaint": 4128,
+                  "firstMeaningfulPaint": 4128,
+                  "largestContentfulPaint": 4296,
+                  "interactive": 4128,
+                  "speedIndex": 4852,
                   "totalBlockingTime": 0,
                   "maxPotentialFID": 16,
                   "cumulativeLayoutShift": 0.11735973358154297,
                   "cumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "totalCumulativeLayoutShift": 0.11735973358154297,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 191070669,
+                  "observedTimeOriginTs": 236651323,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 191070669,
-                  "observedFirstPaint": 1142,
-                  "observedFirstPaintTs": 192212179,
-                  "observedFirstContentfulPaint": 1142,
-                  "observedFirstContentfulPaintTs": 192212179,
-                  "observedFirstContentfulPaintAllFrames": 1142,
-                  "observedFirstContentfulPaintAllFramesTs": 192212179,
-                  "observedFirstMeaningfulPaint": 1142,
-                  "observedFirstMeaningfulPaintTs": 192212179,
-                  "observedLargestContentfulPaint": 1142,
-                  "observedLargestContentfulPaintTs": 192212179,
-                  "observedLargestContentfulPaintAllFrames": 1142,
-                  "observedLargestContentfulPaintAllFramesTs": 192212179,
-                  "observedTraceEnd": 3627,
-                  "observedTraceEndTs": 194697411,
-                  "observedLoad": 1315,
-                  "observedLoadTs": 192385224,
-                  "observedDomContentLoaded": 1140,
-                  "observedDomContentLoadedTs": 192210191,
+                  "observedNavigationStartTs": 236651323,
+                  "observedFirstPaint": 1738,
+                  "observedFirstPaintTs": 238388827,
+                  "observedFirstContentfulPaint": 1738,
+                  "observedFirstContentfulPaintTs": 238388827,
+                  "observedFirstContentfulPaintAllFrames": 1738,
+                  "observedFirstContentfulPaintAllFramesTs": 238388827,
+                  "observedFirstMeaningfulPaint": 1738,
+                  "observedFirstMeaningfulPaintTs": 238388827,
+                  "observedLargestContentfulPaint": 1738,
+                  "observedLargestContentfulPaintTs": 238388827,
+                  "observedLargestContentfulPaintAllFrames": 1738,
+                  "observedLargestContentfulPaintAllFramesTs": 238388827,
+                  "observedTraceEnd": 4279,
+                  "observedTraceEndTs": 240930486,
+                  "observedLoad": 1960,
+                  "observedLoadTs": 238611417,
+                  "observedDomContentLoaded": 1756,
+                  "observedDomContentLoadedTs": 238407685,
                   "observedCumulativeLayoutShift": 0.11735973358154297,
                   "observedCumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "observedTotalCumulativeLayoutShift": 0.11735973358154297,
-                  "observedFirstVisualChange": 1138,
-                  "observedFirstVisualChangeTs": 192208669,
-                  "observedLastVisualChange": 1188,
-                  "observedLastVisualChangeTs": 192258669,
-                  "observedSpeedIndex": 1142,
-                  "observedSpeedIndexTs": 192212978
+                  "observedFirstVisualChange": 1722,
+                  "observedFirstVisualChangeTs": 238373323,
+                  "observedLastVisualChange": 1789,
+                  "observedLastVisualChangeTs": 238440323,
+                  "observedSpeedIndex": 1728,
+                  "observedSpeedIndexTs": 238379131
                 },
                 {
                   "lcpInvalidated": false
@@ -2203,18 +2211,18 @@
                   "numScripts": 3,
                   "numStylesheets": 3,
                   "numFonts": 1,
-                  "numTasks": 257,
-                  "numTasksOver10ms": 2,
+                  "numTasks": 273,
+                  "numTasksOver10ms": 3,
                   "numTasksOver25ms": 2,
                   "numTasksOver50ms": 1,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 5.915,
-                  "throughput": 9212708.971190386,
-                  "maxRtt": 90.914,
-                  "maxServerLatency": 75.48899999999999,
-                  "totalByteWeight": 444788,
-                  "totalTaskTime": 193.25799999999958,
+                  "rtt": 1.824,
+                  "throughput": 5998231.8204830345,
+                  "maxRtt": 145.363,
+                  "maxServerLatency": 128.16299999999998,
+                  "totalByteWeight": 444602,
+                  "totalTaskTime": 246.84999999999968,
                   "mainDocumentTransferSize": 40958
                 }
               ]
