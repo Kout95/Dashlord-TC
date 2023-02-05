@@ -102,7 +102,7 @@
     "connection": "keep-alive",
     "content-encoding": "gzip",
     "content-type": "text/html",
-    "date": "Sun, 29 Jan 2023 01:27:31 GMT",
+    "date": "Sun, 05 Feb 2023 01:28:01 GMT",
     "etag": "W/\"635f90f4-1f840\"",
     "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
     "server": "nginx/1.18.0 (Ubuntu)",
@@ -223,7 +223,7 @@
     },
     {
       "hostname": "fonts.googleapis.com",
-      "ip": "142.250.189.170",
+      "ip": "173.194.74.95",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -277,18 +277,18 @@
     },
     {
       "hostname": "plausible.io",
-      "ip": "156.146.53.227",
+      "ip": "212.102.40.113",
       "geoip": {
         "city": {
-          "geoname_id": 5392171,
+          "geoname_id": 4684888,
           "names": {
-            "de": "San José",
-            "en": "San Jose",
-            "es": "San José",
-            "fr": "San José",
-            "ja": "サンノゼ",
-            "pt-BR": "San José",
-            "ru": "Сан-Хосе"
+            "de": "Dallas",
+            "en": "Dallas",
+            "es": "Dallas",
+            "fr": "Dallas",
+            "ja": "ダラス",
+            "pt-BR": "Dallas",
+            "ru": "Даллас"
           }
         },
         "continent": {
@@ -321,13 +321,13 @@
         },
         "location": {
           "accuracy_radius": 20,
-          "latitude": 37.1835,
-          "longitude": -121.7714,
-          "metro_code": 807,
-          "time_zone": "America/Los_Angeles"
+          "latitude": 32.7797,
+          "longitude": -96.8022,
+          "metro_code": 623,
+          "time_zone": "America/Chicago"
         },
         "postal": {
-          "code": "95141"
+          "code": "75270"
         },
         "registered_country": {
           "geoname_id": 2635167,
@@ -345,17 +345,15 @@
         },
         "subdivisions": [
           {
-            "geoname_id": 5332921,
-            "iso_code": "CA",
+            "geoname_id": 4736286,
+            "iso_code": "TX",
             "names": {
-              "de": "Kalifornien",
-              "en": "California",
-              "es": "California",
-              "fr": "Californie",
-              "ja": "カリフォルニア州",
-              "pt-BR": "Califórnia",
-              "ru": "Калифорния",
-              "zh-CN": "加州"
+              "en": "Texas",
+              "es": "Texas",
+              "fr": "Texas",
+              "ja": "テキサス州",
+              "ru": "Техас",
+              "zh-CN": "德克萨斯州"
             }
           }
         ]
@@ -363,7 +361,7 @@
     },
     {
       "hostname": "fonts.gstatic.com",
-      "ip": "142.250.189.195",
+      "ip": "173.194.194.94",
       "geoip": {
         "continent": {
           "code": "NA",
