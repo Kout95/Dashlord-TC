@@ -5,7 +5,7 @@
     "http": {
       "url": "https://telescoop.fr",
       "algorithm_version": 2,
-      "end_time": "Sun, 05 Feb 2023 01:27:38 GMT",
+      "end_time": "Sun, 12 Feb 2023 01:26:53 GMT",
       "grade": "F",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -13,15 +13,15 @@
         "Connection": "keep-alive",
         "Content-Encoding": "gzip",
         "Content-Type": "text/html",
-        "Date": "Sun, 05 Feb 2023 01:27:37 GMT",
+        "Date": "Sun, 12 Feb 2023 01:26:52 GMT",
         "ETag": "W/\"635f90f4-1f840\"",
         "Last-Modified": "Mon, 31 Oct 2022 09:10:12 GMT",
         "Server": "nginx/1.18.0 (Ubuntu)",
         "Transfer-Encoding": "chunked"
       },
-      "scan_id": 33832046,
+      "scan_id": 34176571,
       "score": 15,
-      "start_time": "Sun, 05 Feb 2023 01:27:23 GMT",
+      "start_time": "Sun, 12 Feb 2023 01:26:48 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 6,
@@ -334,7 +334,7 @@
         "finding": "not offered"
       },
       {
-        "id": "cipherlist_AVERAGE",
+        "id": "cipherlist_OBSOLETED",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
@@ -342,14 +342,14 @@
         "finding": "not offered"
       },
       {
-        "id": "cipherlist_GOOD",
+        "id": "cipherlist_STRONG_NOFS",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
         "finding": "not offered"
       },
       {
-        "id": "cipherlist_STRONG",
+        "id": "cipherlist_STRONG_FS",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
@@ -598,7 +598,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "62 >= 30 days"
+        "finding": "55 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -801,7 +801,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "1675560554"
+        "finding": "1676165311"
       },
       {
         "id": "HSTS",
@@ -1357,7 +1357,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "136"
+        "finding": "93"
       }
     ],
     "thirdparties": {
@@ -1464,7 +1464,7 @@
         "connection": "keep-alive",
         "content-encoding": "gzip",
         "content-type": "text/html",
-        "date": "Sun, 05 Feb 2023 01:28:01 GMT",
+        "date": "Sun, 12 Feb 2023 01:27:24 GMT",
         "etag": "W/\"635f90f4-1f840\"",
         "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
         "server": "nginx/1.18.0 (Ubuntu)",
@@ -1475,6 +1475,19 @@
           "hostname": "telescoop.fr",
           "ip": "51.210.109.110",
           "geoip": {
+            "city": {
+              "geoname_id": 2982652,
+              "names": {
+                "de": "Rouen",
+                "en": "Rouen",
+                "es": "Ruan",
+                "fr": "Rouen",
+                "ja": "ルーアン",
+                "pt-BR": "Ruão",
+                "ru": "Руан",
+                "zh-CN": "鲁昂"
+              }
+            },
             "continent": {
               "code": "EU",
               "geoname_id": 6255148,
@@ -1505,9 +1518,9 @@
               }
             },
             "location": {
-              "accuracy_radius": 500,
-              "latitude": 48.8582,
-              "longitude": 2.3387,
+              "accuracy_radius": 1000,
+              "latitude": 49.4429,
+              "longitude": 1.1003,
               "time_zone": "Europe/Paris"
             },
             "registered_country": {
@@ -1524,13 +1537,49 @@
                 "ru": "Франция",
                 "zh-CN": "法国"
               }
-            }
+            },
+            "subdivisions": [
+              {
+                "geoname_id": 11071621,
+                "iso_code": "NOR",
+                "names": {
+                  "de": "Normandie",
+                  "en": "Normandy",
+                  "es": "Normandía",
+                  "fr": "Normandie"
+                }
+              },
+              {
+                "geoname_id": 2975248,
+                "iso_code": "76",
+                "names": {
+                  "de": "Seine-Maritime",
+                  "en": "Seine-Maritime",
+                  "es": "Sena Marítimo",
+                  "fr": "Seine-Maritime",
+                  "pt-BR": "Sena Marítimo"
+                }
+              }
+            ]
           }
         },
         {
           "hostname": "www.telescoop.fr",
           "ip": "51.210.109.110",
           "geoip": {
+            "city": {
+              "geoname_id": 2982652,
+              "names": {
+                "de": "Rouen",
+                "en": "Rouen",
+                "es": "Ruan",
+                "fr": "Rouen",
+                "ja": "ルーアン",
+                "pt-BR": "Ruão",
+                "ru": "Руан",
+                "zh-CN": "鲁昂"
+              }
+            },
             "continent": {
               "code": "EU",
               "geoname_id": 6255148,
@@ -1561,9 +1610,9 @@
               }
             },
             "location": {
-              "accuracy_radius": 500,
-              "latitude": 48.8582,
-              "longitude": 2.3387,
+              "accuracy_radius": 1000,
+              "latitude": 49.4429,
+              "longitude": 1.1003,
               "time_zone": "Europe/Paris"
             },
             "registered_country": {
@@ -1580,12 +1629,35 @@
                 "ru": "Франция",
                 "zh-CN": "法国"
               }
-            }
+            },
+            "subdivisions": [
+              {
+                "geoname_id": 11071621,
+                "iso_code": "NOR",
+                "names": {
+                  "de": "Normandie",
+                  "en": "Normandy",
+                  "es": "Normandía",
+                  "fr": "Normandie"
+                }
+              },
+              {
+                "geoname_id": 2975248,
+                "iso_code": "76",
+                "names": {
+                  "de": "Seine-Maritime",
+                  "en": "Seine-Maritime",
+                  "es": "Sena Marítimo",
+                  "fr": "Seine-Maritime",
+                  "pt-BR": "Sena Marítimo"
+                }
+              }
+            ]
           }
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "173.194.74.95",
+          "ip": "172.253.115.95",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1639,18 +1711,13 @@
         },
         {
           "hostname": "plausible.io",
-          "ip": "212.102.40.113",
+          "ip": "37.19.207.34",
           "geoip": {
             "city": {
-              "geoname_id": 4684888,
+              "geoname_id": 4744870,
               "names": {
-                "de": "Dallas",
-                "en": "Dallas",
-                "es": "Dallas",
-                "fr": "Dallas",
-                "ja": "ダラス",
-                "pt-BR": "Dallas",
-                "ru": "Даллас"
+                "en": "Ashburn",
+                "ru": "Ашберн"
               }
             },
             "continent": {
@@ -1683,13 +1750,13 @@
             },
             "location": {
               "accuracy_radius": 20,
-              "latitude": 32.7797,
-              "longitude": -96.8022,
-              "metro_code": 623,
-              "time_zone": "America/Chicago"
+              "latitude": 39.0469,
+              "longitude": -77.4903,
+              "metro_code": 511,
+              "time_zone": "America/New_York"
             },
             "postal": {
-              "code": "75270"
+              "code": "20149"
             },
             "registered_country": {
               "geoname_id": 2635167,
@@ -1707,15 +1774,15 @@
             },
             "subdivisions": [
               {
-                "geoname_id": 4736286,
-                "iso_code": "TX",
+                "geoname_id": 6254928,
+                "iso_code": "VA",
                 "names": {
-                  "en": "Texas",
-                  "es": "Texas",
-                  "fr": "Texas",
-                  "ja": "テキサス州",
-                  "ru": "Техас",
-                  "zh-CN": "德克萨斯州"
+                  "en": "Virginia",
+                  "fr": "Virginie",
+                  "ja": "バージニア州",
+                  "pt-BR": "Virgínia",
+                  "ru": "Вирджиния",
+                  "zh-CN": "弗吉尼亚州"
                 }
               }
             ]
@@ -1723,7 +1790,7 @@
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "173.194.194.94",
+          "ip": "142.250.31.94",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1787,23 +1854,6 @@
         }
       },
       "technologies": [
-        {
-          "slug": "c",
-          "name": "C",
-          "description": "C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system.",
-          "confidence": 100,
-          "version": null,
-          "icon": "C.png",
-          "website": "http://www.open-std.org/jtc1/sc22/wg14/",
-          "cpe": null,
-          "categories": [
-            {
-              "id": 27,
-              "slug": "programming-languages",
-              "name": "Programming languages"
-            }
-          ]
-        },
         {
           "slug": "ubuntu",
           "name": "Ubuntu",
@@ -1981,7 +2031,7 @@
     "zap": {
       "@programName": "OWASP ZAP",
       "@version": "2.12.0",
-      "@generated": "Sun, 5 Feb 2023 01:26:55",
+      "@generated": "Sun, 12 Feb 2023 01:26:20",
       "site": [
         {
           "@name": "https://telescoop.fr",
@@ -2082,7 +2132,7 @@
       {
         "requestedUrl": "https://telescoop.fr/",
         "finalUrl": "https://www.telescoop.fr/",
-        "fetchTime": "2023-02-05T01:27:11.704Z",
+        "fetchTime": "2023-02-12T01:26:37.583Z",
         "runWarnings": [
           "The page may not be loading as expected because your test URL (https://telescoop.fr/) was redirected to https://www.telescoop.fr/. Try testing the second URL directly."
         ],
@@ -2147,53 +2197,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3840,
+            "numericValue": 4252,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3840,
-                  "firstMeaningfulPaint": 3840,
-                  "largestContentfulPaint": 3990,
-                  "interactive": 3840,
-                  "speedIndex": 4161,
+                  "firstContentfulPaint": 4252,
+                  "firstMeaningfulPaint": 4252,
+                  "largestContentfulPaint": 4327,
+                  "interactive": 4252,
+                  "speedIndex": 4252,
                   "totalBlockingTime": 0,
                   "maxPotentialFID": 16,
                   "cumulativeLayoutShift": 0.11735973358154297,
                   "cumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "totalCumulativeLayoutShift": 0.11735973358154297,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 352094120,
+                  "observedTimeOriginTs": 306488395,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 352094120,
-                  "observedFirstPaint": 1356,
-                  "observedFirstPaintTs": 353450349,
-                  "observedFirstContentfulPaint": 1356,
-                  "observedFirstContentfulPaintTs": 353450349,
-                  "observedFirstContentfulPaintAllFrames": 1356,
-                  "observedFirstContentfulPaintAllFramesTs": 353450349,
-                  "observedFirstMeaningfulPaint": 1356,
-                  "observedFirstMeaningfulPaintTs": 353450349,
-                  "observedLargestContentfulPaint": 1356,
-                  "observedLargestContentfulPaintTs": 353450349,
-                  "observedLargestContentfulPaintAllFrames": 1356,
-                  "observedLargestContentfulPaintAllFramesTs": 353450349,
-                  "observedTraceEnd": 3813,
-                  "observedTraceEndTs": 355906794,
-                  "observedLoad": 1499,
-                  "observedLoadTs": 353593336,
-                  "observedDomContentLoaded": 1400,
-                  "observedDomContentLoadedTs": 353493664,
+                  "observedNavigationStartTs": 306488395,
+                  "observedFirstPaint": 963,
+                  "observedFirstPaintTs": 307451343,
+                  "observedFirstContentfulPaint": 963,
+                  "observedFirstContentfulPaintTs": 307451343,
+                  "observedFirstContentfulPaintAllFrames": 963,
+                  "observedFirstContentfulPaintAllFramesTs": 307451343,
+                  "observedFirstMeaningfulPaint": 963,
+                  "observedFirstMeaningfulPaintTs": 307451343,
+                  "observedLargestContentfulPaint": 963,
+                  "observedLargestContentfulPaintTs": 307451343,
+                  "observedLargestContentfulPaintAllFrames": 963,
+                  "observedLargestContentfulPaintAllFramesTs": 307451343,
+                  "observedTraceEnd": 3390,
+                  "observedTraceEndTs": 309878652,
+                  "observedLoad": 1077,
+                  "observedLoadTs": 307565415,
+                  "observedDomContentLoaded": 955,
+                  "observedDomContentLoadedTs": 307443631,
                   "observedCumulativeLayoutShift": 0.11735973358154297,
                   "observedCumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "observedTotalCumulativeLayoutShift": 0.11735973358154297,
-                  "observedFirstVisualChange": 1358,
-                  "observedFirstVisualChangeTs": 353452120,
-                  "observedLastVisualChange": 1475,
-                  "observedLastVisualChangeTs": 353569120,
-                  "observedSpeedIndex": 1368,
-                  "observedSpeedIndexTs": 353461861
+                  "observedFirstVisualChange": 949,
+                  "observedFirstVisualChangeTs": 307437395,
+                  "observedLastVisualChange": 982,
+                  "observedLastVisualChangeTs": 307470395,
+                  "observedSpeedIndex": 952,
+                  "observedSpeedIndexTs": 307440369
                 },
                 {
                   "lcpInvalidated": false
@@ -2215,18 +2265,18 @@
                   "numScripts": 3,
                   "numStylesheets": 3,
                   "numFonts": 1,
-                  "numTasks": 284,
-                  "numTasksOver10ms": 4,
-                  "numTasksOver25ms": 2,
-                  "numTasksOver50ms": 2,
+                  "numTasks": 242,
+                  "numTasksOver10ms": 3,
+                  "numTasksOver25ms": 1,
+                  "numTasksOver50ms": 1,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 0.593,
-                  "throughput": 7847567.247795541,
-                  "maxRtt": 108.30000000000001,
-                  "maxServerLatency": 108.62100000000001,
+                  "rtt": 1.19,
+                  "throughput": 14019235.698423063,
+                  "maxRtt": 79.142,
+                  "maxServerLatency": 81.415,
                   "totalByteWeight": 444602,
-                  "totalTaskTime": 241.3469999999998,
+                  "totalTaskTime": 184.39499999999956,
                   "mainDocumentTransferSize": 40958
                 }
               ]
