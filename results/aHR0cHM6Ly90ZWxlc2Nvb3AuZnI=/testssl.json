@@ -110,7 +110,7 @@
               "finding"      : "not offered"
           }
 ,         {
-              "id"           : "cipherlist_AVERAGE",
+              "id"           : "cipherlist_OBSOLETED",
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "INFO",
@@ -118,14 +118,14 @@
               "finding"      : "not offered"
           }
 ,         {
-              "id"           : "cipherlist_GOOD",
+              "id"           : "cipherlist_STRONG_NOFS",
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "INFO",
               "finding"      : "not offered"
           }
 ,         {
-              "id"           : "cipherlist_STRONG",
+              "id"           : "cipherlist_STRONG_FS",
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "OK",
@@ -374,7 +374,7 @@
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "62 >= 30 days"
+              "finding"      : "55 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -577,7 +577,7 @@
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1675560554"
+              "finding"      : "1676165311"
           }
 ,         {
               "id"           : "HSTS",
@@ -1133,6 +1133,6 @@
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "136"
+              "finding"      : "93"
           }
 ]
