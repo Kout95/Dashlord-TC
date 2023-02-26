@@ -5,7 +5,7 @@
     "http": {
       "url": "https://telescoop.fr",
       "algorithm_version": 2,
-      "end_time": "Sun, 19 Feb 2023 01:26:38 GMT",
+      "end_time": "Sun, 26 Feb 2023 01:38:23 GMT",
       "grade": "F",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -13,15 +13,15 @@
         "Connection": "keep-alive",
         "Content-Encoding": "gzip",
         "Content-Type": "text/html",
-        "Date": "Sun, 19 Feb 2023 01:26:37 GMT",
+        "Date": "Sun, 26 Feb 2023 01:38:22 GMT",
         "ETag": "W/\"635f90f4-1f840\"",
         "Last-Modified": "Mon, 31 Oct 2022 09:10:12 GMT",
         "Server": "nginx/1.18.0 (Ubuntu)",
         "Transfer-Encoding": "chunked"
       },
-      "scan_id": 34451996,
+      "scan_id": 34692529,
       "score": 15,
-      "start_time": "Sun, 19 Feb 2023 01:26:32 GMT",
+      "start_time": "Sun, 26 Feb 2023 01:38:17 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 6,
@@ -598,7 +598,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "48 >= 30 days"
+        "finding": "41 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -801,7 +801,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "1676770103"
+        "finding": "1677375601"
       },
       {
         "id": "HSTS",
@@ -1357,7 +1357,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "134"
+        "finding": "91"
       }
     ],
     "thirdparties": {
@@ -1464,7 +1464,7 @@
         "connection": "keep-alive",
         "content-encoding": "gzip",
         "content-type": "text/html",
-        "date": "Sun, 19 Feb 2023 01:27:11 GMT",
+        "date": "Sun, 26 Feb 2023 01:38:55 GMT",
         "etag": "W/\"635f90f4-1f840\"",
         "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
         "server": "nginx/1.18.0 (Ubuntu)",
@@ -1518,7 +1518,7 @@
               }
             },
             "location": {
-              "accuracy_radius": 1000,
+              "accuracy_radius": 100,
               "latitude": 49.4429,
               "longitude": 1.1003,
               "time_zone": "Europe/Paris"
@@ -1610,7 +1610,7 @@
               }
             },
             "location": {
-              "accuracy_radius": 1000,
+              "accuracy_radius": 100,
               "latitude": 49.4429,
               "longitude": 1.1003,
               "time_zone": "Europe/Paris"
@@ -1657,7 +1657,7 @@
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "142.250.138.95",
+          "ip": "142.251.16.95",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1711,18 +1711,13 @@
         },
         {
           "hostname": "plausible.io",
-          "ip": "212.102.40.113",
+          "ip": "37.19.207.34",
           "geoip": {
             "city": {
-              "geoname_id": 4684888,
+              "geoname_id": 4744870,
               "names": {
-                "de": "Dallas",
-                "en": "Dallas",
-                "es": "Dallas",
-                "fr": "Dallas",
-                "ja": "ダラス",
-                "pt-BR": "Dallas",
-                "ru": "Даллас"
+                "en": "Ashburn",
+                "ru": "Ашберн"
               }
             },
             "continent": {
@@ -1755,13 +1750,13 @@
             },
             "location": {
               "accuracy_radius": 20,
-              "latitude": 32.7797,
-              "longitude": -96.8022,
-              "metro_code": 623,
-              "time_zone": "America/Chicago"
+              "latitude": 39.0469,
+              "longitude": -77.4903,
+              "metro_code": 511,
+              "time_zone": "America/New_York"
             },
             "postal": {
-              "code": "75270"
+              "code": "20149"
             },
             "registered_country": {
               "geoname_id": 2635167,
@@ -1779,15 +1774,15 @@
             },
             "subdivisions": [
               {
-                "geoname_id": 4736286,
-                "iso_code": "TX",
+                "geoname_id": 6254928,
+                "iso_code": "VA",
                 "names": {
-                  "en": "Texas",
-                  "es": "Texas",
-                  "fr": "Texas",
-                  "ja": "テキサス州",
-                  "ru": "Техас",
-                  "zh-CN": "德克萨斯州"
+                  "en": "Virginia",
+                  "fr": "Virginie",
+                  "ja": "バージニア州",
+                  "pt-BR": "Virgínia",
+                  "ru": "Вирджиния",
+                  "zh-CN": "弗吉尼亚州"
                 }
               }
             ]
@@ -1795,7 +1790,7 @@
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "142.250.114.94",
+          "ip": "172.253.62.94",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -2036,7 +2031,7 @@
     "zap": {
       "@programName": "OWASP ZAP",
       "@version": "2.12.0",
-      "@generated": "Sun, 19 Feb 2023 01:26:04",
+      "@generated": "Sun, 26 Feb 2023 01:37:51",
       "site": [
         {
           "@name": "https://telescoop.fr",
@@ -2137,7 +2132,7 @@
       {
         "requestedUrl": "https://telescoop.fr/",
         "finalUrl": "https://www.telescoop.fr/",
-        "fetchTime": "2023-02-19T01:26:21.136Z",
+        "fetchTime": "2023-02-26T01:38:07.414Z",
         "runWarnings": [
           "The page may not be loading as expected because your test URL (https://telescoop.fr/) was redirected to https://www.telescoop.fr/. Try testing the second URL directly."
         ],
@@ -2202,53 +2197,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3855,
+            "numericValue": 3647,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3855,
-                  "firstMeaningfulPaint": 3855,
-                  "largestContentfulPaint": 4080,
-                  "interactive": 3855,
-                  "speedIndex": 4088,
+                  "firstContentfulPaint": 3647,
+                  "firstMeaningfulPaint": 3647,
+                  "largestContentfulPaint": 3797,
+                  "interactive": 3647,
+                  "speedIndex": 3647,
                   "totalBlockingTime": 0,
                   "maxPotentialFID": 16,
                   "cumulativeLayoutShift": 0.11735973358154297,
                   "cumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "totalCumulativeLayoutShift": 0.11735973358154297,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 205186906,
+                  "observedTimeOriginTs": 261534847,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 205186906,
-                  "observedFirstPaint": 1303,
-                  "observedFirstPaintTs": 206489694,
-                  "observedFirstContentfulPaint": 1303,
-                  "observedFirstContentfulPaintTs": 206489694,
-                  "observedFirstContentfulPaintAllFrames": 1303,
-                  "observedFirstContentfulPaintAllFramesTs": 206489694,
-                  "observedFirstMeaningfulPaint": 1303,
-                  "observedFirstMeaningfulPaintTs": 206489694,
-                  "observedLargestContentfulPaint": 1303,
-                  "observedLargestContentfulPaintTs": 206489694,
-                  "observedLargestContentfulPaintAllFrames": 1303,
-                  "observedLargestContentfulPaintAllFramesTs": 206489694,
-                  "observedTraceEnd": 3819,
-                  "observedTraceEndTs": 209005624,
-                  "observedLoad": 1508,
-                  "observedLoadTs": 206694713,
-                  "observedDomContentLoaded": 1314,
-                  "observedDomContentLoadedTs": 206500470,
+                  "observedNavigationStartTs": 261534847,
+                  "observedFirstPaint": 947,
+                  "observedFirstPaintTs": 262482097,
+                  "observedFirstContentfulPaint": 947,
+                  "observedFirstContentfulPaintTs": 262482097,
+                  "observedFirstContentfulPaintAllFrames": 947,
+                  "observedFirstContentfulPaintAllFramesTs": 262482097,
+                  "observedFirstMeaningfulPaint": 947,
+                  "observedFirstMeaningfulPaintTs": 262482097,
+                  "observedLargestContentfulPaint": 947,
+                  "observedLargestContentfulPaintTs": 262482097,
+                  "observedLargestContentfulPaintAllFrames": 947,
+                  "observedLargestContentfulPaintAllFramesTs": 262482097,
+                  "observedTraceEnd": 3445,
+                  "observedTraceEndTs": 264979749,
+                  "observedLoad": 1133,
+                  "observedLoadTs": 262667855,
+                  "observedDomContentLoaded": 987,
+                  "observedDomContentLoadedTs": 262522345,
                   "observedCumulativeLayoutShift": 0.11735973358154297,
                   "observedCumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "observedTotalCumulativeLayoutShift": 0.11735973358154297,
-                  "observedFirstVisualChange": 1304,
-                  "observedFirstVisualChangeTs": 206490906,
-                  "observedLastVisualChange": 1354,
-                  "observedLastVisualChangeTs": 206540906,
-                  "observedSpeedIndex": 1309,
-                  "observedSpeedIndexTs": 206495740
+                  "observedFirstVisualChange": 954,
+                  "observedFirstVisualChangeTs": 262488847,
+                  "observedLastVisualChange": 987,
+                  "observedLastVisualChangeTs": 262521847,
+                  "observedSpeedIndex": 957,
+                  "observedSpeedIndexTs": 262492167
                 },
                 {
                   "lcpInvalidated": false
@@ -2270,18 +2265,18 @@
                   "numScripts": 3,
                   "numStylesheets": 3,
                   "numFonts": 1,
-                  "numTasks": 261,
-                  "numTasksOver10ms": 2,
+                  "numTasks": 248,
+                  "numTasksOver10ms": 1,
                   "numTasksOver25ms": 1,
                   "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 5.724,
-                  "throughput": 9953869.672583502,
-                  "maxRtt": 109.393,
-                  "maxServerLatency": 106.92899999999999,
-                  "totalByteWeight": 444601,
-                  "totalTaskTime": 130.08900000000006,
+                  "rtt": 1.3469999999999995,
+                  "throughput": 14553984.460079193,
+                  "maxRtt": 80.998,
+                  "maxServerLatency": 75.70700000000001,
+                  "totalByteWeight": 444603,
+                  "totalTaskTime": 136.58300000000006,
                   "mainDocumentTransferSize": 40958
                 }
               ]
