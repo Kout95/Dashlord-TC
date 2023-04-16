@@ -1,22 +1,17 @@
 [
-  {
-    "label": "EcoIndex",
-    "value": 50
-  },
-  {
-    "label": "Note",
-    "value": "D"
-  },
-  {
-    "label": "GES",
-    "value": 2,
-    "unit": "gCO2e",
-    "comment": "Pour un total de 2000 visites par mois, ceci correspond à 44km en voiture (Peugeot 208 5P 1.6 BlueHDi FAP (75ch) BVM5)"
-  },
-  {
-    "label": "Eau",
-    "value": 3,
-    "unit": "cl",
-    "comment": "Pour un total de 2000 visites par mois, ceci correspond à 1 douche"
-  }
+    {
+        "width": 1920,
+        "height": 1080,
+        "url": "https://telescoop.fr",
+        "size": 727.303,
+        "nodes": 1079,
+        "requests": 23,
+        "grade": "D",
+        "score": 53.0,
+        "ges": 1.94,
+        "water": 2.91,
+        "ecoindex_version": "5.4.2",
+        "date": "2023-04-16 01:17:23.875516",
+        "page_type": "website"
+    }
 ]
