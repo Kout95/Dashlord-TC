@@ -290,7 +290,7 @@
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "0486281BD022EF6A0CAEE1923A6D2D206A6C"
+              "finding"      : "047B815BDADC55D8961AF2E1478EA665F870"
           }
 ,         {
               "id"           : "cert_serialNumberLen",
@@ -304,21 +304,21 @@
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2A9B02753774F2FB8E82424EA5E76492174E8927"
+              "finding"      : "6DEC36BDC96452EDDB07AD1AA83A1A6611A5B15A"
           }
 ,         {
               "id"           : "cert_fingerprintSHA256",
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "7659187110208A25280DC045CD8D75D6257A10EC5B44C18FD59DDFD3E8D11E59"
+              "finding"      : "43371DD8306792BF803B4C6A89F433EDCCEA9143D1C7EC1E3E2231D0C0E71C0E"
           }
 ,         {
               "id"           : "cert",
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFIDCCBAigAwIBAgISBIYoG9Ai72oMruGSOm0tIGpsMA0GCSqGSIb3DQEBCwUAMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJSMzAeFw0yMzAzMTAwOTE2MzFaFw0yMzA2MDgwOTE2MzBaMBcxFTATBgNVBAMTDHRlbGVzY29vcC5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKQ08f/fvhm2T0Zu5yoUR7raZlEhLakzYbaoPbKiMG9gzTraXCvWeihDw5JAKZ8BO1y7L/S2BIkUjEe+tHzlMKgRZCWiYnYKd1XKTT85mK7NDf2Jk9nK9VVJKOcSt/XlhvngRPVHxQgEKaNaBGeDHw2uhkqztG96EhwNtTfGUmBw43Rjq8kfng9xwk2HM8ifBQ15/04xb67JhYu0hk4cDfSE7cqkvZdvCQabwsPbgWcS3FtgU8Jb7CfVnSRUdX3mv+iWcMiIPOKVAT70f0FcA4XLDMGCe/PCjORrJST3WJIIO/5HTRhLm8e9yic9kdgwPwpD+OeHRAxJPD4rHamoiH0CAwEAAaOCAkkwggJFMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUuhrfb4CTMOX4N0rCf2w4aCYY69wwHwYDVR0jBBgwFoAUFC6zF7dYVsuuUAlA5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8vcjMuby5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9yZy8wFwYDVR0RBBAwDoIMdGVsZXNjb29wLmZyMEwGA1UdIARFMEMwCAYGZ4EMAQIBMDcGCysGAQQBgt8TAQEBMCgwJgYIKwYBBQUHAgEWGmh0dHA6Ly9jcHMubGV0c2VuY3J5cHQub3JnMIIBBgYKKwYBBAHWeQIEAgSB9wSB9ADyAHcAejKMVNi3LbYg6jjgUh7phBZwMhOFTTvSK8E6V6NS61IAAAGGywWpOAAABAMASDBGAiEAhsArPNnRE+Mbn5n4c6FcYKAYiKQtNrEElikRwF3z7+QCIQCPzmulfV7g/mNZT0ZEYtmS2o9DDeS2wV7JblJ98rW7sgB3ALc++yTfnE26dfI5xbpY9Gxd/ELPep81xJ4dCYEl7bSZAAABhssFqSgAAAQDAEgwRgIhAOGRnnZimXcLc5re7VfeWJan9xDDtORdRLSGv22+5ojSAiEA8crVmdWvVbQbkP0IqS5tSshWzrFZj64IbaaLGPRiOJswDQYJKoZIhvcNAQELBQADggEBACu6CkUl9JWF+2nH76u0nBW9cp8ZQrSXzetOtOt35HV9qMdL5ZRjivY6PQ2qQdtF60GnwQvLVke3UAtdiCfrK03ib56k6BdWHpTum/XO7PbWOaxgxssOP4q87MPDw+a7RrpRjM55EeyIbq6opqTXVu8qv/bpI6TgKyRCIGDDJ6y1iKRO6PmEAhH4OJES4Z4o9PPZ2CnL78uBStgOtMNMY3XPELZzLN3sLsyYn0hwUHW0ncYaSUFHWGTQdYMWzeLPyjxrjR01ArHEzB1CuT5v9JLeOPgNg/2Ee/Kh93Mu3R/C3+45RUmsWX7gFYhsRXOAgKTl6QEjWQufQ7AQDCqheD4=\n-----END CERTIFICATE-----"
+              "finding"      : "-----BEGIN CERTIFICATE-----\nMIIFHTCCBAWgAwIBAgISBHuBW9rcVdiWGvLhR46mZfhwMA0GCSqGSIb3DQEBCwUAMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJSMzAeFw0yMzA1MDkxMzQyMTNaFw0yMzA4MDcxMzQyMTJaMBcxFTATBgNVBAMTDHRlbGVzY29vcC5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANX5n3jEaO6FLwe2rtSwh9XySGq8I37jmZita64LkCXUMPQJcT8lPRN3mFGw1ZK5WVXnjP5fV1caDFMLYlrzI8XoBo4INiUHgutmR/7KvNIa6kMqjZjaf/L33gGIJwRgDZHS8OK7BHuymkJS+CLyf20u11JaKJCAAr6s/MLD/D88DmhRd8pw4gjzLt+cSQhYwayy3RLufvk4lYT+dPGnenaIn7Ze0hIm4W71VO7MdqW/9qVK+9f524VRMnksSb4AKPm3bmrV3ITxhM1Wdqf3vRoYVQDQjm06MQ/5iqZFvtDtyAhJzvROHmXiO3Mf1XJUkVvnBB7+iFDadbfpYKONxNMCAwEAAaOCAkYwggJCMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQU8fInIFmtoRooKtk7pTN5EwYpVx8wHwYDVR0jBBgwFoAUFC6zF7dYVsuuUAlA5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8vcjMuby5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9yZy8wFwYDVR0RBBAwDoIMdGVsZXNjb29wLmZyMEwGA1UdIARFMEMwCAYGZ4EMAQIBMDcGCysGAQQBgt8TAQEBMCgwJgYIKwYBBQUHAgEWGmh0dHA6Ly9jcHMubGV0c2VuY3J5cHQub3JnMIIBAwYKKwYBBAHWeQIEAgSB9ASB8QDvAHYAtz77JN+cTbp18jnFulj0bF38Qs96nzXEnh0JgSXttJkAAAGIAPZ8LAAABAMARzBFAiEArlCNAFiZPeLkWlypWOb2rxXKgpJFqhcf2bN/FF/ZdrwCIAlpxSlezAVPghus4pChQRoVtN3gqPGTH1H+kmbfxsloAHUA6D7Q2j71BjUy51covIlryQPTy9ERa+zraeF3fW0GvW4AAAGIAPZ8NAAABAMARjBEAiBVxfTxkqu74cjy2CpNF4UD53CWsY/C63Mrm60kWwS+UQIgWR7ZCVWT9dNqktx0TtYUdErerAhmft5Lpx8IXW9t278wDQYJKoZIhvcNAQELBQADggEBAKioA/IzqcT05m4OQdto9Jivk3jFBPaPRlUisP2LEam8wv5kUvWhxbGVGjwaXOByu2qoonsqU+bcP7n+ZP1H8pE5IMXS9MgYdcphH5/Lni0lxZRIzslz9tVyEdPeSpze7YH32H2fqvGBAobzdbprq8CUGB9rQzb9edc2t4QhPdSgOpsYrljMSadLpxyx8P7AQFfE8leiBLItmUPFFSkUd1dLXrXQXKGkMAYWvWIuae33Vue3JlyBQtJbySsbBce5343ALlTjGHyhQds6sD6C50Sg7qA/x9Mhl09RESMcQZ02aq5SclY1yddHMeqcVB6OFiaEbGxAq7b84aOkA9ygtrs=\n-----END CERTIFICATE-----"
           }
 ,         {
               "id"           : "cert_commonName",
@@ -367,21 +367,21 @@
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "32 >= 30 days"
+              "finding"      : "85 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "2023-03-10 09:16"
+              "finding"      : "2023-05-09 13:42"
           }
 ,         {
               "id"           : "cert_notAfter",
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "2023-06-08 09:16"
+              "finding"      : "2023-08-07 13:42"
           }
 ,         {
               "id"           : "cert_extlifeSpan",
@@ -570,7 +570,7 @@
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1683422772"
+              "finding"      : "1684027272"
           }
 ,         {
               "id"           : "HSTS",
@@ -743,7 +743,7 @@
               "severity"     : "INFO",
               "cve"          : "CVE-2016-0800 CVE-2016-0703",
               "cwe"          : "CWE-310",
-              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=7659187110208A25280DC045CD8D75D6257A10EC5B44C18FD59DDFD3E8D11E59"
+              "finding"      : "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=43371DD8306792BF803B4C6A89F433EDCCEA9143D1C7EC1E3E2231D0C0E71C0E"
           }
 ,         {
               "id"           : "LOGJAM-common_primes",
@@ -1126,6 +1126,6 @@
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "59"
+              "finding"      : "56"
           }
 ]
