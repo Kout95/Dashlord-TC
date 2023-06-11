@@ -102,7 +102,7 @@
     "connection": "keep-alive",
     "content-encoding": "gzip",
     "content-type": "text/html",
-    "date": "Sun, 04 Jun 2023 01:53:29 GMT",
+    "date": "Sun, 11 Jun 2023 01:46:21 GMT",
     "etag": "W/\"635f90f4-1f840\"",
     "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
     "server": "nginx/1.18.0 (Ubuntu)",
@@ -223,7 +223,7 @@
     },
     {
       "hostname": "fonts.googleapis.com",
-      "ip": "142.250.114.95",
+      "ip": "142.251.40.74",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -277,18 +277,17 @@
     },
     {
       "hostname": "plausible.io",
-      "ip": "212.102.40.114",
+      "ip": "37.19.216.130",
       "geoip": {
         "city": {
-          "geoname_id": 4684888,
+          "geoname_id": 4699066,
           "names": {
-            "de": "Dallas",
-            "en": "Dallas",
-            "es": "Dallas",
-            "fr": "Dallas",
-            "ja": "ダラス",
-            "pt-BR": "Dallas",
-            "ru": "Даллас"
+            "en": "Houston",
+            "fr": "Houston",
+            "ja": "ヒューストン",
+            "pt-BR": "Houston",
+            "ru": "Хьюстон",
+            "zh-CN": "休斯敦"
           }
         },
         "continent": {
@@ -321,13 +320,13 @@
         },
         "location": {
           "accuracy_radius": 20,
-          "latitude": 32.7797,
-          "longitude": -96.8022,
-          "metro_code": 623,
+          "latitude": 29.7646,
+          "longitude": -95.3657,
+          "metro_code": 618,
           "time_zone": "America/Chicago"
         },
         "postal": {
-          "code": "75270"
+          "code": "77002"
         },
         "registered_country": {
           "geoname_id": 2635167,
@@ -361,14 +360,8 @@
     },
     {
       "hostname": "fonts.gstatic.com",
-      "ip": "142.251.40.67",
+      "ip": "142.251.32.195",
       "geoip": {
-        "city": {
-          "geoname_id": 5116104,
-          "names": {
-            "en": "East White Plains"
-          }
-        },
         "continent": {
           "code": "NA",
           "geoname_id": 6255149,
@@ -399,13 +392,9 @@
         },
         "location": {
           "accuracy_radius": 1000,
-          "latitude": 41.0617,
-          "longitude": -73.7388,
-          "metro_code": 501,
-          "time_zone": "America/New_York"
-        },
-        "postal": {
-          "code": "10604"
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
         },
         "registered_country": {
           "geoname_id": 6252001,
@@ -420,23 +409,7 @@
             "ru": "США",
             "zh-CN": "美国"
           }
-        },
-        "subdivisions": [
-          {
-            "geoname_id": 5128638,
-            "iso_code": "NY",
-            "names": {
-              "de": "New York",
-              "en": "New York",
-              "es": "Nueva York",
-              "fr": "New York",
-              "ja": "ニューヨーク州",
-              "pt-BR": "Nova Iorque",
-              "ru": "Нью-Йорк",
-              "zh-CN": "纽约州"
-            }
-          }
-        ]
+        }
       }
     }
   ]
