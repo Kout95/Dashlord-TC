@@ -5,7 +5,7 @@
     "http": {
       "url": "https://telescoop.fr",
       "algorithm_version": 2,
-      "end_time": "Sun, 02 Jul 2023 00:24:33 GMT",
+      "end_time": "Sun, 09 Jul 2023 00:27:11 GMT",
       "grade": "F",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -13,15 +13,15 @@
         "Connection": "keep-alive",
         "Content-Encoding": "gzip",
         "Content-Type": "text/html",
-        "Date": "Sun, 02 Jul 2023 00:24:32 GMT",
+        "Date": "Sun, 09 Jul 2023 00:27:10 GMT",
         "ETag": "W/\"635f90f4-1f840\"",
         "Last-Modified": "Mon, 31 Oct 2022 09:10:12 GMT",
         "Server": "nginx/1.18.0 (Ubuntu)",
         "Transfer-Encoding": "chunked"
       },
-      "scan_id": 39228379,
+      "scan_id": 39517948,
       "score": 15,
-      "start_time": "Sun, 02 Jul 2023 00:24:28 GMT",
+      "start_time": "Sun, 09 Jul 2023 00:27:05 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 6,
@@ -514,7 +514,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "047B815BDADC55D8961AF2E1478EA665F870"
+        "finding": "04F12E6A12BC1C264C2D7742420F6D5B5D10"
       },
       {
         "id": "cert_serialNumberLen",
@@ -528,21 +528,21 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "6DEC36BDC96452EDDB07AD1AA83A1A6611A5B15A"
+        "finding": "CC09C3779CAE0FCF304068A87F9472346CA90C9C"
       },
       {
         "id": "cert_fingerprintSHA256",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "43371DD8306792BF803B4C6A89F433EDCCEA9143D1C7EC1E3E2231D0C0E71C0E"
+        "finding": "F4A219699EFC934E8AA162F510DE7A6ECF58751F46897F3D7DB4C530477B1391"
       },
       {
         "id": "cert",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "-----BEGIN CERTIFICATE-----\nMIIFHTCCBAWgAwIBAgISBHuBW9rcVdiWGvLhR46mZfhwMA0GCSqGSIb3DQEBCwUAMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJSMzAeFw0yMzA1MDkxMzQyMTNaFw0yMzA4MDcxMzQyMTJaMBcxFTATBgNVBAMTDHRlbGVzY29vcC5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANX5n3jEaO6FLwe2rtSwh9XySGq8I37jmZita64LkCXUMPQJcT8lPRN3mFGw1ZK5WVXnjP5fV1caDFMLYlrzI8XoBo4INiUHgutmR/7KvNIa6kMqjZjaf/L33gGIJwRgDZHS8OK7BHuymkJS+CLyf20u11JaKJCAAr6s/MLD/D88DmhRd8pw4gjzLt+cSQhYwayy3RLufvk4lYT+dPGnenaIn7Ze0hIm4W71VO7MdqW/9qVK+9f524VRMnksSb4AKPm3bmrV3ITxhM1Wdqf3vRoYVQDQjm06MQ/5iqZFvtDtyAhJzvROHmXiO3Mf1XJUkVvnBB7+iFDadbfpYKONxNMCAwEAAaOCAkYwggJCMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQU8fInIFmtoRooKtk7pTN5EwYpVx8wHwYDVR0jBBgwFoAUFC6zF7dYVsuuUAlA5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8vcjMuby5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9yZy8wFwYDVR0RBBAwDoIMdGVsZXNjb29wLmZyMEwGA1UdIARFMEMwCAYGZ4EMAQIBMDcGCysGAQQBgt8TAQEBMCgwJgYIKwYBBQUHAgEWGmh0dHA6Ly9jcHMubGV0c2VuY3J5cHQub3JnMIIBAwYKKwYBBAHWeQIEAgSB9ASB8QDvAHYAtz77JN+cTbp18jnFulj0bF38Qs96nzXEnh0JgSXttJkAAAGIAPZ8LAAABAMARzBFAiEArlCNAFiZPeLkWlypWOb2rxXKgpJFqhcf2bN/FF/ZdrwCIAlpxSlezAVPghus4pChQRoVtN3gqPGTH1H+kmbfxsloAHUA6D7Q2j71BjUy51covIlryQPTy9ERa+zraeF3fW0GvW4AAAGIAPZ8NAAABAMARjBEAiBVxfTxkqu74cjy2CpNF4UD53CWsY/C63Mrm60kWwS+UQIgWR7ZCVWT9dNqktx0TtYUdErerAhmft5Lpx8IXW9t278wDQYJKoZIhvcNAQELBQADggEBAKioA/IzqcT05m4OQdto9Jivk3jFBPaPRlUisP2LEam8wv5kUvWhxbGVGjwaXOByu2qoonsqU+bcP7n+ZP1H8pE5IMXS9MgYdcphH5/Lni0lxZRIzslz9tVyEdPeSpze7YH32H2fqvGBAobzdbprq8CUGB9rQzb9edc2t4QhPdSgOpsYrljMSadLpxyx8P7AQFfE8leiBLItmUPFFSkUd1dLXrXQXKGkMAYWvWIuae33Vue3JlyBQtJbySsbBce5343ALlTjGHyhQds6sD6C50Sg7qA/x9Mhl09RESMcQZ02aq5SclY1yddHMeqcVB6OFiaEbGxAq7b84aOkA9ygtrs=\n-----END CERTIFICATE-----"
+        "finding": "-----BEGIN CERTIFICATE-----\nMIIE5TCCA82gAwIBAgISBPEuahK8HCZMLXdCQg9tW10QMA0GCSqGSIb3DQEBCwUAMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJSMzAeFw0yMzA3MDgyMTA1MzlaFw0yMzEwMDYyMTA1MzhaMBcxFTATBgNVBAMTDHRlbGVzY29vcC5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMohRoe1ZuSv0vep4b7Z0Zs0MD706wDQ2idG/xn7Z0YED73nVnzQQJz8NoYxUwdFUfAfMMEdhNGOcF0ZmJkmMV1B8EDG5mmNQu7/jBzTXlo6rsJ4zjtfTcWi1EcwTlq0FC060bCka2fYk8UDUS7HD9q83hKTxbELMEvM4S5UZAjzk7OlfAGXCQwikSy3KaJIoXSKMfjpBNC2AHnOalPbok2Y/ymqG1rKDq/PmKz4kKVqcFXPcQ7UWPf76LKBtc83MMVMluiNsWkqQFozvDx5qhPzyqygHQ+2EGNBLGmYlSAe6PWLdqnQrDKLQAlbhli1HfYhrCPGognDTYsvGzCxRocCAwEAAaOCAg4wggIKMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQU4ehQewkf71GjHQqjj5gAlBQF+1wwHwYDVR0jBBgwFoAUFC6zF7dYVsuuUAlA5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8vcjMuby5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9yZy8wFwYDVR0RBBAwDoIMdGVsZXNjb29wLmZyMBMGA1UdIAQMMAowCAYGZ4EMAQIBMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHUAtz77JN+cTbp18jnFulj0bF38Qs96nzXEnh0JgSXttJkAAAGJN4oF+QAABAMARjBEAiBOkq1AqsuRmDuNkYlwHQM604gtw5VHxIalxUG2/a1iawIgQVmKSxiqhL/Ns4yle2RgtlMBk6DpyYtF9TUYXJojGzUAdwB6MoxU2LcttiDqOOBSHumEFnAyE4VNO9IrwTpXo1LrUgAAAYk3igYGAAAEAwBIMEYCIQDewTgLaGLJNOkp1rw4ygQos+Baj3AiYHdveIsNG68RjAIhAMSg2sNLYp4JiOhCjWxXF7I/G0bhwTePK/2aolOpwb5TMA0GCSqGSIb3DQEBCwUAA4IBAQAx5DLp25MopgVRzpIzj1TpbatVMtZbmmwJIvbFNcBuX8JAEziXISJPu/gi0WMY+Zaq6AaxKAAnCTaJhwgY3kJGOhzuQ9eV8zmUrq7ujbodj0hCbHr/gLHHpPbucrA7eWBf3lgPHkb5NSOYhQnYCk5eeT5gMYgp7EOQ/itVz/wOmsbyR6khx+21CQYVPeNjUj5ogygIR+QZcczwjrinv3FoVt8g+yyXBdiranLriNl7iwUelSjBlOYj42nzlnMF7RzQwKwA1dL1xsQ77WvB6Ge3fOjpwBQKvb3wc6vH5t8fnt72VaxGgkNmFshjRSB1QovaPKuW9CNar2wE99uwS13I\n-----END CERTIFICATE-----"
       },
       {
         "id": "cert_commonName",
@@ -591,21 +591,21 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "36 >= 30 days"
+        "finding": "89 >= 30 days"
       },
       {
         "id": "cert_notBefore",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "2023-05-09 13:42"
+        "finding": "2023-07-08 21:05"
       },
       {
         "id": "cert_notAfter",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "2023-08-07 13:42"
+        "finding": "2023-10-06 21:05"
       },
       {
         "id": "cert_extlifeSpan",
@@ -794,7 +794,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "1688257549"
+        "finding": "1688862550"
       },
       {
         "id": "HSTS",
@@ -967,7 +967,7 @@
         "severity": "INFO",
         "cve": "CVE-2016-0800 CVE-2016-0703",
         "cwe": "CWE-310",
-        "finding": "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=43371DD8306792BF803B4C6A89F433EDCCEA9143D1C7EC1E3E2231D0C0E71C0E"
+        "finding": "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=F4A219699EFC934E8AA162F510DE7A6ECF58751F46897F3D7DB4C530477B1391"
       },
       {
         "id": "LOGJAM-common_primes",
@@ -1350,7 +1350,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "60"
+        "finding": "111"
       }
     ],
     "thirdparties": {
@@ -1457,7 +1457,7 @@
         "connection": "keep-alive",
         "content-encoding": "gzip",
         "content-type": "text/html",
-        "date": "Sun, 02 Jul 2023 00:25:06 GMT",
+        "date": "Sun, 09 Jul 2023 00:27:46 GMT",
         "etag": "W/\"635f90f4-1f840\"",
         "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
         "server": "nginx/1.18.0 (Ubuntu)",
@@ -1656,7 +1656,7 @@
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "172.253.63.95",
+          "ip": "142.251.46.234",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1710,13 +1710,18 @@
         },
         {
           "hostname": "plausible.io",
-          "ip": "37.19.207.34",
+          "ip": "169.150.221.147",
           "geoip": {
             "city": {
-              "geoname_id": 4744870,
+              "geoname_id": 5392171,
               "names": {
-                "en": "Ashburn",
-                "ru": "Ашберн"
+                "de": "San José",
+                "en": "San Jose",
+                "es": "San José",
+                "fr": "San José",
+                "ja": "サンノゼ",
+                "pt-BR": "San José",
+                "ru": "Сан-Хосе"
               }
             },
             "continent": {
@@ -1749,13 +1754,13 @@
             },
             "location": {
               "accuracy_radius": 20,
-              "latitude": 39.0469,
-              "longitude": -77.4903,
-              "metro_code": 511,
-              "time_zone": "America/New_York"
+              "latitude": 37.1835,
+              "longitude": -121.7714,
+              "metro_code": 807,
+              "time_zone": "America/Los_Angeles"
             },
             "postal": {
-              "code": "20149"
+              "code": "95141"
             },
             "registered_country": {
               "geoname_id": 2635167,
@@ -1773,15 +1778,17 @@
             },
             "subdivisions": [
               {
-                "geoname_id": 6254928,
-                "iso_code": "VA",
+                "geoname_id": 5332921,
+                "iso_code": "CA",
                 "names": {
-                  "en": "Virginia",
-                  "fr": "Virginie",
-                  "ja": "バージニア州",
-                  "pt-BR": "Virgínia",
-                  "ru": "Вирджиния",
-                  "zh-CN": "弗吉尼亚州"
+                  "de": "Kalifornien",
+                  "en": "California",
+                  "es": "California",
+                  "fr": "Californie",
+                  "ja": "カリフォルニア州",
+                  "pt-BR": "Califórnia",
+                  "ru": "Калифорния",
+                  "zh-CN": "加州"
                 }
               }
             ]
@@ -1789,7 +1796,7 @@
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "172.253.62.94",
+          "ip": "142.251.46.195",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -2030,7 +2037,7 @@
     "zap": {
       "@programName": "OWASP ZAP",
       "@version": "2.12.0",
-      "@generated": "Sun, 2 Jul 2023 00:24:00",
+      "@generated": "Sun, 9 Jul 2023 00:26:32",
       "site": [
         {
           "@name": "https://telescoop.fr",
@@ -2131,9 +2138,10 @@
       {
         "requestedUrl": "https://telescoop.fr/",
         "finalUrl": "https://www.telescoop.fr/",
-        "fetchTime": "2023-07-02T00:24:17.494Z",
+        "fetchTime": "2023-07-09T00:26:53.468Z",
         "runWarnings": [
-          "The page may not be loading as expected because your test URL (https://telescoop.fr/) was redirected to https://www.telescoop.fr/. Try testing the second URL directly."
+          "The page may not be loading as expected because your test URL (https://telescoop.fr/) was redirected to https://www.telescoop.fr/. Try testing the second URL directly.",
+          "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#cpu-throttling)."
         ],
         "categories": {
           "performance": {
@@ -2196,53 +2204,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3811,
+            "numericValue": 4175,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3811,
-                  "firstMeaningfulPaint": 3811,
-                  "largestContentfulPaint": 4064,
-                  "interactive": 3811,
-                  "speedIndex": 3811,
+                  "firstContentfulPaint": 4175,
+                  "firstMeaningfulPaint": 4175,
+                  "largestContentfulPaint": 4346,
+                  "interactive": 4175,
+                  "speedIndex": 4937,
                   "totalBlockingTime": 0,
                   "maxPotentialFID": 16,
                   "cumulativeLayoutShift": 0.11735973358154297,
                   "cumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "totalCumulativeLayoutShift": 0.11735973358154297,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 274992772,
+                  "observedTimeOriginTs": 349889964,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 274992772,
-                  "observedFirstPaint": 988,
-                  "observedFirstPaintTs": 275980786,
-                  "observedFirstContentfulPaint": 988,
-                  "observedFirstContentfulPaintTs": 275980786,
-                  "observedFirstContentfulPaintAllFrames": 988,
-                  "observedFirstContentfulPaintAllFramesTs": 275980786,
-                  "observedFirstMeaningfulPaint": 988,
-                  "observedFirstMeaningfulPaintTs": 275980786,
-                  "observedLargestContentfulPaint": 988,
-                  "observedLargestContentfulPaintTs": 275980786,
-                  "observedLargestContentfulPaintAllFrames": 988,
-                  "observedLargestContentfulPaintAllFramesTs": 275980786,
-                  "observedTraceEnd": 3429,
-                  "observedTraceEndTs": 278421397,
-                  "observedLoad": 1115,
-                  "observedLoadTs": 276108253,
-                  "observedDomContentLoaded": 1002,
-                  "observedDomContentLoadedTs": 275994490,
+                  "observedNavigationStartTs": 349889964,
+                  "observedFirstPaint": 1768,
+                  "observedFirstPaintTs": 351657728,
+                  "observedFirstContentfulPaint": 1768,
+                  "observedFirstContentfulPaintTs": 351657728,
+                  "observedFirstContentfulPaintAllFrames": 1768,
+                  "observedFirstContentfulPaintAllFramesTs": 351657728,
+                  "observedFirstMeaningfulPaint": 1768,
+                  "observedFirstMeaningfulPaintTs": 351657728,
+                  "observedLargestContentfulPaint": 1768,
+                  "observedLargestContentfulPaintTs": 351657728,
+                  "observedLargestContentfulPaintAllFrames": 1768,
+                  "observedLargestContentfulPaintAllFramesTs": 351657728,
+                  "observedTraceEnd": 4348,
+                  "observedTraceEndTs": 354238153,
+                  "observedLoad": 2032,
+                  "observedLoadTs": 351921720,
+                  "observedDomContentLoaded": 1784,
+                  "observedDomContentLoadedTs": 351673751,
                   "observedCumulativeLayoutShift": 0.11735973358154297,
                   "observedCumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "observedTotalCumulativeLayoutShift": 0.11735973358154297,
-                  "observedFirstVisualChange": 996,
-                  "observedFirstVisualChangeTs": 275988772,
-                  "observedLastVisualChange": 1029,
-                  "observedLastVisualChangeTs": 276021772,
-                  "observedSpeedIndex": 999,
-                  "observedSpeedIndexTs": 275991627
+                  "observedFirstVisualChange": 1762,
+                  "observedFirstVisualChangeTs": 351651964,
+                  "observedLastVisualChange": 1812,
+                  "observedLastVisualChangeTs": 351701964,
+                  "observedSpeedIndex": 1767,
+                  "observedSpeedIndexTs": 351656600
                 },
                 {
                   "lcpInvalidated": false
@@ -2264,18 +2272,18 @@
                   "numScripts": 3,
                   "numStylesheets": 3,
                   "numFonts": 1,
-                  "numTasks": 231,
+                  "numTasks": 279,
                   "numTasksOver10ms": 3,
                   "numTasksOver25ms": 2,
                   "numTasksOver50ms": 1,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 1.0690000000000008,
-                  "throughput": 10729791.759294046,
-                  "maxRtt": 81.727,
-                  "maxServerLatency": 61.971999999999994,
-                  "totalByteWeight": 446680,
-                  "totalTaskTime": 187.60399999999947,
+                  "rtt": 1.782,
+                  "throughput": 5749086.54264043,
+                  "maxRtt": 149.019,
+                  "maxServerLatency": 130.39899999999997,
+                  "totalByteWeight": 446672,
+                  "totalTaskTime": 230.35399999999998,
                   "mainDocumentTransferSize": 40958
                 }
               ]
@@ -2299,7 +2307,7 @@
         "width": 1920,
         "height": 1080,
         "url": "https://telescoop.fr",
-        "size": 728.94,
+        "size": 728.941,
         "nodes": 259,
         "requests": 23,
         "grade": "B",
@@ -2307,7 +2315,7 @@
         "ges": 1.4,
         "water": 2.1,
         "ecoindex_version": "5.4.2",
-        "date": "2023-07-02 00:22:25.623571",
+        "date": "2023-07-09 00:24:34.126823",
         "page_type": "website"
       }
     ],
@@ -2319,7 +2327,7 @@
       "nmapOpenPortsCount": 2,
       "nmapOpenPortsGrade": "A",
       "testsslExpireSoon": false,
-      "testsslExpireDate": "2023-08-07T13:42:00.000Z",
+      "testsslExpireDate": "2023-10-06T21:05:00.000Z",
       "testsslGrade": "A",
       "cookiesGrade": "A",
       "cookiesCount": 0,
