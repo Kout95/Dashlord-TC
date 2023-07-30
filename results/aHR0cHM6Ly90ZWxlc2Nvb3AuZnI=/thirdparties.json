@@ -102,7 +102,7 @@
     "connection": "keep-alive",
     "content-encoding": "gzip",
     "content-type": "text/html",
-    "date": "Sun, 23 Jul 2023 00:23:41 GMT",
+    "date": "Sun, 30 Jul 2023 00:23:39 GMT",
     "etag": "W/\"635f90f4-1f840\"",
     "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
     "server": "nginx/1.18.0 (Ubuntu)",
@@ -113,6 +113,19 @@
       "hostname": "telescoop.fr",
       "ip": "51.210.109.110",
       "geoip": {
+        "city": {
+          "geoname_id": 3021411,
+          "names": {
+            "de": "Dieppe",
+            "en": "Dieppe",
+            "es": "Dieppe",
+            "fr": "Dieppe",
+            "ja": "ディエップ",
+            "pt-BR": "Dieppe",
+            "ru": "Дьеп",
+            "zh-CN": "迪耶普"
+          }
+        },
         "continent": {
           "code": "EU",
           "geoname_id": 6255148,
@@ -143,10 +156,13 @@
           }
         },
         "location": {
-          "accuracy_radius": 500,
-          "latitude": 48.8582,
-          "longitude": 2.3387,
+          "accuracy_radius": 50,
+          "latitude": 49.9206,
+          "longitude": 1.0891,
           "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "76200"
         },
         "registered_country": {
           "geoname_id": 3017382,
@@ -162,13 +178,49 @@
             "ru": "Франция",
             "zh-CN": "法国"
           }
-        }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 11071621,
+            "iso_code": "NOR",
+            "names": {
+              "de": "Normandie",
+              "en": "Normandy",
+              "es": "Normandía",
+              "fr": "Normandie"
+            }
+          },
+          {
+            "geoname_id": 2975248,
+            "iso_code": "76",
+            "names": {
+              "de": "Seine-Maritime",
+              "en": "Seine-Maritime",
+              "es": "Sena Marítimo",
+              "fr": "Seine-Maritime",
+              "pt-BR": "Sena Marítimo"
+            }
+          }
+        ]
       }
     },
     {
       "hostname": "www.telescoop.fr",
       "ip": "51.210.109.110",
       "geoip": {
+        "city": {
+          "geoname_id": 3021411,
+          "names": {
+            "de": "Dieppe",
+            "en": "Dieppe",
+            "es": "Dieppe",
+            "fr": "Dieppe",
+            "ja": "ディエップ",
+            "pt-BR": "Dieppe",
+            "ru": "Дьеп",
+            "zh-CN": "迪耶普"
+          }
+        },
         "continent": {
           "code": "EU",
           "geoname_id": 6255148,
@@ -199,10 +251,13 @@
           }
         },
         "location": {
-          "accuracy_radius": 500,
-          "latitude": 48.8582,
-          "longitude": 2.3387,
+          "accuracy_radius": 50,
+          "latitude": 49.9206,
+          "longitude": 1.0891,
           "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "76200"
         },
         "registered_country": {
           "geoname_id": 3017382,
@@ -218,12 +273,35 @@
             "ru": "Франция",
             "zh-CN": "法国"
           }
-        }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 11071621,
+            "iso_code": "NOR",
+            "names": {
+              "de": "Normandie",
+              "en": "Normandy",
+              "es": "Normandía",
+              "fr": "Normandie"
+            }
+          },
+          {
+            "geoname_id": 2975248,
+            "iso_code": "76",
+            "names": {
+              "de": "Seine-Maritime",
+              "en": "Seine-Maritime",
+              "es": "Sena Marítimo",
+              "fr": "Seine-Maritime",
+              "pt-BR": "Sena Marítimo"
+            }
+          }
+        ]
       }
     },
     {
       "hostname": "fonts.googleapis.com",
-      "ip": "142.251.214.138",
+      "ip": "142.250.138.95",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -277,18 +355,18 @@
     },
     {
       "hostname": "plausible.io",
-      "ip": "169.150.221.147",
+      "ip": "212.102.40.114",
       "geoip": {
         "city": {
-          "geoname_id": 5392171,
+          "geoname_id": 4684888,
           "names": {
-            "de": "San José",
-            "en": "San Jose",
-            "es": "San José",
-            "fr": "San José",
-            "ja": "サンノゼ",
-            "pt-BR": "San José",
-            "ru": "Сан-Хосе"
+            "de": "Dallas",
+            "en": "Dallas",
+            "es": "Dallas",
+            "fr": "Dallas",
+            "ja": "ダラス",
+            "pt-BR": "Dallas",
+            "ru": "Даллас"
           }
         },
         "continent": {
@@ -321,13 +399,13 @@
         },
         "location": {
           "accuracy_radius": 20,
-          "latitude": 37.1835,
-          "longitude": -121.7714,
-          "metro_code": 807,
-          "time_zone": "America/Los_Angeles"
+          "latitude": 32.7797,
+          "longitude": -96.8022,
+          "metro_code": 623,
+          "time_zone": "America/Chicago"
         },
         "postal": {
-          "code": "95141"
+          "code": "75270"
         },
         "registered_country": {
           "geoname_id": 2635167,
@@ -345,17 +423,15 @@
         },
         "subdivisions": [
           {
-            "geoname_id": 5332921,
-            "iso_code": "CA",
+            "geoname_id": 4736286,
+            "iso_code": "TX",
             "names": {
-              "de": "Kalifornien",
-              "en": "California",
-              "es": "California",
-              "fr": "Californie",
-              "ja": "カリフォルニア州",
-              "pt-BR": "Califórnia",
-              "ru": "Калифорния",
-              "zh-CN": "加州"
+              "en": "Texas",
+              "es": "Texas",
+              "fr": "Texas",
+              "ja": "テキサス州",
+              "ru": "Техас",
+              "zh-CN": "德克萨斯州"
             }
           }
         ]
@@ -363,14 +439,8 @@
     },
     {
       "hostname": "fonts.gstatic.com",
-      "ip": "142.251.32.35",
+      "ip": "142.251.116.94",
       "geoip": {
-        "city": {
-          "geoname_id": 4361736,
-          "names": {
-            "en": "Marriottsville"
-          }
-        },
         "continent": {
           "code": "NA",
           "geoname_id": 6255149,
@@ -400,14 +470,10 @@
           }
         },
         "location": {
-          "accuracy_radius": 500,
-          "latitude": 39.3385,
-          "longitude": -76.9201,
-          "metro_code": 512,
-          "time_zone": "America/New_York"
-        },
-        "postal": {
-          "code": "21104"
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
         },
         "registered_country": {
           "geoname_id": 6252001,
@@ -422,23 +488,7 @@
             "ru": "США",
             "zh-CN": "美国"
           }
-        },
-        "subdivisions": [
-          {
-            "geoname_id": 4361885,
-            "iso_code": "MD",
-            "names": {
-              "de": "Maryland",
-              "en": "Maryland",
-              "es": "Maryland",
-              "fr": "Maryland",
-              "ja": "メリーランド州",
-              "pt-BR": "Maryland",
-              "ru": "Мэриленд",
-              "zh-CN": "马里兰州"
-            }
-          }
-        ]
+        }
       }
     }
   ]
