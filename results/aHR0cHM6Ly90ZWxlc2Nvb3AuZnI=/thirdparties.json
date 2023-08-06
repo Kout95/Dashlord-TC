@@ -102,7 +102,7 @@
     "connection": "keep-alive",
     "content-encoding": "gzip",
     "content-type": "text/html",
-    "date": "Sun, 30 Jul 2023 00:23:39 GMT",
+    "date": "Sun, 06 Aug 2023 00:20:07 GMT",
     "etag": "W/\"635f90f4-1f840\"",
     "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
     "server": "nginx/1.18.0 (Ubuntu)",
@@ -301,7 +301,7 @@
     },
     {
       "hostname": "fonts.googleapis.com",
-      "ip": "142.250.138.95",
+      "ip": "172.253.115.95",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -355,18 +355,19 @@
     },
     {
       "hostname": "plausible.io",
-      "ip": "212.102.40.114",
+      "ip": "192.34.87.166",
       "geoip": {
         "city": {
-          "geoname_id": 4684888,
+          "geoname_id": 4930956,
           "names": {
-            "de": "Dallas",
-            "en": "Dallas",
-            "es": "Dallas",
-            "fr": "Dallas",
-            "ja": "ダラス",
-            "pt-BR": "Dallas",
-            "ru": "Даллас"
+            "de": "Boston",
+            "en": "Boston",
+            "es": "Boston",
+            "fr": "Boston",
+            "ja": "ボストン",
+            "pt-BR": "Boston",
+            "ru": "Бостон",
+            "zh-CN": "波士顿"
           }
         },
         "continent": {
@@ -399,39 +400,37 @@
         },
         "location": {
           "accuracy_radius": 20,
-          "latitude": 32.7797,
-          "longitude": -96.8022,
-          "metro_code": 623,
-          "time_zone": "America/Chicago"
+          "latitude": 42.3562,
+          "longitude": -71.0631,
+          "metro_code": 506,
+          "time_zone": "America/New_York"
         },
         "postal": {
-          "code": "75270"
+          "code": "02266"
         },
         "registered_country": {
-          "geoname_id": 2635167,
-          "iso_code": "GB",
+          "geoname_id": 6252001,
+          "iso_code": "US",
           "names": {
-            "de": "Vereinigtes Königreich",
-            "en": "United Kingdom",
-            "es": "Reino Unido",
-            "fr": "Royaume Uni",
-            "ja": "英国",
-            "pt-BR": "Reino Unido",
-            "ru": "Британия",
-            "zh-CN": "英国"
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
           }
         },
         "subdivisions": [
           {
-            "geoname_id": 4736286,
-            "iso_code": "TX",
+            "geoname_id": 6254926,
+            "iso_code": "MA",
             "names": {
-              "en": "Texas",
-              "es": "Texas",
-              "fr": "Texas",
-              "ja": "テキサス州",
-              "ru": "Техас",
-              "zh-CN": "德克萨斯州"
+              "en": "Massachusetts",
+              "fr": "Massachusetts",
+              "ja": "マサチューセッツ州",
+              "ru": "Массачусетс"
             }
           }
         ]
@@ -439,7 +438,7 @@
     },
     {
       "hostname": "fonts.gstatic.com",
-      "ip": "142.251.116.94",
+      "ip": "142.251.16.94",
       "geoip": {
         "continent": {
           "code": "NA",
