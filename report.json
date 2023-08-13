@@ -2,7 +2,197 @@
   {
     "404": [],
     "url": "https://telescoop.fr",
-    "http": null,
+    "http": {
+      "url": "https://telescoop.fr",
+      "algorithm_version": 2,
+      "end_time": "Sun, 13 Aug 2023 00:18:52 GMT",
+      "grade": "F",
+      "hidden": false,
+      "likelihood_indicator": "MEDIUM",
+      "response_headers": {
+        "Connection": "keep-alive",
+        "Content-Encoding": "gzip",
+        "Content-Type": "text/html",
+        "Date": "Sun, 13 Aug 2023 00:18:50 GMT",
+        "ETag": "W/\"635f90f4-1f840\"",
+        "Last-Modified": "Mon, 31 Oct 2022 09:10:12 GMT",
+        "Server": "nginx/1.18.0 (Ubuntu)",
+        "Transfer-Encoding": "chunked"
+      },
+      "scan_id": 40734021,
+      "score": 15,
+      "start_time": "Sun, 13 Aug 2023 00:18:46 GMT",
+      "state": "FINISHED",
+      "status_code": 200,
+      "tests_failed": 6,
+      "tests_passed": 6,
+      "tests_quantity": 12,
+      "details": {
+        "content-security-policy": {
+          "expectation": "csp-implemented-with-no-unsafe",
+          "name": "content-security-policy",
+          "output": {
+            "data": null,
+            "http": false,
+            "meta": false,
+            "numPolicies": 0,
+            "policy": null
+          },
+          "pass": false,
+          "result": "csp-not-implemented",
+          "score_description": "Content Security Policy (CSP) header not implemented",
+          "score_modifier": -25
+        },
+        "contribute": {
+          "expectation": "contribute-json-only-required-on-mozilla-properties",
+          "name": "contribute",
+          "output": {
+            "data": null
+          },
+          "pass": true,
+          "result": "contribute-json-only-required-on-mozilla-properties",
+          "score_description": "Contribute.json isn't required on websites that don't belong to Mozilla",
+          "score_modifier": 0
+        },
+        "cookies": {
+          "expectation": "cookies-secure-with-httponly-sessions",
+          "name": "cookies",
+          "output": {
+            "data": null,
+            "sameSite": null
+          },
+          "pass": true,
+          "result": "cookies-not-found",
+          "score_description": "No cookies detected",
+          "score_modifier": 0
+        },
+        "cross-origin-resource-sharing": {
+          "expectation": "cross-origin-resource-sharing-not-implemented",
+          "name": "cross-origin-resource-sharing",
+          "output": {
+            "data": {
+              "acao": null,
+              "clientaccesspolicy": null,
+              "crossdomain": null
+            }
+          },
+          "pass": true,
+          "result": "cross-origin-resource-sharing-not-implemented",
+          "score_description": "Content is not visible via cross-origin resource sharing (CORS) files or headers",
+          "score_modifier": 0
+        },
+        "public-key-pinning": {
+          "expectation": "hpkp-not-implemented",
+          "name": "public-key-pinning",
+          "output": {
+            "data": null,
+            "includeSubDomains": false,
+            "max-age": null,
+            "numPins": null,
+            "preloaded": false
+          },
+          "pass": true,
+          "result": "hpkp-not-implemented",
+          "score_description": "HTTP Public Key Pinning (HPKP) header not implemented",
+          "score_modifier": 0
+        },
+        "redirection": {
+          "expectation": "redirection-to-https",
+          "name": "redirection",
+          "output": {
+            "destination": "https://www.telescoop.fr",
+            "redirects": true,
+            "route": [
+              "http://telescoop.fr/",
+              "https://telescoop.fr/",
+              "https://www.telescoop.fr"
+            ],
+            "status_code": 200
+          },
+          "pass": true,
+          "result": "redirection-to-https",
+          "score_description": "Initial redirection is to HTTPS on same host, final destination is HTTPS",
+          "score_modifier": 0
+        },
+        "referrer-policy": {
+          "expectation": "referrer-policy-private",
+          "name": "referrer-policy",
+          "output": {
+            "data": null,
+            "http": false,
+            "meta": false
+          },
+          "pass": true,
+          "result": "referrer-policy-not-implemented",
+          "score_description": "Referrer-Policy header not implemented",
+          "score_modifier": 0
+        },
+        "strict-transport-security": {
+          "expectation": "hsts-implemented-max-age-at-least-six-months",
+          "name": "strict-transport-security",
+          "output": {
+            "data": null,
+            "includeSubDomains": false,
+            "max-age": null,
+            "preload": false,
+            "preloaded": false
+          },
+          "pass": false,
+          "result": "hsts-not-implemented",
+          "score_description": "HTTP Strict Transport Security (HSTS) header not implemented",
+          "score_modifier": -20
+        },
+        "subresource-integrity": {
+          "expectation": "sri-implemented-and-external-scripts-loaded-securely",
+          "name": "subresource-integrity",
+          "output": {
+            "data": {
+              "https://plausible.io/js/plausible.js": {
+                "crossorigin": null,
+                "integrity": null
+              }
+            }
+          },
+          "pass": false,
+          "result": "sri-not-implemented-but-external-scripts-loaded-securely",
+          "score_description": "Subresource Integrity (SRI) not implemented, but all external scripts are loaded over HTTPS",
+          "score_modifier": -5
+        },
+        "x-content-type-options": {
+          "expectation": "x-content-type-options-nosniff",
+          "name": "x-content-type-options",
+          "output": {
+            "data": null
+          },
+          "pass": false,
+          "result": "x-content-type-options-not-implemented",
+          "score_description": "X-Content-Type-Options header not implemented",
+          "score_modifier": -5
+        },
+        "x-frame-options": {
+          "expectation": "x-frame-options-sameorigin-or-deny",
+          "name": "x-frame-options",
+          "output": {
+            "data": null
+          },
+          "pass": false,
+          "result": "x-frame-options-not-implemented",
+          "score_description": "X-Frame-Options (XFO) header not implemented",
+          "score_modifier": -20
+        },
+        "x-xss-protection": {
+          "expectation": "x-xss-protection-1-mode-block",
+          "name": "x-xss-protection",
+          "output": {
+            "data": null
+          },
+          "pass": false,
+          "result": "x-xss-protection-not-implemented",
+          "score_description": "X-XSS-Protection header not implemented",
+          "score_modifier": -10
+        }
+      }
+    },
     "updownio": null,
     "nmap": {
       "host": "telescoop.fr",
@@ -401,7 +591,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "61 >= 30 days"
+        "finding": "54 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -604,7 +794,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "1691281252"
+        "finding": "1691886007"
       },
       {
         "id": "HSTS",
@@ -1160,7 +1350,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "61"
+        "finding": "60"
       }
     ],
     "thirdparties": {
@@ -1267,7 +1457,7 @@
         "connection": "keep-alive",
         "content-encoding": "gzip",
         "content-type": "text/html",
-        "date": "Sun, 06 Aug 2023 00:20:07 GMT",
+        "date": "Sun, 13 Aug 2023 00:19:23 GMT",
         "etag": "W/\"635f90f4-1f840\"",
         "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
         "server": "nginx/1.18.0 (Ubuntu)",
@@ -1278,19 +1468,6 @@
           "hostname": "telescoop.fr",
           "ip": "51.210.109.110",
           "geoip": {
-            "city": {
-              "geoname_id": 3021411,
-              "names": {
-                "de": "Dieppe",
-                "en": "Dieppe",
-                "es": "Dieppe",
-                "fr": "Dieppe",
-                "ja": "ディエップ",
-                "pt-BR": "Dieppe",
-                "ru": "Дьеп",
-                "zh-CN": "迪耶普"
-              }
-            },
             "continent": {
               "code": "EU",
               "geoname_id": 6255148,
@@ -1321,13 +1498,10 @@
               }
             },
             "location": {
-              "accuracy_radius": 50,
-              "latitude": 49.9206,
-              "longitude": 1.0891,
+              "accuracy_radius": 500,
+              "latitude": 48.8582,
+              "longitude": 2.3387,
               "time_zone": "Europe/Paris"
-            },
-            "postal": {
-              "code": "76200"
             },
             "registered_country": {
               "geoname_id": 3017382,
@@ -1343,49 +1517,13 @@
                 "ru": "Франция",
                 "zh-CN": "法国"
               }
-            },
-            "subdivisions": [
-              {
-                "geoname_id": 11071621,
-                "iso_code": "NOR",
-                "names": {
-                  "de": "Normandie",
-                  "en": "Normandy",
-                  "es": "Normandía",
-                  "fr": "Normandie"
-                }
-              },
-              {
-                "geoname_id": 2975248,
-                "iso_code": "76",
-                "names": {
-                  "de": "Seine-Maritime",
-                  "en": "Seine-Maritime",
-                  "es": "Sena Marítimo",
-                  "fr": "Seine-Maritime",
-                  "pt-BR": "Sena Marítimo"
-                }
-              }
-            ]
+            }
           }
         },
         {
           "hostname": "www.telescoop.fr",
           "ip": "51.210.109.110",
           "geoip": {
-            "city": {
-              "geoname_id": 3021411,
-              "names": {
-                "de": "Dieppe",
-                "en": "Dieppe",
-                "es": "Dieppe",
-                "fr": "Dieppe",
-                "ja": "ディエップ",
-                "pt-BR": "Dieppe",
-                "ru": "Дьеп",
-                "zh-CN": "迪耶普"
-              }
-            },
             "continent": {
               "code": "EU",
               "geoname_id": 6255148,
@@ -1416,13 +1554,10 @@
               }
             },
             "location": {
-              "accuracy_radius": 50,
-              "latitude": 49.9206,
-              "longitude": 1.0891,
+              "accuracy_radius": 500,
+              "latitude": 48.8582,
+              "longitude": 2.3387,
               "time_zone": "Europe/Paris"
-            },
-            "postal": {
-              "code": "76200"
             },
             "registered_country": {
               "geoname_id": 3017382,
@@ -1438,35 +1573,12 @@
                 "ru": "Франция",
                 "zh-CN": "法国"
               }
-            },
-            "subdivisions": [
-              {
-                "geoname_id": 11071621,
-                "iso_code": "NOR",
-                "names": {
-                  "de": "Normandie",
-                  "en": "Normandy",
-                  "es": "Normandía",
-                  "fr": "Normandie"
-                }
-              },
-              {
-                "geoname_id": 2975248,
-                "iso_code": "76",
-                "names": {
-                  "de": "Seine-Maritime",
-                  "en": "Seine-Maritime",
-                  "es": "Sena Marítimo",
-                  "fr": "Seine-Maritime",
-                  "pt-BR": "Sena Marítimo"
-                }
-              }
-            ]
+            }
           }
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "172.253.115.95",
+          "ip": "142.251.163.95",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1520,19 +1632,13 @@
         },
         {
           "hostname": "plausible.io",
-          "ip": "192.34.87.166",
+          "ip": "37.19.207.34",
           "geoip": {
             "city": {
-              "geoname_id": 4930956,
+              "geoname_id": 4744870,
               "names": {
-                "de": "Boston",
-                "en": "Boston",
-                "es": "Boston",
-                "fr": "Boston",
-                "ja": "ボストン",
-                "pt-BR": "Boston",
-                "ru": "Бостон",
-                "zh-CN": "波士顿"
+                "en": "Ashburn",
+                "ru": "Ашберн"
               }
             },
             "continent": {
@@ -1565,37 +1671,39 @@
             },
             "location": {
               "accuracy_radius": 20,
-              "latitude": 42.3562,
-              "longitude": -71.0631,
-              "metro_code": 506,
+              "latitude": 39.0469,
+              "longitude": -77.4903,
+              "metro_code": 511,
               "time_zone": "America/New_York"
             },
             "postal": {
-              "code": "02266"
+              "code": "20149"
             },
             "registered_country": {
-              "geoname_id": 6252001,
-              "iso_code": "US",
+              "geoname_id": 2635167,
+              "iso_code": "GB",
               "names": {
-                "de": "Vereinigte Staaten",
-                "en": "United States",
-                "es": "Estados Unidos",
-                "fr": "États Unis",
-                "ja": "アメリカ",
-                "pt-BR": "EUA",
-                "ru": "США",
-                "zh-CN": "美国"
+                "de": "Vereinigtes Königreich",
+                "en": "United Kingdom",
+                "es": "Reino Unido",
+                "fr": "Royaume Uni",
+                "ja": "英国",
+                "pt-BR": "Reino Unido",
+                "ru": "Британия",
+                "zh-CN": "英国"
               }
             },
             "subdivisions": [
               {
-                "geoname_id": 6254926,
-                "iso_code": "MA",
+                "geoname_id": 6254928,
+                "iso_code": "VA",
                 "names": {
-                  "en": "Massachusetts",
-                  "fr": "Massachusetts",
-                  "ja": "マサチューセッツ州",
-                  "ru": "Массачусетс"
+                  "en": "Virginia",
+                  "fr": "Virginie",
+                  "ja": "バージニア州",
+                  "pt-BR": "Virgínia",
+                  "ru": "Вирджиния",
+                  "zh-CN": "弗吉尼亚州"
                 }
               }
             ]
@@ -1603,7 +1711,7 @@
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "142.251.16.94",
+          "ip": "142.251.167.94",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1844,7 +1952,7 @@
     "zap": {
       "@programName": "OWASP ZAP",
       "@version": "2.13.0",
-      "@generated": "Sun, 6 Aug 2023 00:19:23",
+      "@generated": "Sun, 13 Aug 2023 00:18:18",
       "site": [
         {
           "@name": "https://telescoop.fr",
@@ -1973,7 +2081,7 @@
       {
         "requestedUrl": "https://telescoop.fr/",
         "finalUrl": "https://www.telescoop.fr/",
-        "fetchTime": "2023-08-06T00:19:39.424Z",
+        "fetchTime": "2023-08-13T00:18:35.748Z",
         "runWarnings": [
           "The page may not be loading as expected because your test URL (https://telescoop.fr/) was redirected to https://www.telescoop.fr/. Try testing the second URL directly.",
           "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#cpu-throttling)."
@@ -2008,7 +2116,7 @@
               "snapshot"
             ],
             "id": "best-practices",
-            "score": 1
+            "score": 0.92
           },
           "seo": {
             "title": "SEO",
@@ -2039,53 +2147,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3918,
+            "numericValue": 3706,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3825,
-                  "firstMeaningfulPaint": 3918,
-                  "largestContentfulPaint": 4104,
-                  "interactive": 3918,
-                  "speedIndex": 3825,
+                  "firstContentfulPaint": 3706,
+                  "firstMeaningfulPaint": 3706,
+                  "largestContentfulPaint": 3946,
+                  "interactive": 3706,
+                  "speedIndex": 3706,
                   "totalBlockingTime": 0,
                   "maxPotentialFID": 16,
                   "cumulativeLayoutShift": 0.11735973358154297,
                   "cumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "totalCumulativeLayoutShift": 0.11735973358154297,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 252048043,
+                  "observedTimeOriginTs": 352159075,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 252048043,
-                  "observedFirstPaint": 994,
-                  "observedFirstPaintTs": 253041675,
-                  "observedFirstContentfulPaint": 994,
-                  "observedFirstContentfulPaintTs": 253041675,
-                  "observedFirstContentfulPaintAllFrames": 994,
-                  "observedFirstContentfulPaintAllFramesTs": 253041675,
-                  "observedFirstMeaningfulPaint": 994,
-                  "observedFirstMeaningfulPaintTs": 253041675,
-                  "observedLargestContentfulPaint": 994,
-                  "observedLargestContentfulPaintTs": 253041675,
-                  "observedLargestContentfulPaintAllFrames": 994,
-                  "observedLargestContentfulPaintAllFramesTs": 253041675,
-                  "observedTraceEnd": 3441,
-                  "observedTraceEndTs": 255489494,
-                  "observedLoad": 1129,
-                  "observedLoadTs": 253176877,
-                  "observedDomContentLoaded": 1011,
-                  "observedDomContentLoadedTs": 253059222,
+                  "observedNavigationStartTs": 352159075,
+                  "observedFirstPaint": 974,
+                  "observedFirstPaintTs": 353133544,
+                  "observedFirstContentfulPaint": 974,
+                  "observedFirstContentfulPaintTs": 353133544,
+                  "observedFirstContentfulPaintAllFrames": 974,
+                  "observedFirstContentfulPaintAllFramesTs": 353133544,
+                  "observedFirstMeaningfulPaint": 974,
+                  "observedFirstMeaningfulPaintTs": 353133544,
+                  "observedLargestContentfulPaint": 974,
+                  "observedLargestContentfulPaintTs": 353133544,
+                  "observedLargestContentfulPaintAllFrames": 974,
+                  "observedLargestContentfulPaintAllFramesTs": 353133544,
+                  "observedTraceEnd": 3415,
+                  "observedTraceEndTs": 355574056,
+                  "observedLoad": 1103,
+                  "observedLoadTs": 353261733,
+                  "observedDomContentLoaded": 971,
+                  "observedDomContentLoadedTs": 353130036,
                   "observedCumulativeLayoutShift": 0.11735973358154297,
                   "observedCumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "observedTotalCumulativeLayoutShift": 0.11735973358154297,
-                  "observedFirstVisualChange": 991,
-                  "observedFirstVisualChangeTs": 253039043,
-                  "observedLastVisualChange": 1025,
-                  "observedLastVisualChangeTs": 253073043,
-                  "observedSpeedIndex": 995,
-                  "observedSpeedIndexTs": 253042545
+                  "observedFirstVisualChange": 976,
+                  "observedFirstVisualChangeTs": 353135075,
+                  "observedLastVisualChange": 1026,
+                  "observedLastVisualChangeTs": 353185075,
+                  "observedSpeedIndex": 981,
+                  "observedSpeedIndexTs": 353139874
                 },
                 {
                   "lcpInvalidated": false
@@ -2107,18 +2215,18 @@
                   "numScripts": 3,
                   "numStylesheets": 3,
                   "numFonts": 1,
-                  "numTasks": 266,
-                  "numTasksOver10ms": 6,
-                  "numTasksOver25ms": 3,
-                  "numTasksOver50ms": 2,
+                  "numTasks": 252,
+                  "numTasksOver10ms": 4,
+                  "numTasksOver25ms": 2,
+                  "numTasksOver50ms": 0,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 1.7979999999999998,
-                  "throughput": 10518162.08798636,
-                  "maxRtt": 80.18799999999999,
-                  "maxServerLatency": 44.86899999999999,
-                  "totalByteWeight": 446679,
-                  "totalTaskTime": 283.75799999999947,
+                  "rtt": 1.2779999999999632,
+                  "throughput": 14066318.271471597,
+                  "maxRtt": 81.673,
+                  "maxServerLatency": 69.49,
+                  "totalByteWeight": 443640,
+                  "totalTaskTime": 174.3149999999996,
                   "mainDocumentTransferSize": 40958
                 }
               ]
@@ -2142,7 +2250,7 @@
         "width": 1920,
         "height": 1080,
         "url": "https://telescoop.fr",
-        "size": 728.941,
+        "size": 725.901,
         "nodes": 259,
         "requests": 23,
         "grade": "B",
@@ -2150,13 +2258,14 @@
         "ges": 1.4,
         "water": 2.1,
         "ecoindex_version": "5.4.2",
-        "date": "2023-08-06 00:17:49.803266",
+        "date": "2023-08-13 00:16:45.570911",
         "page_type": "website"
       }
     ],
     "sonarcloud": null,
     "summary": {
       "404": "A+",
+      "httpGrade": "F",
       "nmapGrade": "A",
       "nmapOpenPortsCount": 2,
       "nmapOpenPortsGrade": "A",
@@ -2171,7 +2280,7 @@
       "lighthouse_performanceGrade": "A",
       "lighthouse_accessibility": 0.95,
       "lighthouse_accessibilityGrade": "A",
-      "lighthouse_best-practices": 1,
+      "lighthouse_best-practices": 0.92,
       "lighthouse_best-practicesGrade": "A",
       "lighthouse_seo": 0.92,
       "lighthouse_seoGrade": "A",
