@@ -102,7 +102,7 @@
     "connection": "keep-alive",
     "content-encoding": "gzip",
     "content-type": "text/html",
-    "date": "Sun, 27 Aug 2023 00:20:29 GMT",
+    "date": "Sun, 03 Sep 2023 00:20:25 GMT",
     "etag": "W/\"635f90f4-1f840\"",
     "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
     "server": "nginx/1.18.0 (Ubuntu)",
@@ -301,7 +301,7 @@
     },
     {
       "hostname": "fonts.googleapis.com",
-      "ip": "142.251.167.95",
+      "ip": "74.125.69.95",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -355,19 +355,19 @@
     },
     {
       "hostname": "plausible.io",
-      "ip": "38.104.169.186",
+      "ip": "38.142.94.218",
       "geoip": {
         "city": {
-          "geoname_id": 4460243,
+          "geoname_id": 5037649,
           "names": {
-            "de": "Charlotte",
-            "en": "Charlotte",
-            "es": "Charlotte",
-            "fr": "Charlotte",
-            "ja": "シャーロット",
-            "pt-BR": "Charlotte",
-            "ru": "Шарлотт",
-            "zh-CN": "夏洛特"
+            "de": "Minneapolis",
+            "en": "Minneapolis",
+            "es": "Mineápolis",
+            "fr": "Minneapolis",
+            "ja": "ミネアポリス",
+            "pt-BR": "Minneapolis",
+            "ru": "Миннеаполис",
+            "zh-CN": "明尼阿波利斯"
           }
         },
         "continent": {
@@ -399,14 +399,14 @@
           }
         },
         "location": {
-          "accuracy_radius": 100,
-          "latitude": 35.2296,
-          "longitude": -80.843,
-          "metro_code": 517,
-          "time_zone": "America/New_York"
+          "accuracy_radius": 20,
+          "latitude": 44.9618,
+          "longitude": -93.2638,
+          "metro_code": 613,
+          "time_zone": "America/Chicago"
         },
         "postal": {
-          "code": "28233"
+          "code": "55404"
         },
         "registered_country": {
           "geoname_id": 6252001,
@@ -424,16 +424,16 @@
         },
         "subdivisions": [
           {
-            "geoname_id": 4482348,
-            "iso_code": "NC",
+            "geoname_id": 5037779,
+            "iso_code": "MN",
             "names": {
-              "en": "North Carolina",
-              "es": "Carolina del Norte",
-              "fr": "Caroline du Nord",
-              "ja": "ノースカロライナ州",
-              "pt-BR": "Carolina do Norte",
-              "ru": "Северная Каролина",
-              "zh-CN": "北卡罗来纳州"
+              "en": "Minnesota",
+              "es": "Minnesota",
+              "fr": "Minnesota",
+              "ja": "ミネソタ州",
+              "pt-BR": "Minesota",
+              "ru": "Миннесота",
+              "zh-CN": "明尼苏达州"
             }
           }
         ]
@@ -441,7 +441,7 @@
     },
     {
       "hostname": "fonts.gstatic.com",
-      "ip": "172.253.122.94",
+      "ip": "142.250.1.94",
       "geoip": {
         "continent": {
           "code": "NA",
