@@ -5,7 +5,7 @@
     "http": {
       "url": "https://telescoop.fr",
       "algorithm_version": 2,
-      "end_time": "Sun, 17 Sep 2023 00:20:28 GMT",
+      "end_time": "Sun, 24 Sep 2023 00:20:34 GMT",
       "grade": "F",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -13,15 +13,15 @@
         "Connection": "keep-alive",
         "Content-Encoding": "gzip",
         "Content-Type": "text/html",
-        "Date": "Sun, 17 Sep 2023 00:20:27 GMT",
+        "Date": "Sun, 24 Sep 2023 00:20:33 GMT",
         "ETag": "W/\"635f90f4-1f840\"",
         "Last-Modified": "Mon, 31 Oct 2022 09:10:12 GMT",
         "Server": "nginx/1.18.0 (Ubuntu)",
         "Transfer-Encoding": "chunked"
       },
-      "scan_id": 42214724,
+      "scan_id": 42499605,
       "score": 15,
-      "start_time": "Sun, 17 Sep 2023 00:20:22 GMT",
+      "start_time": "Sun, 24 Sep 2023 00:20:29 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 6,
@@ -591,7 +591,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "79 >= 30 days"
+        "finding": "72 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -794,7 +794,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "1694910145"
+        "finding": "1695514954"
       },
       {
         "id": "HSTS",
@@ -1350,7 +1350,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "107"
+        "finding": "114"
       }
     ],
     "thirdparties": {
@@ -1457,7 +1457,7 @@
         "connection": "keep-alive",
         "content-encoding": "gzip",
         "content-type": "text/html",
-        "date": "Sun, 17 Sep 2023 00:21:06 GMT",
+        "date": "Sun, 24 Sep 2023 00:21:08 GMT",
         "etag": "W/\"635f90f4-1f840\"",
         "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
         "server": "nginx/1.18.0 (Ubuntu)",
@@ -1578,7 +1578,7 @@
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "209.85.234.95",
+          "ip": "142.250.189.234",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1632,18 +1632,18 @@
         },
         {
           "hostname": "plausible.io",
-          "ip": "212.102.40.114",
+          "ip": "169.150.221.147",
           "geoip": {
             "city": {
-              "geoname_id": 4684888,
+              "geoname_id": 5392171,
               "names": {
-                "de": "Dallas",
-                "en": "Dallas",
-                "es": "Dallas",
-                "fr": "Dallas",
-                "ja": "ダラス",
-                "pt-BR": "Dallas",
-                "ru": "Даллас"
+                "de": "San José",
+                "en": "San Jose",
+                "es": "San José",
+                "fr": "San José",
+                "ja": "サンノゼ",
+                "pt-BR": "San José",
+                "ru": "Сан-Хосе"
               }
             },
             "continent": {
@@ -1676,13 +1676,13 @@
             },
             "location": {
               "accuracy_radius": 20,
-              "latitude": 32.7797,
-              "longitude": -96.8022,
-              "metro_code": 623,
-              "time_zone": "America/Chicago"
+              "latitude": 37.1835,
+              "longitude": -121.7714,
+              "metro_code": 807,
+              "time_zone": "America/Los_Angeles"
             },
             "postal": {
-              "code": "75270"
+              "code": "95141"
             },
             "registered_country": {
               "geoname_id": 2635167,
@@ -1700,15 +1700,17 @@
             },
             "subdivisions": [
               {
-                "geoname_id": 4736286,
-                "iso_code": "TX",
+                "geoname_id": 5332921,
+                "iso_code": "CA",
                 "names": {
-                  "en": "Texas",
-                  "es": "Texas",
-                  "fr": "Texas",
-                  "ja": "テキサス州",
-                  "ru": "Техас",
-                  "zh-CN": "德克萨斯州"
+                  "de": "Kalifornien",
+                  "en": "California",
+                  "es": "California",
+                  "fr": "Californie",
+                  "ja": "カリフォルニア州",
+                  "pt-BR": "Califórnia",
+                  "ru": "Калифорния",
+                  "zh-CN": "加州"
                 }
               }
             ]
@@ -1716,8 +1718,14 @@
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "74.125.124.94",
+          "ip": "142.250.72.131",
           "geoip": {
+            "city": {
+              "geoname_id": 5102162,
+              "names": {
+                "en": "Old Bridge"
+              }
+            },
             "continent": {
               "code": "NA",
               "geoname_id": 6255149,
@@ -1747,10 +1755,14 @@
               }
             },
             "location": {
-              "accuracy_radius": 1000,
-              "latitude": 34.0544,
-              "longitude": -118.244,
-              "time_zone": "America/Los_Angeles"
+              "accuracy_radius": 500,
+              "latitude": 40.3913,
+              "longitude": -74.3247,
+              "metro_code": 501,
+              "time_zone": "America/New_York"
+            },
+            "postal": {
+              "code": "08857"
             },
             "registered_country": {
               "geoname_id": 6252001,
@@ -1768,17 +1780,16 @@
             },
             "subdivisions": [
               {
-                "geoname_id": 5332921,
-                "iso_code": "CA",
+                "geoname_id": 5101760,
+                "iso_code": "NJ",
                 "names": {
-                  "de": "Kalifornien",
-                  "en": "California",
-                  "es": "California",
-                  "fr": "Californie",
-                  "ja": "カリフォルニア州",
-                  "pt-BR": "Califórnia",
-                  "ru": "Калифорния",
-                  "zh-CN": "加州"
+                  "en": "New Jersey",
+                  "es": "Nueva Jersey",
+                  "fr": "New Jersey",
+                  "ja": "ニュージャージー州",
+                  "pt-BR": "Nova Jérsia",
+                  "ru": "Нью-Джерси",
+                  "zh-CN": "新泽西州"
                 }
               }
             ]
@@ -1973,7 +1984,7 @@
     "zap": {
       "@programName": "ZAP",
       "@version": "2.13.0",
-      "@generated": "Sun, 17 Sep 2023 00:19:53",
+      "@generated": "Sun, 24 Sep 2023 00:19:58",
       "site": [
         {
           "@name": "https://telescoop.fr",
@@ -2102,7 +2113,7 @@
       {
         "requestedUrl": "https://telescoop.fr/",
         "finalUrl": "https://www.telescoop.fr/",
-        "fetchTime": "2023-09-17T00:20:11.302Z",
+        "fetchTime": "2023-09-24T00:20:17.098Z",
         "runWarnings": [
           "The page may not be loading as expected because your test URL (https://telescoop.fr/) was redirected to https://www.telescoop.fr/. Try testing the second URL directly."
         ],
@@ -2167,53 +2178,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3859,
+            "numericValue": 4215,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3859,
-                  "firstMeaningfulPaint": 3859,
-                  "largestContentfulPaint": 4093,
-                  "interactive": 3859,
-                  "speedIndex": 4314,
+                  "firstContentfulPaint": 4215,
+                  "firstMeaningfulPaint": 4215,
+                  "largestContentfulPaint": 4389,
+                  "interactive": 4215,
+                  "speedIndex": 5020,
                   "totalBlockingTime": 0,
                   "maxPotentialFID": 16,
                   "cumulativeLayoutShift": 0.11735973358154297,
                   "cumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "totalCumulativeLayoutShift": 0.11735973358154297,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 286450260,
+                  "observedTimeOriginTs": 278055254,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 286450260,
-                  "observedFirstPaint": 1432,
-                  "observedFirstPaintTs": 287882198,
-                  "observedFirstContentfulPaint": 1432,
-                  "observedFirstContentfulPaintTs": 287882198,
-                  "observedFirstContentfulPaintAllFrames": 1432,
-                  "observedFirstContentfulPaintAllFramesTs": 287882198,
-                  "observedFirstMeaningfulPaint": 1432,
-                  "observedFirstMeaningfulPaintTs": 287882198,
-                  "observedLargestContentfulPaint": 1432,
-                  "observedLargestContentfulPaintTs": 287882198,
-                  "observedLargestContentfulPaintAllFrames": 1432,
-                  "observedLargestContentfulPaintAllFramesTs": 287882198,
-                  "observedTraceEnd": 3914,
-                  "observedTraceEndTs": 290363938,
-                  "observedLoad": 1598,
-                  "observedLoadTs": 288047972,
-                  "observedDomContentLoaded": 1431,
-                  "observedDomContentLoadedTs": 287881673,
+                  "observedNavigationStartTs": 278055254,
+                  "observedFirstPaint": 1804,
+                  "observedFirstPaintTs": 279858969,
+                  "observedFirstContentfulPaint": 1804,
+                  "observedFirstContentfulPaintTs": 279858969,
+                  "observedFirstContentfulPaintAllFrames": 1804,
+                  "observedFirstContentfulPaintAllFramesTs": 279858969,
+                  "observedFirstMeaningfulPaint": 1804,
+                  "observedFirstMeaningfulPaintTs": 279858969,
+                  "observedLargestContentfulPaint": 1804,
+                  "observedLargestContentfulPaintTs": 279858969,
+                  "observedLargestContentfulPaintAllFrames": 1804,
+                  "observedLargestContentfulPaintAllFramesTs": 279858969,
+                  "observedTraceEnd": 4373,
+                  "observedTraceEndTs": 282427913,
+                  "observedLoad": 2059,
+                  "observedLoadTs": 280114392,
+                  "observedDomContentLoaded": 1834,
+                  "observedDomContentLoadedTs": 279888764,
                   "observedCumulativeLayoutShift": 0.11735973358154297,
                   "observedCumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "observedTotalCumulativeLayoutShift": 0.11735973358154297,
-                  "observedFirstVisualChange": 1421,
-                  "observedFirstVisualChangeTs": 287871260,
-                  "observedLastVisualChange": 1554,
-                  "observedLastVisualChangeTs": 288004260,
-                  "observedSpeedIndex": 1432,
-                  "observedSpeedIndexTs": 287882484
+                  "observedFirstVisualChange": 1800,
+                  "observedFirstVisualChangeTs": 279855254,
+                  "observedLastVisualChange": 1883,
+                  "observedLastVisualChangeTs": 279938254,
+                  "observedSpeedIndex": 1807,
+                  "observedSpeedIndexTs": 279862138
                 },
                 {
                   "lcpInvalidated": false
@@ -2241,12 +2252,12 @@
                   "numTasksOver50ms": 1,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 13.343,
-                  "throughput": 8942507.786130346,
-                  "maxRtt": 120.493,
-                  "maxServerLatency": 99.49700000000001,
-                  "totalByteWeight": 446694,
-                  "totalTaskTime": 218.76699999999965,
+                  "rtt": 1.725999999999999,
+                  "throughput": 7199459.8353302125,
+                  "maxRtt": 150.525,
+                  "maxServerLatency": 128.467,
+                  "totalByteWeight": 446705,
+                  "totalTaskTime": 224.6549999999994,
                   "mainDocumentTransferSize": 40958
                 }
               ]
@@ -2270,7 +2281,7 @@
         "width": 1920,
         "height": 1080,
         "url": "https://telescoop.fr",
-        "size": 728.989,
+        "size": 728.981,
         "nodes": 259,
         "requests": 23,
         "grade": "B",
@@ -2278,7 +2289,7 @@
         "ges": 1.4,
         "water": 2.1,
         "ecoindex_version": "5.4.2",
-        "date": "2023-09-17 00:18:01.149514",
+        "date": "2023-09-24 00:18:10.959158",
         "page_type": "website"
       }
     ],
