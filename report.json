@@ -2,197 +2,7 @@
   {
     "404": [],
     "url": "https://telescoop.fr",
-    "http": {
-      "url": "https://telescoop.fr",
-      "algorithm_version": 2,
-      "end_time": "Sun, 01 Oct 2023 00:21:21 GMT",
-      "grade": "F",
-      "hidden": false,
-      "likelihood_indicator": "MEDIUM",
-      "response_headers": {
-        "Connection": "keep-alive",
-        "Content-Encoding": "gzip",
-        "Content-Type": "text/html",
-        "Date": "Sun, 01 Oct 2023 00:21:19 GMT",
-        "ETag": "W/\"635f90f4-1f840\"",
-        "Last-Modified": "Mon, 31 Oct 2022 09:10:12 GMT",
-        "Server": "nginx/1.18.0 (Ubuntu)",
-        "Transfer-Encoding": "chunked"
-      },
-      "scan_id": 42737307,
-      "score": 15,
-      "start_time": "Sun, 01 Oct 2023 00:21:15 GMT",
-      "state": "FINISHED",
-      "status_code": 200,
-      "tests_failed": 6,
-      "tests_passed": 6,
-      "tests_quantity": 12,
-      "details": {
-        "content-security-policy": {
-          "expectation": "csp-implemented-with-no-unsafe",
-          "name": "content-security-policy",
-          "output": {
-            "data": null,
-            "http": false,
-            "meta": false,
-            "numPolicies": 0,
-            "policy": null
-          },
-          "pass": false,
-          "result": "csp-not-implemented",
-          "score_description": "Content Security Policy (CSP) header not implemented",
-          "score_modifier": -25
-        },
-        "contribute": {
-          "expectation": "contribute-json-only-required-on-mozilla-properties",
-          "name": "contribute",
-          "output": {
-            "data": null
-          },
-          "pass": true,
-          "result": "contribute-json-only-required-on-mozilla-properties",
-          "score_description": "Contribute.json isn't required on websites that don't belong to Mozilla",
-          "score_modifier": 0
-        },
-        "cookies": {
-          "expectation": "cookies-secure-with-httponly-sessions",
-          "name": "cookies",
-          "output": {
-            "data": null,
-            "sameSite": null
-          },
-          "pass": true,
-          "result": "cookies-not-found",
-          "score_description": "No cookies detected",
-          "score_modifier": 0
-        },
-        "cross-origin-resource-sharing": {
-          "expectation": "cross-origin-resource-sharing-not-implemented",
-          "name": "cross-origin-resource-sharing",
-          "output": {
-            "data": {
-              "acao": null,
-              "clientaccesspolicy": null,
-              "crossdomain": null
-            }
-          },
-          "pass": true,
-          "result": "cross-origin-resource-sharing-not-implemented",
-          "score_description": "Content is not visible via cross-origin resource sharing (CORS) files or headers",
-          "score_modifier": 0
-        },
-        "public-key-pinning": {
-          "expectation": "hpkp-not-implemented",
-          "name": "public-key-pinning",
-          "output": {
-            "data": null,
-            "includeSubDomains": false,
-            "max-age": null,
-            "numPins": null,
-            "preloaded": false
-          },
-          "pass": true,
-          "result": "hpkp-not-implemented",
-          "score_description": "HTTP Public Key Pinning (HPKP) header not implemented",
-          "score_modifier": 0
-        },
-        "redirection": {
-          "expectation": "redirection-to-https",
-          "name": "redirection",
-          "output": {
-            "destination": "https://www.telescoop.fr",
-            "redirects": true,
-            "route": [
-              "http://telescoop.fr/",
-              "https://telescoop.fr/",
-              "https://www.telescoop.fr"
-            ],
-            "status_code": 200
-          },
-          "pass": true,
-          "result": "redirection-to-https",
-          "score_description": "Initial redirection is to HTTPS on same host, final destination is HTTPS",
-          "score_modifier": 0
-        },
-        "referrer-policy": {
-          "expectation": "referrer-policy-private",
-          "name": "referrer-policy",
-          "output": {
-            "data": null,
-            "http": false,
-            "meta": false
-          },
-          "pass": true,
-          "result": "referrer-policy-not-implemented",
-          "score_description": "Referrer-Policy header not implemented",
-          "score_modifier": 0
-        },
-        "strict-transport-security": {
-          "expectation": "hsts-implemented-max-age-at-least-six-months",
-          "name": "strict-transport-security",
-          "output": {
-            "data": null,
-            "includeSubDomains": false,
-            "max-age": null,
-            "preload": false,
-            "preloaded": false
-          },
-          "pass": false,
-          "result": "hsts-not-implemented",
-          "score_description": "HTTP Strict Transport Security (HSTS) header not implemented",
-          "score_modifier": -20
-        },
-        "subresource-integrity": {
-          "expectation": "sri-implemented-and-external-scripts-loaded-securely",
-          "name": "subresource-integrity",
-          "output": {
-            "data": {
-              "https://plausible.io/js/plausible.js": {
-                "crossorigin": null,
-                "integrity": null
-              }
-            }
-          },
-          "pass": false,
-          "result": "sri-not-implemented-but-external-scripts-loaded-securely",
-          "score_description": "Subresource Integrity (SRI) not implemented, but all external scripts are loaded over HTTPS",
-          "score_modifier": -5
-        },
-        "x-content-type-options": {
-          "expectation": "x-content-type-options-nosniff",
-          "name": "x-content-type-options",
-          "output": {
-            "data": null
-          },
-          "pass": false,
-          "result": "x-content-type-options-not-implemented",
-          "score_description": "X-Content-Type-Options header not implemented",
-          "score_modifier": -5
-        },
-        "x-frame-options": {
-          "expectation": "x-frame-options-sameorigin-or-deny",
-          "name": "x-frame-options",
-          "output": {
-            "data": null
-          },
-          "pass": false,
-          "result": "x-frame-options-not-implemented",
-          "score_description": "X-Frame-Options (XFO) header not implemented",
-          "score_modifier": -20
-        },
-        "x-xss-protection": {
-          "expectation": "x-xss-protection-1-mode-block",
-          "name": "x-xss-protection",
-          "output": {
-            "data": null
-          },
-          "pass": false,
-          "result": "x-xss-protection-not-implemented",
-          "score_description": "X-XSS-Protection header not implemented",
-          "score_modifier": -10
-        }
-      }
-    },
+    "http": null,
     "updownio": null,
     "nmap": {
       "host": "telescoop.fr",
@@ -591,7 +401,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "65 >= 30 days"
+        "finding": "58 >= 30 days"
       },
       {
         "id": "cert_notBefore",
@@ -794,7 +604,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "1696119756"
+        "finding": "1696724876"
       },
       {
         "id": "HSTS",
@@ -1457,7 +1267,7 @@
         "connection": "keep-alive",
         "content-encoding": "gzip",
         "content-type": "text/html",
-        "date": "Sun, 01 Oct 2023 00:21:53 GMT",
+        "date": "Sun, 08 Oct 2023 00:27:12 GMT",
         "etag": "W/\"635f90f4-1f840\"",
         "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
         "server": "nginx/1.18.0 (Ubuntu)",
@@ -1578,7 +1388,7 @@
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "142.251.16.95",
+          "ip": "172.253.63.95",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1632,13 +1442,19 @@
         },
         {
           "hostname": "plausible.io",
-          "ip": "37.19.207.34",
+          "ip": "38.104.169.186",
           "geoip": {
             "city": {
-              "geoname_id": 4744870,
+              "geoname_id": 4460243,
               "names": {
-                "en": "Ashburn",
-                "ru": "Ашберн"
+                "de": "Charlotte",
+                "en": "Charlotte",
+                "es": "Charlotte",
+                "fr": "Charlotte",
+                "ja": "シャーロット",
+                "pt-BR": "Charlotte",
+                "ru": "Шарлотт",
+                "zh-CN": "夏洛特"
               }
             },
             "continent": {
@@ -1670,40 +1486,41 @@
               }
             },
             "location": {
-              "accuracy_radius": 20,
-              "latitude": 39.0469,
-              "longitude": -77.4903,
-              "metro_code": 511,
+              "accuracy_radius": 100,
+              "latitude": 35.2227,
+              "longitude": -80.7938,
+              "metro_code": 517,
               "time_zone": "America/New_York"
             },
             "postal": {
-              "code": "20149"
+              "code": "28205"
             },
             "registered_country": {
-              "geoname_id": 2635167,
-              "iso_code": "GB",
+              "geoname_id": 6252001,
+              "iso_code": "US",
               "names": {
-                "de": "Vereinigtes Königreich",
-                "en": "United Kingdom",
-                "es": "Reino Unido",
-                "fr": "Royaume Uni",
-                "ja": "英国",
-                "pt-BR": "Reino Unido",
-                "ru": "Британия",
-                "zh-CN": "英国"
+                "de": "Vereinigte Staaten",
+                "en": "United States",
+                "es": "Estados Unidos",
+                "fr": "États Unis",
+                "ja": "アメリカ",
+                "pt-BR": "EUA",
+                "ru": "США",
+                "zh-CN": "美国"
               }
             },
             "subdivisions": [
               {
-                "geoname_id": 6254928,
-                "iso_code": "VA",
+                "geoname_id": 4482348,
+                "iso_code": "NC",
                 "names": {
-                  "en": "Virginia",
-                  "fr": "Virginie",
-                  "ja": "バージニア州",
-                  "pt-BR": "Virgínia",
-                  "ru": "Вирджиния",
-                  "zh-CN": "弗吉尼亚州"
+                  "en": "North Carolina",
+                  "es": "Carolina del Norte",
+                  "fr": "Caroline du Nord",
+                  "ja": "ノースカロライナ州",
+                  "pt-BR": "Carolina do Norte",
+                  "ru": "Северная Каролина",
+                  "zh-CN": "北卡罗来纳州"
                 }
               }
             ]
@@ -1711,7 +1528,7 @@
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "142.251.167.94",
+          "ip": "172.253.62.94",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1952,7 +1769,7 @@
     "zap": {
       "@programName": "ZAP",
       "@version": "2.13.0",
-      "@generated": "Sun, 1 Oct 2023 00:20:48",
+      "@generated": "Sun, 8 Oct 2023 00:20:01",
       "site": [
         {
           "@name": "https://telescoop.fr",
@@ -2081,7 +1898,7 @@
       {
         "requestedUrl": "https://telescoop.fr/",
         "finalUrl": "https://www.telescoop.fr/",
-        "fetchTime": "2023-10-01T00:21:05.287Z",
+        "fetchTime": "2023-10-08T00:20:17.911Z",
         "runWarnings": [
           "The page may not be loading as expected because your test URL (https://telescoop.fr/) was redirected to https://www.telescoop.fr/. Try testing the second URL directly."
         ],
@@ -2146,53 +1963,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3744,
+            "numericValue": 3766,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3744,
-                  "firstMeaningfulPaint": 3744,
-                  "largestContentfulPaint": 3980,
-                  "interactive": 3744,
-                  "speedIndex": 3744,
+                  "firstContentfulPaint": 3766,
+                  "firstMeaningfulPaint": 3766,
+                  "largestContentfulPaint": 4005,
+                  "interactive": 3766,
+                  "speedIndex": 3766,
                   "totalBlockingTime": 0,
                   "maxPotentialFID": 16,
                   "cumulativeLayoutShift": 0.11735973358154297,
                   "cumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "totalCumulativeLayoutShift": 0.11735973358154297,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 210054790,
+                  "observedTimeOriginTs": 345626115,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 210054790,
-                  "observedFirstPaint": 971,
-                  "observedFirstPaintTs": 211025587,
-                  "observedFirstContentfulPaint": 971,
-                  "observedFirstContentfulPaintTs": 211025587,
-                  "observedFirstContentfulPaintAllFrames": 971,
-                  "observedFirstContentfulPaintAllFramesTs": 211025587,
-                  "observedFirstMeaningfulPaint": 971,
-                  "observedFirstMeaningfulPaintTs": 211025587,
-                  "observedLargestContentfulPaint": 971,
-                  "observedLargestContentfulPaintTs": 211025587,
-                  "observedLargestContentfulPaintAllFrames": 971,
-                  "observedLargestContentfulPaintAllFramesTs": 211025587,
-                  "observedTraceEnd": 3402,
-                  "observedTraceEndTs": 213456606,
-                  "observedLoad": 1092,
-                  "observedLoadTs": 211146449,
-                  "observedDomContentLoaded": 982,
-                  "observedDomContentLoadedTs": 211036448,
+                  "observedNavigationStartTs": 345626115,
+                  "observedFirstPaint": 1032,
+                  "observedFirstPaintTs": 346658229,
+                  "observedFirstContentfulPaint": 1032,
+                  "observedFirstContentfulPaintTs": 346658229,
+                  "observedFirstContentfulPaintAllFrames": 1032,
+                  "observedFirstContentfulPaintAllFramesTs": 346658229,
+                  "observedFirstMeaningfulPaint": 1032,
+                  "observedFirstMeaningfulPaintTs": 346658229,
+                  "observedLargestContentfulPaint": 1032,
+                  "observedLargestContentfulPaintTs": 346658229,
+                  "observedLargestContentfulPaintAllFrames": 1032,
+                  "observedLargestContentfulPaintAllFramesTs": 346658229,
+                  "observedTraceEnd": 3477,
+                  "observedTraceEndTs": 349102649,
+                  "observedLoad": 1165,
+                  "observedLoadTs": 346790998,
+                  "observedDomContentLoaded": 1064,
+                  "observedDomContentLoadedTs": 346690096,
                   "observedCumulativeLayoutShift": 0.11735973358154297,
                   "observedCumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "observedTotalCumulativeLayoutShift": 0.11735973358154297,
-                  "observedFirstVisualChange": 970,
-                  "observedFirstVisualChangeTs": 211024790,
-                  "observedLastVisualChange": 1020,
-                  "observedLastVisualChangeTs": 211074790,
-                  "observedSpeedIndex": 974,
-                  "observedSpeedIndexTs": 211028892
+                  "observedFirstVisualChange": 1026,
+                  "observedFirstVisualChangeTs": 346652115,
+                  "observedLastVisualChange": 1093,
+                  "observedLastVisualChangeTs": 346719115,
+                  "observedSpeedIndex": 1032,
+                  "observedSpeedIndexTs": 346658133
                 },
                 {
                   "lcpInvalidated": false
@@ -2214,18 +2031,18 @@
                   "numScripts": 3,
                   "numStylesheets": 3,
                   "numFonts": 1,
-                  "numTasks": 233,
-                  "numTasksOver10ms": 1,
-                  "numTasksOver25ms": 1,
-                  "numTasksOver50ms": 0,
+                  "numTasks": 238,
+                  "numTasksOver10ms": 3,
+                  "numTasksOver25ms": 2,
+                  "numTasksOver50ms": 1,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 1.4350000000000023,
-                  "throughput": 10882097.027747253,
-                  "maxRtt": 80.621,
-                  "maxServerLatency": 73.098,
-                  "totalByteWeight": 446695,
-                  "totalTaskTime": 132.04899999999992,
+                  "rtt": 6.757,
+                  "throughput": 10231627.672498383,
+                  "maxRtt": 86.744,
+                  "maxServerLatency": 69.981,
+                  "totalByteWeight": 446706,
+                  "totalTaskTime": 173.59199999999964,
                   "mainDocumentTransferSize": 40958
                 }
               ]
@@ -2249,7 +2066,7 @@
         "width": 1920,
         "height": 1080,
         "url": "https://telescoop.fr",
-        "size": 728.992,
+        "size": 728.991,
         "nodes": 259,
         "requests": 23,
         "grade": "B",
@@ -2257,14 +2074,13 @@
         "ges": 1.4,
         "water": 2.1,
         "ecoindex_version": "5.4.2",
-        "date": "2023-10-01 00:19:14.469184",
+        "date": "2023-10-08 00:18:22.530126",
         "page_type": "website"
       }
     ],
     "sonarcloud": null,
     "summary": {
       "404": "A+",
-      "httpGrade": "F",
       "nmapGrade": "A",
       "nmapOpenPortsCount": 2,
       "nmapOpenPortsGrade": "A",
