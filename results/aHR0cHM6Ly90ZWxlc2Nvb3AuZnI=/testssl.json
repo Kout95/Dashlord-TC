@@ -367,7 +367,7 @@
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "OK",
-              "finding"      : "58 >= 30 days"
+              "finding"      : "51 >= 30 days"
           }
 ,         {
               "id"           : "cert_notBefore",
@@ -570,7 +570,7 @@
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "1696724876"
+              "finding"      : "1697329596"
           }
 ,         {
               "id"           : "HSTS",
@@ -1126,6 +1126,6 @@
               "ip"           : "telescoop.fr/51.210.109.110",
               "port"         : "443",
               "severity"     : "INFO",
-              "finding"      : "61"
+              "finding"      : "101"
           }
 ]
