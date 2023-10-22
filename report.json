@@ -5,7 +5,7 @@
     "http": {
       "url": "https://telescoop.fr",
       "algorithm_version": 2,
-      "end_time": "Sun, 15 Oct 2023 00:24:42 GMT",
+      "end_time": "Sun, 22 Oct 2023 00:21:22 GMT",
       "grade": "F",
       "hidden": false,
       "likelihood_indicator": "MEDIUM",
@@ -13,15 +13,16 @@
         "Connection": "keep-alive",
         "Content-Encoding": "gzip",
         "Content-Type": "text/html",
-        "Date": "Sun, 15 Oct 2023 00:24:41 GMT",
-        "ETag": "W/\"635f90f4-1f840\"",
-        "Last-Modified": "Mon, 31 Oct 2022 09:10:12 GMT",
+        "Date": "Sun, 22 Oct 2023 00:21:20 GMT",
+        "ETag": "W/\"65310146-1f840\"",
+        "Last-Modified": "Thu, 19 Oct 2023 10:13:26 GMT",
         "Server": "nginx/1.18.0 (Ubuntu)",
-        "Transfer-Encoding": "chunked"
+        "Transfer-Encoding": "chunked",
+        "Vary": "Accept-Encoding"
       },
-      "scan_id": 43268684,
+      "scan_id": 43508726,
       "score": 15,
-      "start_time": "Sun, 15 Oct 2023 00:20:35 GMT",
+      "start_time": "Sun, 22 Oct 2023 00:21:15 GMT",
       "state": "FINISHED",
       "status_code": 200,
       "tests_failed": 6,
@@ -356,39 +357,25 @@
         "finding": "NOT a cipher order configured"
       },
       {
-        "id": "cipher-tls1_2_xc030",
+        "id": "cipher-tls1_2_xc02c",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "TLSv1.2   xc030   ECDHE-RSA-AES256-GCM-SHA384       ECDH 521   AESGCM      256      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+        "finding": "TLSv1.2   xc02c   ECDHE-ECDSA-AES256-GCM-SHA384     ECDH 521   AESGCM      256      TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384"
       },
       {
-        "id": "cipher-tls1_2_x9f",
+        "id": "cipher-tls1_2_xc02b",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "TLSv1.2   x9f     DHE-RSA-AES256-GCM-SHA384         DH 2048    AESGCM      256      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384"
-      },
-      {
-        "id": "cipher-tls1_2_xc02f",
-        "ip": "telescoop.fr/51.210.109.110",
-        "port": "443",
-        "severity": "OK",
-        "finding": "TLSv1.2   xc02f   ECDHE-RSA-AES128-GCM-SHA256       ECDH 521   AESGCM      128      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256"
-      },
-      {
-        "id": "cipher-tls1_2_x9e",
-        "ip": "telescoop.fr/51.210.109.110",
-        "port": "443",
-        "severity": "OK",
-        "finding": "TLSv1.2   x9e     DHE-RSA-AES128-GCM-SHA256         DH 2048    AESGCM      128      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256"
+        "finding": "TLSv1.2   xc02b   ECDHE-ECDSA-AES128-GCM-SHA256     ECDH 521   AESGCM      128      TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256"
       },
       {
         "id": "supportedciphers_TLSv1_2",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "ECDHE-RSA-AES256-GCM-SHA384 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES128-GCM-SHA256"
+        "finding": "ECDHE-ECDSA-AES256-GCM-SHA384 ECDHE-ECDSA-AES128-GCM-SHA256"
       },
       {
         "id": "cipher_order",
@@ -409,14 +396,14 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "DHE-RSA-AES128-GCM-SHA256 DHE-RSA-AES256-GCM-SHA384 ECDHE-RSA-AES128-GCM-SHA256 ECDHE-RSA-AES256-GCM-SHA384"
+        "finding": "ECDHE-ECDSA-AES128-GCM-SHA256 ECDHE-ECDSA-AES256-GCM-SHA384"
       },
       {
         "id": "FS_ECDHE_curves",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "prime256v1 secp384r1 secp521r1"
+        "finding": "prime256v1"
       },
       {
         "id": "TLS_extensions",
@@ -492,15 +479,15 @@
         "id": "cert_keySize",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
-        "severity": "INFO",
-        "finding": "RSA 2048 bits (exponent is 65537)"
+        "severity": "OK",
+        "finding": "EC 256 bits (curve P-256)"
       },
       {
         "id": "cert_keyUsage",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "Digital Signature, Key Encipherment"
+        "finding": "Digital Signature"
       },
       {
         "id": "cert_extKeyUsage",
@@ -514,7 +501,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "04A06CB8028D1443436A0E810DF4602BAD28"
+        "finding": "04336ECA1F1A68B3CC021C3E25F91782198E"
       },
       {
         "id": "cert_serialNumberLen",
@@ -528,21 +515,21 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "F3F4AF0CA151D232684B10477905D3C5EEC05EC0"
+        "finding": "43A208414761FEE8F9D888BD60F13E837B7C4E02"
       },
       {
         "id": "cert_fingerprintSHA256",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "7597F30DB554CD0D352FA5CC7838A209270F3ED4C88938BE47B2113879FEE7AF"
+        "finding": "B55BB4B443C9FD58C425541678E1615A20DF71C21E06EBD1467609D8D7B1D2A1"
       },
       {
         "id": "cert",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "-----BEGIN CERTIFICATE-----\nMIIE5TCCA82gAwIBAgISBKBsuAKNFENDag6BDfRgK60oMA0GCSqGSIb3DQEBCwUAMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJSMzAeFw0yMzA5MDYyMzExMTBaFw0yMzEyMDUyMzExMDlaMBcxFTATBgNVBAMTDHRlbGVzY29vcC5mcjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANIBN0q+cpzAvc1QICtJmFMRsYA5FK4DTfG+NqlM3QzjcbcUZZonmB78K9EONZolGORmMtkQYippvbZrEzMPJch5Il156JZU8ErG1s1ZRAqK+7BE8g8d79hsLRdZ7my0A7pDEMDFi/5w95Urkvfa8SVaYkXrX6CWgrXvhqcce/E3jlvxjhayeuJ+ChibzI/4diiZxmJvGPkejMDyqhH+daYSdCZCHtrXDFTGXFeSHqzE8S1egUv9qjD54p9/LdaNhd0cy3SZvrMaLfUHNHBOb9Ix/QTZVOCoAhh6DqasUNsEr/rne+4nsj+DOG+gwEjI3o1nHDKcARQ4uEQbMlhJsHsCAwEAAaOCAg4wggIKMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQUwR/OePWP0kmh9SO/nPIf6kGfFcowHwYDVR0jBBgwFoAUFC6zF7dYVsuuUAlA5h+vnYsUwsYwVQYIKwYBBQUHAQEESTBHMCEGCCsGAQUFBzABhhVodHRwOi8vcjMuby5sZW5jci5vcmcwIgYIKwYBBQUHMAKGFmh0dHA6Ly9yMy5pLmxlbmNyLm9yZy8wFwYDVR0RBBAwDoIMdGVsZXNjb29wLmZyMBMGA1UdIAQMMAowCAYGZ4EMAQIBMIIBBAYKKwYBBAHWeQIEAgSB9QSB8gDwAHYAtz77JN+cTbp18jnFulj0bF38Qs96nzXEnh0JgSXttJkAAAGKbPqBewAABAMARzBFAiAgCmuYIKyx+3jHn7lHhPck5ZB27EFs/Hv1yMOXjmMQgwIhAKJE3cxAm/3VFyOsEg2XwF7sFbGyTar4bcsw43D60duvAHYAejKMVNi3LbYg6jjgUh7phBZwMhOFTTvSK8E6V6NS61IAAAGKbPqBqgAABAMARzBFAiEAmTqhji4zc0XMwz2qc8yB4IC/wnjkMURWUhLa2nzTzcICIB03iVeY+kZPfyjqgDVoB80Cp15xEGvkTMDadM+O84KTMA0GCSqGSIb3DQEBCwUAA4IBAQCLSWPnKWDF3zz8X8yLeZUkt2i4TTCE3sXsdhoU2gz0LtXWalQLxnjzUd2HcKvyESqBspqPR0JeSHe4O8MgRd9KSWNTPVEqvs6rq0a16mVjbs2DRvaksyE5u3TOqpIbF9wsbSUnUnIibfO8zMw0T300A13LQj1EuOl+36SuaCEQU4RoxXH2w0N6wl/l7Uz33B2zJgbKklcmwXlNXUvRqngC2MCg6QZK9nnjfDAhTGP0VQA1gYdzgP+fpGmVOqGvU1FTtIeJxhGt0tdLooNFBn2NDvI9Fxf3WL915N6184J7BjmV3vxCol6Ooexzn83qASBeXuUl81ANF5ESft0EXDFP\n-----END CERTIFICATE-----"
+        "finding": "-----BEGIN CERTIFICATE-----\nMIIERjCCAy6gAwIBAgISBDNuyh8aaLPMAhw+JfkXghmOMA0GCSqGSIb3DQEBCwUAMDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQDEwJSMzAeFw0yMzEwMTkxMjM1NDVaFw0yNDAxMTcxMjM1NDRaMBcxFTATBgNVBAMTDHRlbGVzY29vcC5mcjBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABISJ+OXPNsb7KNUAmbCqELJZXqNJ74O/QLXF4gNggeSkrNNVYuGLYKEXdc77s0lOAWVHTCJYM0cYz7RHpE//9fijggI6MIICNjAOBgNVHQ8BAf8EBAMCB4AwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFAwrsGdymwkuX8nfIxsdRuyzwAUKMB8GA1UdIwQYMBaAFBQusxe3WFbLrlAJQOYfr52LFMLGMFUGCCsGAQUFBwEBBEkwRzAhBggrBgEFBQcwAYYVaHR0cDovL3IzLm8ubGVuY3Iub3JnMCIGCCsGAQUFBzAChhZodHRwOi8vcjMuaS5sZW5jci5vcmcvMEIGA1UdEQQ7MDmCF3Jldm9sdXRpb24udGVsZXNjb29wLmZyggx0ZWxlc2Nvb3AuZnKCEHd3dy50ZWxlc2Nvb3AuZnIwEwYDVR0gBAwwCjAIBgZngQwBAgEwggEFBgorBgEEAdZ5AgQCBIH2BIHzAPEAdgDatr9rP7W2Ip+bwrtca+hwkXFsu1GEhTS9pD0wSNf7qwAAAYtIJjYFAAAEAwBHMEUCIQC6TB4ouQhC9cnH4FnydjOqGG84gXV+Bwrz/q4DG/1LLQIgITEPkGBXKThCOLJeyyi/RaGaTwGv/zIfKJApgPoO3NMAdwDuzdBk1dsazsVct520zROiModGfLzs3sNRSFlGcR+1mwAAAYtIJjXkAAAEAwBIMEYCIQC8P5JrQBdeDTIkRSbiaekn9tgMoeNXfSRC4uw9WqkztQIhAMqWcBb6bPzR/UIU1ZzWuddvzUCCs5MOnHGiHLc05MjgMA0GCSqGSIb3DQEBCwUAA4IBAQB4k71Hh/sTexvDlzaTlzs8IiEwmzKhIVPIVSX3b5Ul5TP6ld/HxcaBLfFXi59vs18s6PsAJuZ/Fbmto2OiWoMgtKrmCvgmX0BBXiFRb8aH486oMAMEvM58AsKhas/P47L7C6QgYQEBWQPm/dwTXyB15yqAJQB6QKbIczbS9V9xGmDjshrSHNs9dTJsosFkAqRNrF/XGOomVvW+UQ6tS+TjgJnoNFBf8R4eivooupjGP/8hG+le0gcWQE5k6JeDA/bljg8V0gmh6XLAQmvRPB4C8aVFfChFzQjiwFaHhoH0GiK/QwGbl3OjYqtUVO5f1CqoykYtck5WnENYzD4tBu/R\n-----END CERTIFICATE-----"
       },
       {
         "id": "cert_commonName",
@@ -563,7 +550,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "telescoop.fr"
+        "finding": "revolution.telescoop.fr telescoop.fr www.telescoop.fr"
       },
       {
         "id": "cert_trust",
@@ -591,21 +578,21 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "51 >= 30 days"
+        "finding": "87 >= 30 days"
       },
       {
         "id": "cert_notBefore",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "2023-09-06 23:11"
+        "finding": "2023-10-19 12:35"
       },
       {
         "id": "cert_notAfter",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "OK",
-        "finding": "2023-12-05 23:11"
+        "finding": "2024-01-17 12:35"
       },
       {
         "id": "cert_extlifeSpan",
@@ -794,7 +781,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "1697329596"
+        "finding": "1697934200"
       },
       {
         "id": "HSTS",
@@ -967,16 +954,7 @@
         "severity": "INFO",
         "cve": "CVE-2016-0800 CVE-2016-0703",
         "cwe": "CWE-310",
-        "finding": "Make sure you don't use this certificate elsewhere with SSLv2 enabled services, see https://search.censys.io/search?resource=hosts&virtual_hosts=INCLUDE&q=7597F30DB554CD0D352FA5CC7838A209270F3ED4C88938BE47B2113879FEE7AF"
-      },
-      {
-        "id": "LOGJAM-common_primes",
-        "ip": "telescoop.fr/51.210.109.110",
-        "port": "443",
-        "severity": "INFO",
-        "cve": "CVE-2015-4000",
-        "cwe": "CWE-310",
-        "finding": "RFC7919/ffdhe2048"
+        "finding": "no RSA certificate, can't be used with SSLv2 elsewhere"
       },
       {
         "id": "LOGJAM",
@@ -986,6 +964,15 @@
         "cve": "CVE-2015-4000",
         "cwe": "CWE-310",
         "finding": "not vulnerable, no DH EXPORT ciphers,"
+      },
+      {
+        "id": "LOGJAM-common_primes",
+        "ip": "telescoop.fr/51.210.109.110",
+        "port": "443",
+        "severity": "OK",
+        "cve": "CVE-2015-4000",
+        "cwe": "CWE-310",
+        "finding": "no DH key with <= TLS 1.2"
       },
       {
         "id": "BEAST",
@@ -1028,21 +1015,21 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+        "finding": "TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-android_70",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+        "finding": "TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-android_81",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES128-GCM-SHA256"
+        "finding": "TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-android_90",
@@ -1126,35 +1113,35 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "TLSv1.2 DHE-RSA-AES256-GCM-SHA384"
+        "finding": "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
       },
       {
         "id": "clientsimulation-ie_11_win81",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "TLSv1.2 DHE-RSA-AES256-GCM-SHA384"
+        "finding": "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
       },
       {
         "id": "clientsimulation-ie_11_winphone81",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "No connection"
+        "finding": "TLSv1.2 ECDHE-ECDSA-AES128-GCM-SHA256"
       },
       {
         "id": "clientsimulation-ie_11_win10",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+        "finding": "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
       },
       {
         "id": "clientsimulation-edge_15_win10",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+        "finding": "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
       },
       {
         "id": "clientsimulation-edge_101_win10_21h2",
@@ -1196,7 +1183,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+        "finding": "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
       },
       {
         "id": "clientsimulation-java1102",
@@ -1224,21 +1211,21 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305"
+        "finding": "TLSv1.2 ECDHE-ECDSA-CHACHA20-POLY1305"
       },
       {
         "id": "clientsimulation-openssl_102e",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+        "finding": "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
       },
       {
         "id": "clientsimulation-openssl_110l",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+        "finding": "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
       },
       {
         "id": "clientsimulation-openssl_111d",
@@ -1259,7 +1246,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "TLSv1.2 ECDHE-RSA-AES256-GCM-SHA384"
+        "finding": "TLSv1.2 ECDHE-ECDSA-AES256-GCM-SHA384"
       },
       {
         "id": "clientsimulation-thunderbird_91_9",
@@ -1301,14 +1288,14 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "90"
+        "finding": "100"
       },
       {
         "id": "key_exchange_score_weighted",
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "27"
+        "finding": "30"
       },
       {
         "id": "cipher_strength_score",
@@ -1329,7 +1316,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "93"
+        "finding": "96"
       },
       {
         "id": "overall_grade",
@@ -1350,7 +1337,7 @@
         "ip": "telescoop.fr/51.210.109.110",
         "port": "443",
         "severity": "INFO",
-        "finding": "101"
+        "finding": "113"
       }
     ],
     "thirdparties": {
@@ -1457,11 +1444,12 @@
         "connection": "keep-alive",
         "content-encoding": "gzip",
         "content-type": "text/html",
-        "date": "Sun, 15 Oct 2023 00:25:20 GMT",
-        "etag": "W/\"635f90f4-1f840\"",
-        "last-modified": "Mon, 31 Oct 2022 09:10:12 GMT",
+        "date": "Sun, 22 Oct 2023 00:21:57 GMT",
+        "etag": "W/\"65310146-1f840\"",
+        "last-modified": "Thu, 19 Oct 2023 10:13:26 GMT",
         "server": "nginx/1.18.0 (Ubuntu)",
-        "transfer-encoding": "chunked"
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding"
       },
       "endpoints": [
         {
@@ -1578,7 +1566,7 @@
         },
         {
           "hostname": "fonts.googleapis.com",
-          "ip": "173.194.192.95",
+          "ip": "172.217.12.106",
           "geoip": {
             "continent": {
               "code": "NA",
@@ -1632,18 +1620,18 @@
         },
         {
           "hostname": "plausible.io",
-          "ip": "212.102.40.114",
+          "ip": "169.150.221.147",
           "geoip": {
             "city": {
-              "geoname_id": 4684888,
+              "geoname_id": 5392171,
               "names": {
-                "de": "Dallas",
-                "en": "Dallas",
-                "es": "Dallas",
-                "fr": "Dallas",
-                "ja": "ダラス",
-                "pt-BR": "Dallas",
-                "ru": "Даллас"
+                "de": "San José",
+                "en": "San Jose",
+                "es": "San José",
+                "fr": "San José",
+                "ja": "サンノゼ",
+                "pt-BR": "San José",
+                "ru": "Сан-Хосе"
               }
             },
             "continent": {
@@ -1676,13 +1664,13 @@
             },
             "location": {
               "accuracy_radius": 20,
-              "latitude": 32.7797,
-              "longitude": -96.8022,
-              "metro_code": 623,
-              "time_zone": "America/Chicago"
+              "latitude": 37.1835,
+              "longitude": -121.7714,
+              "metro_code": 807,
+              "time_zone": "America/Los_Angeles"
             },
             "postal": {
-              "code": "75270"
+              "code": "95141"
             },
             "registered_country": {
               "geoname_id": 2635167,
@@ -1700,15 +1688,17 @@
             },
             "subdivisions": [
               {
-                "geoname_id": 4736286,
-                "iso_code": "TX",
+                "geoname_id": 5332921,
+                "iso_code": "CA",
                 "names": {
-                  "en": "Texas",
-                  "es": "Texas",
-                  "fr": "Texas",
-                  "ja": "テキサス州",
-                  "ru": "Техас",
-                  "zh-CN": "德克萨斯州"
+                  "de": "Kalifornien",
+                  "en": "California",
+                  "es": "California",
+                  "fr": "Californie",
+                  "ja": "カリフォルニア州",
+                  "pt-BR": "Califórnia",
+                  "ru": "Калифорния",
+                  "zh-CN": "加州"
                 }
               }
             ]
@@ -1716,8 +1706,14 @@
         },
         {
           "hostname": "fonts.gstatic.com",
-          "ip": "108.177.121.94",
+          "ip": "142.251.46.195",
           "geoip": {
+            "city": {
+              "geoname_id": 5133273,
+              "names": {
+                "en": "Queens"
+              }
+            },
             "continent": {
               "code": "NA",
               "geoname_id": 6255149,
@@ -1747,10 +1743,14 @@
               }
             },
             "location": {
-              "accuracy_radius": 1000,
-              "latitude": 37.751,
-              "longitude": -97.822,
-              "time_zone": "America/Chicago"
+              "accuracy_radius": 500,
+              "latitude": 40.66,
+              "longitude": -73.839,
+              "metro_code": 501,
+              "time_zone": "America/New_York"
+            },
+            "postal": {
+              "code": "11414"
             },
             "registered_country": {
               "geoname_id": 6252001,
@@ -1765,7 +1765,23 @@
                 "ru": "США",
                 "zh-CN": "美国"
               }
-            }
+            },
+            "subdivisions": [
+              {
+                "geoname_id": 5128638,
+                "iso_code": "NY",
+                "names": {
+                  "de": "New York",
+                  "en": "New York",
+                  "es": "Nueva York",
+                  "fr": "New York",
+                  "ja": "ニューヨーク州",
+                  "pt-BR": "Nova Iorque",
+                  "ru": "Нью-Йорк",
+                  "zh-CN": "纽约州"
+                }
+              }
+            ]
           }
         }
       ]
@@ -1957,7 +1973,7 @@
     "zap": {
       "@programName": "ZAP",
       "@version": "2.14.0",
-      "@generated": "Sun, 15 Oct 2023 00:20:07",
+      "@generated": "Sun, 22 Oct 2023 00:20:43",
       "site": [
         {
           "@name": "https://telescoop.fr",
@@ -2083,6 +2099,46 @@
     },
     "nuclei": [
       {
+        "template": "dns/txt-fingerprint.yaml",
+        "template-url": "https://templates.nuclei.sh/public/txt-fingerprint",
+        "template-id": "txt-fingerprint",
+        "template-path": "/home/runner/nuclei-templates/dns/txt-fingerprint.yaml",
+        "info": {
+          "name": "DNS TXT Record Detected",
+          "author": [
+            "pdteam"
+          ],
+          "tags": [
+            "dns",
+            "txt"
+          ],
+          "description": "A DNS TXT record was detected. The TXT record lets a domain admin leave notes on a DNS server.",
+          "reference": [
+            "https://www.netspi.com/blog/technical/network-penetration-testing/analyzing-dns-txt-records-to-fingerprint-service-providers/"
+          ],
+          "severity": "info",
+          "metadata": {
+            "max-request": 1
+          },
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ]
+          }
+        },
+        "type": "dns",
+        "host": "telescoop.fr.",
+        "matched-at": "telescoop.fr",
+        "extracted-results": [
+          "\"v=spf1 include:_spf.ecomail.earth include:eu.mailgun.org ~all\"",
+          "\"google-site-verification=uL9WfZaJjiQLIfjf3YPhAeIMDXfmCPim_WYRLEz4bbA\"",
+          "\"1|www.telescoop.fr\""
+        ],
+        "timestamp": "2023-10-22T00:24:48.717862452Z",
+        "matcher-status": true
+      },
+      {
         "template": "dns/mx-fingerprint.yaml",
         "template-url": "https://templates.nuclei.sh/public/mx-fingerprint",
         "template-id": "mx-fingerprint",
@@ -2118,47 +2174,7 @@
         "extracted-results": [
           "1 mx1.ecomail.earth."
         ],
-        "timestamp": "2023-10-15T00:27:53.002073507Z",
-        "matcher-status": true
-      },
-      {
-        "template": "dns/txt-fingerprint.yaml",
-        "template-url": "https://templates.nuclei.sh/public/txt-fingerprint",
-        "template-id": "txt-fingerprint",
-        "template-path": "/home/runner/nuclei-templates/dns/txt-fingerprint.yaml",
-        "info": {
-          "name": "DNS TXT Record Detected",
-          "author": [
-            "pdteam"
-          ],
-          "tags": [
-            "dns",
-            "txt"
-          ],
-          "description": "A DNS TXT record was detected. The TXT record lets a domain admin leave notes on a DNS server.",
-          "reference": [
-            "https://www.netspi.com/blog/technical/network-penetration-testing/analyzing-dns-txt-records-to-fingerprint-service-providers/"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ]
-          }
-        },
-        "type": "dns",
-        "host": "telescoop.fr.",
-        "matched-at": "telescoop.fr",
-        "extracted-results": [
-          "\"google-site-verification=uL9WfZaJjiQLIfjf3YPhAeIMDXfmCPim_WYRLEz4bbA\"",
-          "\"v=spf1 include:_spf.ecomail.earth include:eu.mailgun.org ~all\"",
-          "\"1|www.telescoop.fr\""
-        ],
-        "timestamp": "2023-10-15T00:27:53.105495375Z",
+        "timestamp": "2023-10-22T00:24:48.740743969Z",
         "matcher-status": true
       },
       {
@@ -2194,7 +2210,7 @@
           "ns110.ovh.net.",
           "dns110.ovh.net."
         ],
-        "timestamp": "2023-10-15T00:27:56.88013061Z",
+        "timestamp": "2023-10-22T00:24:52.876627277Z",
         "matcher-status": true
       },
       {
@@ -2220,7 +2236,7 @@
         "host": "https://telescoop.fr",
         "matched-at": "https://telescoop.fr",
         "ip": "51.210.109.110",
-        "timestamp": "2023-10-15T00:28:39.164603483Z",
+        "timestamp": "2023-10-22T00:25:48.064271846Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://telescoop.fr'",
         "matcher-status": true
       },
@@ -2266,7 +2282,7 @@
           "2023-05-31T22:14:47.948704Z"
         ],
         "ip": "45.77.228.254",
-        "timestamp": "2023-10-15T00:29:03.837172303Z",
+        "timestamp": "2023-10-22T00:26:19.781889607Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
         "matcher-status": true
       },
@@ -2312,376 +2328,7 @@
           "2024-04-28T07:13:52Z"
         ],
         "ip": "45.77.228.254",
-        "timestamp": "2023-10-15T00:29:03.837245704Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/miscellaneous/rdap-whois.yaml",
-        "template-url": "https://templates.nuclei.sh/public/rdap-whois",
-        "template-id": "rdap-whois",
-        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
-        "info": {
-          "name": "RDAP WHOIS",
-          "author": [
-            "ricardomaia",
-            "sttlr"
-          ],
-          "tags": [
-            "whois",
-            "rdap",
-            "osint",
-            "misc"
-          ],
-          "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
-          "reference": [
-            "https://about.rdap.org/"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1,
-            "verified": true
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ],
-            "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
-          }
-        },
-        "extractor-name": "registrantOrg",
-        "type": "http",
-        "host": "https://telescoop.fr",
-        "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
-        "extracted-results": [
-          "Maxime Bellec"
-        ],
-        "ip": "45.77.228.254",
-        "timestamp": "2023-10-15T00:29:03.83795461Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/miscellaneous/rdap-whois.yaml",
-        "template-url": "https://templates.nuclei.sh/public/rdap-whois",
-        "template-id": "rdap-whois",
-        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
-        "info": {
-          "name": "RDAP WHOIS",
-          "author": [
-            "ricardomaia",
-            "sttlr"
-          ],
-          "tags": [
-            "whois",
-            "rdap",
-            "osint",
-            "misc"
-          ],
-          "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
-          "reference": [
-            "https://about.rdap.org/"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1,
-            "verified": true
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ],
-            "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
-          }
-        },
-        "extractor-name": "registrantCountry",
-        "type": "http",
-        "host": "https://telescoop.fr",
-        "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
-        "extracted-results": [
-          "FR"
-        ],
-        "ip": "45.77.228.254",
-        "timestamp": "2023-10-15T00:29:03.838014811Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/miscellaneous/rdap-whois.yaml",
-        "template-url": "https://templates.nuclei.sh/public/rdap-whois",
-        "template-id": "rdap-whois",
-        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
-        "info": {
-          "name": "RDAP WHOIS",
-          "author": [
-            "ricardomaia",
-            "sttlr"
-          ],
-          "tags": [
-            "whois",
-            "rdap",
-            "osint",
-            "misc"
-          ],
-          "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
-          "reference": [
-            "https://about.rdap.org/"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1,
-            "verified": true
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ],
-            "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
-          }
-        },
-        "extractor-name": "secureDNS",
-        "type": "http",
-        "host": "https://telescoop.fr",
-        "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
-        "extracted-results": [
-          "false"
-        ],
-        "ip": "45.77.228.254",
-        "timestamp": "2023-10-15T00:29:03.838068311Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/miscellaneous/rdap-whois.yaml",
-        "template-url": "https://templates.nuclei.sh/public/rdap-whois",
-        "template-id": "rdap-whois",
-        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
-        "info": {
-          "name": "RDAP WHOIS",
-          "author": [
-            "ricardomaia",
-            "sttlr"
-          ],
-          "tags": [
-            "whois",
-            "rdap",
-            "osint",
-            "misc"
-          ],
-          "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
-          "reference": [
-            "https://about.rdap.org/"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1,
-            "verified": true
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ],
-            "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
-          }
-        },
-        "extractor-name": "nameServers",
-        "type": "http",
-        "host": "https://telescoop.fr",
-        "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
-        "extracted-results": [
-          "dns110.ovh.net",
-          "ns110.ovh.net"
-        ],
-        "ip": "45.77.228.254",
-        "timestamp": "2023-10-15T00:29:03.838087812Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/miscellaneous/rdap-whois.yaml",
-        "template-url": "https://templates.nuclei.sh/public/rdap-whois",
-        "template-id": "rdap-whois",
-        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
-        "info": {
-          "name": "RDAP WHOIS",
-          "author": [
-            "ricardomaia",
-            "sttlr"
-          ],
-          "tags": [
-            "whois",
-            "rdap",
-            "osint",
-            "misc"
-          ],
-          "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
-          "reference": [
-            "https://about.rdap.org/"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1,
-            "verified": true
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ],
-            "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
-          }
-        },
-        "extractor-name": "status",
-        "type": "http",
-        "host": "https://telescoop.fr",
-        "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
-        "extracted-results": [
-          "active"
-        ],
-        "ip": "45.77.228.254",
-        "timestamp": "2023-10-15T00:29:03.838104412Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/miscellaneous/rdap-whois.yaml",
-        "template-url": "https://templates.nuclei.sh/public/rdap-whois",
-        "template-id": "rdap-whois",
-        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
-        "info": {
-          "name": "RDAP WHOIS",
-          "author": [
-            "ricardomaia",
-            "sttlr"
-          ],
-          "tags": [
-            "whois",
-            "rdap",
-            "osint",
-            "misc"
-          ],
-          "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
-          "reference": [
-            "https://about.rdap.org/"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1,
-            "verified": true
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ],
-            "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
-          }
-        },
-        "extractor-name": "registrationDate",
-        "type": "http",
-        "host": "https://telescoop.fr",
-        "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
-        "extracted-results": [
-          "2020-04-28T07:13:52Z"
-        ],
-        "ip": "45.77.228.254",
-        "timestamp": "2023-10-15T00:29:03.838118612Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/miscellaneous/rdap-whois.yaml",
-        "template-url": "https://templates.nuclei.sh/public/rdap-whois",
-        "template-id": "rdap-whois",
-        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
-        "info": {
-          "name": "RDAP WHOIS",
-          "author": [
-            "ricardomaia",
-            "sttlr"
-          ],
-          "tags": [
-            "whois",
-            "rdap",
-            "osint",
-            "misc"
-          ],
-          "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
-          "reference": [
-            "https://about.rdap.org/"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1,
-            "verified": true
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ],
-            "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
-          }
-        },
-        "extractor-name": "registrantName",
-        "type": "http",
-        "host": "https://telescoop.fr",
-        "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
-        "extracted-results": [
-          "Maxime Bellec"
-        ],
-        "ip": "45.77.228.254",
-        "timestamp": "2023-10-15T00:29:03.838130812Z",
-        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
-        "matcher-status": true
-      },
-      {
-        "template": "http/miscellaneous/rdap-whois.yaml",
-        "template-url": "https://templates.nuclei.sh/public/rdap-whois",
-        "template-id": "rdap-whois",
-        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
-        "info": {
-          "name": "RDAP WHOIS",
-          "author": [
-            "ricardomaia",
-            "sttlr"
-          ],
-          "tags": [
-            "whois",
-            "rdap",
-            "osint",
-            "misc"
-          ],
-          "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
-          "reference": [
-            "https://about.rdap.org/"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1,
-            "verified": true
-          },
-          "classification": {
-            "cve-id": null,
-            "cwe-id": [
-              "cwe-200"
-            ],
-            "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
-          }
-        },
-        "extractor-name": "registrantEmail",
-        "type": "http",
-        "host": "https://telescoop.fr",
-        "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
-        "extracted-results": [
-          "maxbellec2@gmail.com"
-        ],
-        "ip": "45.77.228.254",
-        "timestamp": "2023-10-15T00:29:03.838143712Z",
+        "timestamp": "2023-10-22T00:26:19.781962408Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
         "matcher-status": true
       },
@@ -2727,7 +2374,7 @@
           "+33.670584386"
         ],
         "ip": "45.77.228.254",
-        "timestamp": "2023-10-15T00:29:03.838155412Z",
+        "timestamp": "2023-10-22T00:26:19.781981808Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
         "matcher-status": true
       },
@@ -2776,7 +2423,376 @@
           "FR"
         ],
         "ip": "45.77.228.254",
-        "timestamp": "2023-10-15T00:29:03.838166312Z",
+        "timestamp": "2023-10-22T00:26:19.781995108Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/miscellaneous/rdap-whois.yaml",
+        "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+        "template-id": "rdap-whois",
+        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+        "info": {
+          "name": "RDAP WHOIS",
+          "author": [
+            "ricardomaia",
+            "sttlr"
+          ],
+          "tags": [
+            "whois",
+            "rdap",
+            "osint",
+            "misc"
+          ],
+          "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+          "reference": [
+            "https://about.rdap.org/"
+          ],
+          "severity": "info",
+          "metadata": {
+            "max-request": 1,
+            "verified": true
+          },
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ],
+            "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+          }
+        },
+        "extractor-name": "status",
+        "type": "http",
+        "host": "https://telescoop.fr",
+        "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+        "extracted-results": [
+          "active"
+        ],
+        "ip": "45.77.228.254",
+        "timestamp": "2023-10-22T00:26:19.782008508Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/miscellaneous/rdap-whois.yaml",
+        "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+        "template-id": "rdap-whois",
+        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+        "info": {
+          "name": "RDAP WHOIS",
+          "author": [
+            "ricardomaia",
+            "sttlr"
+          ],
+          "tags": [
+            "whois",
+            "rdap",
+            "osint",
+            "misc"
+          ],
+          "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+          "reference": [
+            "https://about.rdap.org/"
+          ],
+          "severity": "info",
+          "metadata": {
+            "max-request": 1,
+            "verified": true
+          },
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ],
+            "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+          }
+        },
+        "extractor-name": "registrationDate",
+        "type": "http",
+        "host": "https://telescoop.fr",
+        "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+        "extracted-results": [
+          "2020-04-28T07:13:52Z"
+        ],
+        "ip": "45.77.228.254",
+        "timestamp": "2023-10-22T00:26:19.782024208Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/miscellaneous/rdap-whois.yaml",
+        "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+        "template-id": "rdap-whois",
+        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+        "info": {
+          "name": "RDAP WHOIS",
+          "author": [
+            "ricardomaia",
+            "sttlr"
+          ],
+          "tags": [
+            "whois",
+            "rdap",
+            "osint",
+            "misc"
+          ],
+          "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+          "reference": [
+            "https://about.rdap.org/"
+          ],
+          "severity": "info",
+          "metadata": {
+            "max-request": 1,
+            "verified": true
+          },
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ],
+            "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+          }
+        },
+        "extractor-name": "registrantEmail",
+        "type": "http",
+        "host": "https://telescoop.fr",
+        "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+        "extracted-results": [
+          "maxbellec2@gmail.com"
+        ],
+        "ip": "45.77.228.254",
+        "timestamp": "2023-10-22T00:26:19.782038008Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/miscellaneous/rdap-whois.yaml",
+        "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+        "template-id": "rdap-whois",
+        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+        "info": {
+          "name": "RDAP WHOIS",
+          "author": [
+            "ricardomaia",
+            "sttlr"
+          ],
+          "tags": [
+            "whois",
+            "rdap",
+            "osint",
+            "misc"
+          ],
+          "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+          "reference": [
+            "https://about.rdap.org/"
+          ],
+          "severity": "info",
+          "metadata": {
+            "max-request": 1,
+            "verified": true
+          },
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ],
+            "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+          }
+        },
+        "extractor-name": "registrantCountry",
+        "type": "http",
+        "host": "https://telescoop.fr",
+        "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+        "extracted-results": [
+          "FR"
+        ],
+        "ip": "45.77.228.254",
+        "timestamp": "2023-10-22T00:26:19.782050208Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/miscellaneous/rdap-whois.yaml",
+        "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+        "template-id": "rdap-whois",
+        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+        "info": {
+          "name": "RDAP WHOIS",
+          "author": [
+            "ricardomaia",
+            "sttlr"
+          ],
+          "tags": [
+            "whois",
+            "rdap",
+            "osint",
+            "misc"
+          ],
+          "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+          "reference": [
+            "https://about.rdap.org/"
+          ],
+          "severity": "info",
+          "metadata": {
+            "max-request": 1,
+            "verified": true
+          },
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ],
+            "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+          }
+        },
+        "extractor-name": "nameServers",
+        "type": "http",
+        "host": "https://telescoop.fr",
+        "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+        "extracted-results": [
+          "ns110.ovh.net",
+          "dns110.ovh.net"
+        ],
+        "ip": "45.77.228.254",
+        "timestamp": "2023-10-22T00:26:19.782064608Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/miscellaneous/rdap-whois.yaml",
+        "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+        "template-id": "rdap-whois",
+        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+        "info": {
+          "name": "RDAP WHOIS",
+          "author": [
+            "ricardomaia",
+            "sttlr"
+          ],
+          "tags": [
+            "whois",
+            "rdap",
+            "osint",
+            "misc"
+          ],
+          "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+          "reference": [
+            "https://about.rdap.org/"
+          ],
+          "severity": "info",
+          "metadata": {
+            "max-request": 1,
+            "verified": true
+          },
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ],
+            "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+          }
+        },
+        "extractor-name": "secureDNS",
+        "type": "http",
+        "host": "https://telescoop.fr",
+        "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+        "extracted-results": [
+          "false"
+        ],
+        "ip": "45.77.228.254",
+        "timestamp": "2023-10-22T00:26:19.782076709Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/miscellaneous/rdap-whois.yaml",
+        "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+        "template-id": "rdap-whois",
+        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+        "info": {
+          "name": "RDAP WHOIS",
+          "author": [
+            "ricardomaia",
+            "sttlr"
+          ],
+          "tags": [
+            "whois",
+            "rdap",
+            "osint",
+            "misc"
+          ],
+          "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+          "reference": [
+            "https://about.rdap.org/"
+          ],
+          "severity": "info",
+          "metadata": {
+            "max-request": 1,
+            "verified": true
+          },
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ],
+            "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+          }
+        },
+        "extractor-name": "registrantName",
+        "type": "http",
+        "host": "https://telescoop.fr",
+        "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+        "extracted-results": [
+          "Maxime Bellec"
+        ],
+        "ip": "45.77.228.254",
+        "timestamp": "2023-10-22T00:26:19.782088309Z",
+        "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+        "matcher-status": true
+      },
+      {
+        "template": "http/miscellaneous/rdap-whois.yaml",
+        "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+        "template-id": "rdap-whois",
+        "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+        "info": {
+          "name": "RDAP WHOIS",
+          "author": [
+            "ricardomaia",
+            "sttlr"
+          ],
+          "tags": [
+            "whois",
+            "rdap",
+            "osint",
+            "misc"
+          ],
+          "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+          "reference": [
+            "https://about.rdap.org/"
+          ],
+          "severity": "info",
+          "metadata": {
+            "max-request": 1,
+            "verified": true
+          },
+          "classification": {
+            "cve-id": null,
+            "cwe-id": [
+              "cwe-200"
+            ],
+            "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+          }
+        },
+        "extractor-name": "registrantOrg",
+        "type": "http",
+        "host": "https://telescoop.fr",
+        "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+        "extracted-results": [
+          "Maxime Bellec"
+        ],
+        "ip": "45.77.228.254",
+        "timestamp": "2023-10-22T00:26:19.782099409Z",
         "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
         "matcher-status": true
       },
@@ -2813,7 +2829,7 @@
           "https://plausible.io/js/plausible.js"
         ],
         "ip": "51.210.109.110",
-        "timestamp": "2023-10-15T00:29:10.766884712Z",
+        "timestamp": "2023-10-22T00:26:28.648958164Z",
         "curl-command": "curl -X 'GET' -d '' -H 'Host: telescoop.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://telescoop.fr/'",
         "matcher-status": true
       },
@@ -2853,7 +2869,7 @@
         "host": "https://telescoop.fr",
         "matched-at": "https://telescoop.fr/",
         "ip": "51.210.109.110",
-        "timestamp": "2023-10-15T00:29:19.200771788Z",
+        "timestamp": "2023-10-22T00:26:39.535523875Z",
         "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: telescoop.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://telescoop.fr/'",
         "matcher-status": true
       },
@@ -2883,7 +2899,7 @@
           "Let's Encrypt"
         ],
         "ip": "51.210.109.110",
-        "timestamp": "2023-10-15T00:29:45.361624284Z",
+        "timestamp": "2023-10-22T00:27:13.794412676Z",
         "matcher-status": true
       },
       {
@@ -2909,42 +2925,12 @@
         "host": "telescoop.fr",
         "matched-at": "telescoop.fr:443",
         "extracted-results": [
-          "telescoop.fr"
+          "telescoop.fr",
+          "www.telescoop.fr",
+          "revolution.telescoop.fr"
         ],
         "ip": "51.210.109.110",
-        "timestamp": "2023-10-15T00:29:45.36219779Z",
-        "matcher-status": true
-      },
-      {
-        "template": "network/jarm/c2/generic-c2-jarm.yaml",
-        "template-url": "https://templates.nuclei.sh/public/generic-c2-jarm",
-        "template-id": "generic-c2-jarm",
-        "template-path": "/home/runner/nuclei-templates/network/jarm/c2/generic-c2-jarm.yaml",
-        "info": {
-          "name": "Generic C2 JARM - Detect",
-          "author": [
-            "pussycat0x"
-          ],
-          "tags": [
-            "network",
-            "c2",
-            "jarm",
-            "cti"
-          ],
-          "description": "Detect C2 Servers with JARM Hashes\n",
-          "reference": [
-            "https://github.com/michaelkoczwara/c2jarm"
-          ],
-          "severity": "info",
-          "metadata": {
-            "max-request": 1
-          }
-        },
-        "type": "tcp",
-        "host": "telescoop.fr:443",
-        "matched-at": "telescoop.fr:443",
-        "ip": "51.210.109.110",
-        "timestamp": "2023-10-15T00:29:45.583208231Z",
+        "timestamp": "2023-10-22T00:27:13.795336088Z",
         "matcher-status": true
       },
       {
@@ -2974,7 +2960,7 @@
           "tls12"
         ],
         "ip": "51.210.109.110",
-        "timestamp": "2023-10-15T00:29:47.425258071Z",
+        "timestamp": "2023-10-22T00:27:16.413831422Z",
         "matcher-status": true
       },
       {
@@ -3004,7 +2990,7 @@
           "tls13"
         ],
         "ip": "51.210.109.110",
-        "timestamp": "2023-10-15T00:29:47.723689667Z",
+        "timestamp": "2023-10-22T00:27:16.730237158Z",
         "matcher-status": true
       }
     ],
@@ -3012,9 +2998,10 @@
       {
         "requestedUrl": "https://telescoop.fr/",
         "finalUrl": "https://www.telescoop.fr/",
-        "fetchTime": "2023-10-15T00:20:24.066Z",
+        "fetchTime": "2023-10-22T00:21:03.526Z",
         "runWarnings": [
-          "The page may not be loading as expected because your test URL (https://telescoop.fr/) was redirected to https://www.telescoop.fr/. Try testing the second URL directly."
+          "The page may not be loading as expected because your test URL (https://telescoop.fr/) was redirected to https://www.telescoop.fr/. Try testing the second URL directly.",
+          "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/master/docs/throttling.md#cpu-throttling)."
         ],
         "categories": {
           "performance": {
@@ -3077,53 +3064,53 @@
             "description": "Collects all available metrics.",
             "score": null,
             "scoreDisplayMode": "informative",
-            "numericValue": 3836,
+            "numericValue": 3224,
             "numericUnit": "millisecond",
             "details": {
               "type": "debugdata",
               "items": [
                 {
-                  "firstContentfulPaint": 3836,
-                  "firstMeaningfulPaint": 3836,
-                  "largestContentfulPaint": 4072,
-                  "interactive": 3836,
-                  "speedIndex": 4234,
+                  "firstContentfulPaint": 3224,
+                  "firstMeaningfulPaint": 3224,
+                  "largestContentfulPaint": 3302,
+                  "interactive": 3224,
+                  "speedIndex": 4144,
                   "totalBlockingTime": 0,
                   "maxPotentialFID": 16,
                   "cumulativeLayoutShift": 0.11735973358154297,
                   "cumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "totalCumulativeLayoutShift": 0.11735973358154297,
                   "observedTimeOrigin": 0,
-                  "observedTimeOriginTs": 229748100,
+                  "observedTimeOriginTs": 411278997,
                   "observedNavigationStart": 0,
-                  "observedNavigationStartTs": 229748100,
-                  "observedFirstPaint": 1374,
-                  "observedFirstPaintTs": 231122118,
-                  "observedFirstContentfulPaint": 1374,
-                  "observedFirstContentfulPaintTs": 231122118,
-                  "observedFirstContentfulPaintAllFrames": 1374,
-                  "observedFirstContentfulPaintAllFramesTs": 231122118,
-                  "observedFirstMeaningfulPaint": 1374,
-                  "observedFirstMeaningfulPaintTs": 231122118,
-                  "observedLargestContentfulPaint": 1374,
-                  "observedLargestContentfulPaintTs": 231122118,
-                  "observedLargestContentfulPaintAllFrames": 1374,
-                  "observedLargestContentfulPaintAllFramesTs": 231122118,
-                  "observedTraceEnd": 3883,
-                  "observedTraceEndTs": 233630845,
-                  "observedLoad": 1571,
-                  "observedLoadTs": 231319227,
-                  "observedDomContentLoaded": 1395,
-                  "observedDomContentLoadedTs": 231143180,
+                  "observedNavigationStartTs": 411278997,
+                  "observedFirstPaint": 1638,
+                  "observedFirstPaintTs": 412917434,
+                  "observedFirstContentfulPaint": 1638,
+                  "observedFirstContentfulPaintTs": 412917434,
+                  "observedFirstContentfulPaintAllFrames": 1638,
+                  "observedFirstContentfulPaintAllFramesTs": 412917434,
+                  "observedFirstMeaningfulPaint": 1638,
+                  "observedFirstMeaningfulPaintTs": 412917434,
+                  "observedLargestContentfulPaint": 1638,
+                  "observedLargestContentfulPaintTs": 412917434,
+                  "observedLargestContentfulPaintAllFrames": 1638,
+                  "observedLargestContentfulPaintAllFramesTs": 412917434,
+                  "observedTraceEnd": 4352,
+                  "observedTraceEndTs": 415630609,
+                  "observedLoad": 2032,
+                  "observedLoadTs": 413310951,
+                  "observedDomContentLoaded": 1750,
+                  "observedDomContentLoadedTs": 413028644,
                   "observedCumulativeLayoutShift": 0.11735973358154297,
                   "observedCumulativeLayoutShiftMainFrame": 0.11735973358154297,
                   "observedTotalCumulativeLayoutShift": 0.11735973358154297,
-                  "observedFirstVisualChange": 1375,
-                  "observedFirstVisualChangeTs": 231123100,
-                  "observedLastVisualChange": 1492,
-                  "observedLastVisualChangeTs": 231240100,
-                  "observedSpeedIndex": 1385,
-                  "observedSpeedIndexTs": 231133421
+                  "observedFirstVisualChange": 1637,
+                  "observedFirstVisualChangeTs": 412915997,
+                  "observedLastVisualChange": 1687,
+                  "observedLastVisualChangeTs": 412965997,
+                  "observedSpeedIndex": 1642,
+                  "observedSpeedIndexTs": 412920816
                 },
                 {
                   "lcpInvalidated": false
@@ -3145,19 +3132,19 @@
                   "numScripts": 3,
                   "numStylesheets": 3,
                   "numFonts": 1,
-                  "numTasks": 277,
+                  "numTasks": 227,
                   "numTasksOver10ms": 4,
-                  "numTasksOver25ms": 3,
-                  "numTasksOver50ms": 0,
+                  "numTasksOver25ms": 2,
+                  "numTasksOver50ms": 1,
                   "numTasksOver100ms": 0,
                   "numTasksOver500ms": 0,
-                  "rtt": 13.32,
-                  "throughput": 7561310.69944531,
-                  "maxRtt": 117.333,
-                  "maxServerLatency": 96.83699999999997,
-                  "totalByteWeight": 446693,
-                  "totalTaskTime": 211.07999999999967,
-                  "mainDocumentTransferSize": 40958
+                  "rtt": 1.6710000000000003,
+                  "throughput": 6871762.185291818,
+                  "maxRtt": 148.469,
+                  "maxServerLatency": 145.73299999999998,
+                  "totalByteWeight": 272432,
+                  "totalTaskTime": 221.8789999999997,
+                  "mainDocumentTransferSize": 40981
                 }
               ]
             }
@@ -3179,15 +3166,15 @@
         "width": 1920,
         "height": 1080,
         "url": "https://telescoop.fr",
-        "size": 728.992,
+        "size": 554.729,
         "nodes": 259,
         "requests": 23,
-        "grade": "B",
-        "score": 80,
-        "ges": 1.4,
-        "water": 2.1,
+        "grade": "A",
+        "score": 81,
+        "ges": 1.38,
+        "water": 2.07,
         "ecoindex_version": "5.4.2",
-        "date": "2023-10-15 00:18:25.724436",
+        "date": "2023-10-22 00:18:45.808171",
         "page_type": "website"
       }
     ],
@@ -3199,7 +3186,7 @@
       "nmapOpenPortsCount": 2,
       "nmapOpenPortsGrade": "A",
       "testsslExpireSoon": false,
-      "testsslExpireDate": "2023-12-05T23:11:00.000Z",
+      "testsslExpireDate": "2024-01-17T12:35:00.000Z",
       "testsslGrade": "A",
       "cookiesGrade": "A",
       "cookiesCount": 0,
@@ -3216,7 +3203,7 @@
       "lighthouse_pwa": 0.8,
       "lighthouse_pwaGrade": "B",
       "declaration-a11y": "F",
-      "ecoindexGrade": "B"
+      "ecoindexGrade": "A"
     }
   }
 ]
