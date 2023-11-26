@@ -102,7 +102,7 @@
     "connection": "keep-alive",
     "content-encoding": "gzip",
     "content-type": "text/html",
-    "date": "Sun, 19 Nov 2023 00:22:19 GMT",
+    "date": "Sun, 26 Nov 2023 00:21:54 GMT",
     "etag": "W/\"65310146-1f840\"",
     "last-modified": "Thu, 19 Oct 2023 10:13:26 GMT",
     "server": "nginx/1.18.0 (Ubuntu)",
@@ -224,7 +224,7 @@
     },
     {
       "hostname": "fonts.googleapis.com",
-      "ip": "142.251.16.95",
+      "ip": "172.253.115.95",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -357,7 +357,7 @@
     },
     {
       "hostname": "fonts.gstatic.com",
-      "ip": "142.251.111.94",
+      "ip": "172.253.122.94",
       "geoip": {
         "continent": {
           "code": "NA",
