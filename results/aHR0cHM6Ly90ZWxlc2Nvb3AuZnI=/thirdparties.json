@@ -6,71 +6,7 @@
     },
     {
       "type": "unknown",
-      "url": "https://www.telescoop.fr/css/bulma.min.css"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/css/telescoop.css"
-    },
-    {
-      "type": "google fonts",
-      "url": "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&family=Roboto+Slab:wght@300;400;600&Overpass+Mono:wght@300;400&display=swap",
-      "details": {
-        "id": "google fonts",
-        "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
-      }
-    },
-    {
-      "type": "unknown",
-      "url": "https://plausible.io/js/plausible.js"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/maxime.jpg"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/clement.jpg"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/antoine.jpg"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/camille.jpg"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/anthakarana.png"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/excellent-excedent.png"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/references/back-market.png"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/references/greenpeace.png"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/references/green-menu.png"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/references/excellents-excedent.png"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/references/akuo.png"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/references/oxfam.png"
+      "url": "https://www.telescoop.fr/css/style.min.css"
     },
     {
       "type": "unknown",
@@ -78,23 +14,95 @@
     },
     {
       "type": "unknown",
-      "url": "https://www.telescoop.fr/js/siema.min.js"
+      "url": "https://plausible.io/js/plausible.js"
     },
     {
-      "type": "google fonts",
-      "url": "https://fonts.gstatic.com/s/robotoslab/v34/BngMUXZYTXPIvIBgJJSb6ufN5qU.woff2",
-      "details": {
-        "id": "google fonts",
-        "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
-      }
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/logo.svg"
     },
     {
-      "type": "google fonts",
-      "url": "https://fonts.gstatic.com/s/robotoslab/v34/BngMUXZYTXPIvIBgJJSb6ufN5qU.woff2",
-      "details": {
-        "id": "google fonts",
-        "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
-      }
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/illustration-left.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/illustration-top-right.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/illustration-right.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/after-title.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/service-public.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/development-tool.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/website.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/cartographie.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/no-code.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/data.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/values/remote.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/values/gouvernance.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/values/freedom.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/values/80.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/values/probono.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/accessibility.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/rgpd.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/project-management.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/eco-conception.svg"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/class=%22p-4%22"
+    },
+    {
+      "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/bottom.svg"
     }
   ],
   "cookies": [],
@@ -102,9 +110,9 @@
     "connection": "keep-alive",
     "content-encoding": "gzip",
     "content-type": "text/html",
-    "date": "Sun, 03 Dec 2023 00:22:09 GMT",
-    "etag": "W/\"65310146-1f840\"",
-    "last-modified": "Thu, 19 Oct 2023 10:13:26 GMT",
+    "date": "Sun, 10 Dec 2023 00:21:45 GMT",
+    "etag": "W/\"65733151-3d1d\"",
+    "last-modified": "Fri, 08 Dec 2023 15:08:01 GMT",
     "server": "nginx/1.18.0 (Ubuntu)",
     "transfer-encoding": "chunked",
     "vary": "Accept-Encoding"
@@ -114,6 +122,19 @@
       "hostname": "telescoop.fr",
       "ip": "51.210.109.110",
       "geoip": {
+        "city": {
+          "geoname_id": 3021411,
+          "names": {
+            "de": "Dieppe",
+            "en": "Dieppe",
+            "es": "Dieppe",
+            "fr": "Dieppe",
+            "ja": "ディエップ",
+            "pt-BR": "Dieppe",
+            "ru": "Дьеп",
+            "zh-CN": "迪耶普"
+          }
+        },
         "continent": {
           "code": "EU",
           "geoname_id": 6255148,
@@ -144,10 +165,13 @@
           }
         },
         "location": {
-          "accuracy_radius": 500,
-          "latitude": 48.8582,
-          "longitude": 2.3387,
+          "accuracy_radius": 1000,
+          "latitude": 49.9206,
+          "longitude": 1.0891,
           "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "76200"
         },
         "registered_country": {
           "geoname_id": 3017382,
@@ -163,13 +187,49 @@
             "ru": "Франция",
             "zh-CN": "法国"
           }
-        }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 11071621,
+            "iso_code": "NOR",
+            "names": {
+              "de": "Normandie",
+              "en": "Normandy",
+              "es": "Normandía",
+              "fr": "Normandie"
+            }
+          },
+          {
+            "geoname_id": 2975248,
+            "iso_code": "76",
+            "names": {
+              "de": "Seine-Maritime",
+              "en": "Seine-Maritime",
+              "es": "Sena Marítimo",
+              "fr": "Seine-Maritime",
+              "pt-BR": "Sena Marítimo"
+            }
+          }
+        ]
       }
     },
     {
       "hostname": "www.telescoop.fr",
       "ip": "51.210.109.110",
       "geoip": {
+        "city": {
+          "geoname_id": 3021411,
+          "names": {
+            "de": "Dieppe",
+            "en": "Dieppe",
+            "es": "Dieppe",
+            "fr": "Dieppe",
+            "ja": "ディエップ",
+            "pt-BR": "Dieppe",
+            "ru": "Дьеп",
+            "zh-CN": "迪耶普"
+          }
+        },
         "continent": {
           "code": "EU",
           "geoname_id": 6255148,
@@ -200,10 +260,13 @@
           }
         },
         "location": {
-          "accuracy_radius": 500,
-          "latitude": 48.8582,
-          "longitude": 2.3387,
+          "accuracy_radius": 1000,
+          "latitude": 49.9206,
+          "longitude": 1.0891,
           "time_zone": "Europe/Paris"
+        },
+        "postal": {
+          "code": "76200"
         },
         "registered_country": {
           "geoname_id": 3017382,
@@ -219,77 +282,41 @@
             "ru": "Франция",
             "zh-CN": "法国"
           }
-        }
-      }
-    },
-    {
-      "hostname": "fonts.googleapis.com",
-      "ip": "172.217.164.106",
-      "geoip": {
-        "continent": {
-          "code": "NA",
-          "geoname_id": 6255149,
-          "names": {
-            "de": "Nordamerika",
-            "en": "North America",
-            "es": "Norteamérica",
-            "fr": "Amérique du Nord",
-            "ja": "北アメリカ",
-            "pt-BR": "América do Norte",
-            "ru": "Северная Америка",
-            "zh-CN": "北美洲"
-          }
         },
-        "country": {
-          "geoname_id": 6252001,
-          "iso_code": "US",
-          "names": {
-            "de": "Vereinigte Staaten",
-            "en": "United States",
-            "es": "Estados Unidos",
-            "fr": "États Unis",
-            "ja": "アメリカ",
-            "pt-BR": "EUA",
-            "ru": "США",
-            "zh-CN": "美国"
+        "subdivisions": [
+          {
+            "geoname_id": 11071621,
+            "iso_code": "NOR",
+            "names": {
+              "de": "Normandie",
+              "en": "Normandy",
+              "es": "Normandía",
+              "fr": "Normandie"
+            }
+          },
+          {
+            "geoname_id": 2975248,
+            "iso_code": "76",
+            "names": {
+              "de": "Seine-Maritime",
+              "en": "Seine-Maritime",
+              "es": "Sena Marítimo",
+              "fr": "Seine-Maritime",
+              "pt-BR": "Sena Marítimo"
+            }
           }
-        },
-        "location": {
-          "accuracy_radius": 1000,
-          "latitude": 37.751,
-          "longitude": -97.822,
-          "time_zone": "America/Chicago"
-        },
-        "registered_country": {
-          "geoname_id": 6252001,
-          "iso_code": "US",
-          "names": {
-            "de": "Vereinigte Staaten",
-            "en": "United States",
-            "es": "Estados Unidos",
-            "fr": "États Unis",
-            "ja": "アメリカ",
-            "pt-BR": "EUA",
-            "ru": "США",
-            "zh-CN": "美国"
-          }
-        }
+        ]
       }
     },
     {
       "hostname": "plausible.io",
-      "ip": "169.150.221.147",
+      "ip": "37.19.207.34",
       "geoip": {
         "city": {
-          "geoname_id": 5392171,
+          "geoname_id": 4744870,
           "names": {
-            "de": "San José",
-            "en": "San Jose",
-            "es": "San José",
-            "fr": "San José",
-            "ja": "サンノゼ",
-            "pt-BR": "San José",
-            "ru": "Сан-Хосе"
+            "en": "Ashburn",
+            "ru": "Ашберн"
           }
         },
         "continent": {
@@ -322,13 +349,13 @@
         },
         "location": {
           "accuracy_radius": 20,
-          "latitude": 37.1835,
-          "longitude": -121.7714,
-          "metro_code": 807,
-          "time_zone": "America/Los_Angeles"
+          "latitude": 39.0469,
+          "longitude": -77.4903,
+          "metro_code": 511,
+          "time_zone": "America/New_York"
         },
         "postal": {
-          "code": "95141"
+          "code": "20149"
         },
         "registered_country": {
           "geoname_id": 2635167,
@@ -346,97 +373,15 @@
         },
         "subdivisions": [
           {
-            "geoname_id": 5332921,
-            "iso_code": "CA",
+            "geoname_id": 6254928,
+            "iso_code": "VA",
             "names": {
-              "de": "Kalifornien",
-              "en": "California",
-              "es": "California",
-              "fr": "Californie",
-              "ja": "カリフォルニア州",
-              "pt-BR": "Califórnia",
-              "ru": "Калифорния",
-              "zh-CN": "加州"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "hostname": "fonts.gstatic.com",
-      "ip": "142.251.46.195",
-      "geoip": {
-        "city": {
-          "geoname_id": 5133273,
-          "names": {
-            "en": "Queens"
-          }
-        },
-        "continent": {
-          "code": "NA",
-          "geoname_id": 6255149,
-          "names": {
-            "de": "Nordamerika",
-            "en": "North America",
-            "es": "Norteamérica",
-            "fr": "Amérique du Nord",
-            "ja": "北アメリカ",
-            "pt-BR": "América do Norte",
-            "ru": "Северная Америка",
-            "zh-CN": "北美洲"
-          }
-        },
-        "country": {
-          "geoname_id": 6252001,
-          "iso_code": "US",
-          "names": {
-            "de": "Vereinigte Staaten",
-            "en": "United States",
-            "es": "Estados Unidos",
-            "fr": "États Unis",
-            "ja": "アメリカ",
-            "pt-BR": "EUA",
-            "ru": "США",
-            "zh-CN": "美国"
-          }
-        },
-        "location": {
-          "accuracy_radius": 1000,
-          "latitude": 40.66,
-          "longitude": -73.839,
-          "metro_code": 501,
-          "time_zone": "America/New_York"
-        },
-        "postal": {
-          "code": "11414"
-        },
-        "registered_country": {
-          "geoname_id": 6252001,
-          "iso_code": "US",
-          "names": {
-            "de": "Vereinigte Staaten",
-            "en": "United States",
-            "es": "Estados Unidos",
-            "fr": "États Unis",
-            "ja": "アメリカ",
-            "pt-BR": "EUA",
-            "ru": "США",
-            "zh-CN": "美国"
-          }
-        },
-        "subdivisions": [
-          {
-            "geoname_id": 5128638,
-            "iso_code": "NY",
-            "names": {
-              "de": "New York",
-              "en": "New York",
-              "es": "Nueva York",
-              "fr": "New York",
-              "ja": "ニューヨーク州",
-              "pt-BR": "Nova Iorque",
-              "ru": "Нью-Йорк",
-              "zh-CN": "纽约州"
+              "en": "Virginia",
+              "fr": "Virginie",
+              "ja": "バージニア州",
+              "pt-BR": "Virgínia",
+              "ru": "Вирджиния",
+              "zh-CN": "弗吉尼亚州"
             }
           }
         ]

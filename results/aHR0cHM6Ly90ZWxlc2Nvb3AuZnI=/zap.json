@@ -1,7 +1,7 @@
 {
 	"@programName": "ZAP",
 	"@version": "2.14.0",
-	"@generated": "Sun, 3 Dec 2023 00:20:37",
+	"@generated": "Sun, 10 Dec 2023 00:20:44",
 	"site":[ 
 		{
 			"@name": "https://telescoop.fr",
@@ -78,19 +78,11 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<link\n    href=\"https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&family=Roboto+Slab:wght@300;400;600&Overpass+Mono:wght@300;400&display=swap\"\n    rel=\"stylesheet\" />",
-							"otherinfo": ""
-						},
-						{
-							"uri": "https://telescoop.fr",
-							"method": "GET",
-							"param": "",
-							"attack": "",
 							"evidence": "<script defer data-domain=\"telescoop.fr\" src=\"https://plausible.io/js/plausible.js\"></script>",
 							"otherinfo": ""
 						}
 					],
-					"count": "2",
+					"count": "1",
 					"solution": "<p>Provide a valid integrity attribute to the tag.</p>",
 					"otherinfo": "",
 					"reference": "<p>https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity</p>",
@@ -266,33 +258,6 @@
 					"sourceid": "1"
 				},
 				{
-					"pluginid": "10094",
-					"alertRef": "10094-3",
-					"alert": "Base64 Disclosure",
-					"name": "Base64 Disclosure",
-					"riskcode": "0",
-					"confidence": "2",
-					"riskdesc": "Informational (Medium)",
-					"desc": "<p>Base64 encoded data was disclosed by the application/web server. Note: in the interests of performance not all base64 strings in the response were analyzed individually, the entire response should be looked at by the analyst/security team/developer(s).</p>",
-					"instances":[ 
-						{
-							"uri": "https://telescoop.fr",
-							"method": "GET",
-							"param": "",
-							"attack": "",
-							"evidence": "com/presentation/d/e/2PACX-1vSZoSbs6iY0suI2UxRglauTMmnzJwyTp4SMZAasbnloZQhdV-CfBq7flA1RF7fxqf1aXCX-uGqbh1gN/pub",
-							"otherinfo": "r\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDz{Z\uFFFD*'\uFFFD\uFFFD\uFFFD\uFFFDc\uFFFD\t\uFFFD\uFFFD&hI\uFFFD:\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFD\uFFFD\\x0018%j\uFFFD\u031A|\uFFFD\uFFFD$\uFFFD\uFFFD#\\x0019\\x0001\uFFFD\\x001b\uFFFDZ\\x0019B\\x0017U\uFFFD'\uFFFD\uFFFD\uFFFD\uFFFD\\x0003TE\uFFFD\uFFFDjV\uFFFD\t\uFFFD\\x001a\uFFFD\uFFFD\uFFFD\\x0003\uFFFD\uFFFD"
-						}
-					],
-					"count": "1",
-					"solution": "<p>Manually confirm that the Base64 data does not leak sensitive information, and that the data cannot be aggregated/used to exploit other vulnerabilities.</p>",
-					"otherinfo": "<p>r\uFFFD\uFFFD\uFFFD\uFFFD\uFFFDz{Z\uFFFD*'\uFFFD\uFFFD\uFFFD\uFFFDc\uFFFD\t\uFFFD\uFFFD&hI\uFFFD:\uFFFD\uFFFD,\uFFFD\uFFFD\uFFFD\uFFFD\\x0018%j\uFFFD\u031A|\uFFFD\uFFFD$\uFFFD\uFFFD#\\x0019\\x0001\uFFFD\\x001b\uFFFDZ\\x0019B\\x0017U\uFFFD'\uFFFD\uFFFD\uFFFD\uFFFD\\x0003TE\uFFFD\uFFFDjV\uFFFD\t\uFFFD\\x001a\uFFFD\uFFFD\uFFFD\\x0003\uFFFD\uFFFD</p>",
-					"reference": "<p>https://projects.webappsec.org/w/page/13246936/Information%20Leakage</p>",
-					"cweid": "200",
-					"wascid": "13",
-					"sourceid": "1"
-				},
-				{
 					"pluginid": "10109",
 					"alertRef": "10109",
 					"alert": "Modern Web Application",
@@ -307,7 +272,7 @@
 							"method": "GET",
 							"param": "",
 							"attack": "",
-							"evidence": "<a class=\"navbar-link\"> \u00C0 propos de nous </a>",
+							"evidence": "<a role=\"button\" class=\"navbar-burger\" aria-label=\"menu\" aria-expanded=\"false\" data-target=\"main-navigation\">\n                <span aria-hidden=\"true\"></span>\n                <span aria-hidden=\"true\"></span>\n                <span aria-hidden=\"true\"></span>\n            </a>",
 							"otherinfo": "Links have been found that do not have traditional href attributes, which is an indication that this is a modern web application."
 						}
 					],
