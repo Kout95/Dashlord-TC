@@ -22,11 +22,11 @@
     },
     {
       "type": "unknown",
-      "url": "https://www.telescoop.fr/img/svg/illustration-left.svg"
+      "url": "https://www.telescoop.fr/img/svg/illustration-top-right.svg"
     },
     {
       "type": "unknown",
-      "url": "https://www.telescoop.fr/img/svg/illustration-top-right.svg"
+      "url": "https://www.telescoop.fr/img/svg/illustration-left.svg"
     },
     {
       "type": "unknown",
@@ -110,9 +110,9 @@
     "connection": "keep-alive",
     "content-encoding": "gzip",
     "content-type": "text/html",
-    "date": "Sun, 10 Dec 2023 00:21:45 GMT",
-    "etag": "W/\"65733151-3d1d\"",
-    "last-modified": "Fri, 08 Dec 2023 15:08:01 GMT",
+    "date": "Sun, 17 Dec 2023 00:22:19 GMT",
+    "etag": "W/\"657aec8e-3d6e\"",
+    "last-modified": "Thu, 14 Dec 2023 11:52:46 GMT",
     "server": "nginx/1.18.0 (Ubuntu)",
     "transfer-encoding": "chunked",
     "vary": "Accept-Encoding"
@@ -122,19 +122,6 @@
       "hostname": "telescoop.fr",
       "ip": "51.210.109.110",
       "geoip": {
-        "city": {
-          "geoname_id": 3021411,
-          "names": {
-            "de": "Dieppe",
-            "en": "Dieppe",
-            "es": "Dieppe",
-            "fr": "Dieppe",
-            "ja": "ディエップ",
-            "pt-BR": "Dieppe",
-            "ru": "Дьеп",
-            "zh-CN": "迪耶普"
-          }
-        },
         "continent": {
           "code": "EU",
           "geoname_id": 6255148,
@@ -165,13 +152,10 @@
           }
         },
         "location": {
-          "accuracy_radius": 1000,
-          "latitude": 49.9206,
-          "longitude": 1.0891,
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
           "time_zone": "Europe/Paris"
-        },
-        "postal": {
-          "code": "76200"
         },
         "registered_country": {
           "geoname_id": 3017382,
@@ -187,49 +171,13 @@
             "ru": "Франция",
             "zh-CN": "法国"
           }
-        },
-        "subdivisions": [
-          {
-            "geoname_id": 11071621,
-            "iso_code": "NOR",
-            "names": {
-              "de": "Normandie",
-              "en": "Normandy",
-              "es": "Normandía",
-              "fr": "Normandie"
-            }
-          },
-          {
-            "geoname_id": 2975248,
-            "iso_code": "76",
-            "names": {
-              "de": "Seine-Maritime",
-              "en": "Seine-Maritime",
-              "es": "Sena Marítimo",
-              "fr": "Seine-Maritime",
-              "pt-BR": "Sena Marítimo"
-            }
-          }
-        ]
+        }
       }
     },
     {
       "hostname": "www.telescoop.fr",
       "ip": "51.210.109.110",
       "geoip": {
-        "city": {
-          "geoname_id": 3021411,
-          "names": {
-            "de": "Dieppe",
-            "en": "Dieppe",
-            "es": "Dieppe",
-            "fr": "Dieppe",
-            "ja": "ディエップ",
-            "pt-BR": "Dieppe",
-            "ru": "Дьеп",
-            "zh-CN": "迪耶普"
-          }
-        },
         "continent": {
           "code": "EU",
           "geoname_id": 6255148,
@@ -260,13 +208,10 @@
           }
         },
         "location": {
-          "accuracy_radius": 1000,
-          "latitude": 49.9206,
-          "longitude": 1.0891,
+          "accuracy_radius": 500,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
           "time_zone": "Europe/Paris"
-        },
-        "postal": {
-          "code": "76200"
         },
         "registered_country": {
           "geoname_id": 3017382,
@@ -282,41 +227,24 @@
             "ru": "Франция",
             "zh-CN": "法国"
           }
-        },
-        "subdivisions": [
-          {
-            "geoname_id": 11071621,
-            "iso_code": "NOR",
-            "names": {
-              "de": "Normandie",
-              "en": "Normandy",
-              "es": "Normandía",
-              "fr": "Normandie"
-            }
-          },
-          {
-            "geoname_id": 2975248,
-            "iso_code": "76",
-            "names": {
-              "de": "Seine-Maritime",
-              "en": "Seine-Maritime",
-              "es": "Sena Marítimo",
-              "fr": "Seine-Maritime",
-              "pt-BR": "Sena Marítimo"
-            }
-          }
-        ]
+        }
       }
     },
     {
       "hostname": "plausible.io",
-      "ip": "37.19.207.34",
+      "ip": "38.104.169.186",
       "geoip": {
         "city": {
-          "geoname_id": 4744870,
+          "geoname_id": 4460243,
           "names": {
-            "en": "Ashburn",
-            "ru": "Ашберн"
+            "de": "Charlotte",
+            "en": "Charlotte",
+            "es": "Charlotte",
+            "fr": "Charlotte",
+            "ja": "シャーロット",
+            "pt-BR": "Charlotte",
+            "ru": "Шарлотт",
+            "zh-CN": "夏洛特"
           }
         },
         "continent": {
@@ -349,39 +277,40 @@
         },
         "location": {
           "accuracy_radius": 20,
-          "latitude": 39.0469,
-          "longitude": -77.4903,
-          "metro_code": 511,
+          "latitude": 35.2316,
+          "longitude": -80.8428,
+          "metro_code": 517,
           "time_zone": "America/New_York"
         },
         "postal": {
-          "code": "20149"
+          "code": "28202"
         },
         "registered_country": {
-          "geoname_id": 2635167,
-          "iso_code": "GB",
+          "geoname_id": 6252001,
+          "iso_code": "US",
           "names": {
-            "de": "Vereinigtes Königreich",
-            "en": "United Kingdom",
-            "es": "Reino Unido",
-            "fr": "Royaume Uni",
-            "ja": "英国",
-            "pt-BR": "Reino Unido",
-            "ru": "Британия",
-            "zh-CN": "英国"
+            "de": "Vereinigte Staaten",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
           }
         },
         "subdivisions": [
           {
-            "geoname_id": 6254928,
-            "iso_code": "VA",
+            "geoname_id": 4482348,
+            "iso_code": "NC",
             "names": {
-              "en": "Virginia",
-              "fr": "Virginie",
-              "ja": "バージニア州",
-              "pt-BR": "Virgínia",
-              "ru": "Вирджиния",
-              "zh-CN": "弗吉尼亚州"
+              "en": "North Carolina",
+              "es": "Carolina del Norte",
+              "fr": "Caroline du Nord",
+              "ja": "ノースカロライナ州",
+              "pt-BR": "Carolina do Norte",
+              "ru": "Северная Каролина",
+              "zh-CN": "北卡罗来纳州"
             }
           }
         ]
