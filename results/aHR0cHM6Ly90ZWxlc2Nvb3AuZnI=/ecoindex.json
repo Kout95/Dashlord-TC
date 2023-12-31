@@ -3,7 +3,7 @@
         "width": 1920,
         "height": 1080,
         "url": "https://telescoop.fr",
-        "size": 114.267,
+        "size": 114.265,
         "nodes": 194,
         "requests": 29,
         "grade": "A",
@@ -11,7 +11,7 @@
         "ges": 1.32,
         "water": 1.98,
         "ecoindex_version": "5.4.2",
-        "date": "2023-12-24 00:19:23.243216",
+        "date": "2023-12-31 00:19:27.360958",
         "page_type": "website"
     }
 ]
