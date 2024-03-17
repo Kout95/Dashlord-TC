@@ -110,7 +110,7 @@
     "connection": "keep-alive",
     "content-encoding": "gzip",
     "content-type": "text/html",
-    "date": "Sun, 10 Mar 2024 00:21:18 GMT",
+    "date": "Sun, 17 Mar 2024 00:21:11 GMT",
     "etag": "W/\"65c9ffbb-3d41\"",
     "last-modified": "Mon, 12 Feb 2024 11:23:39 GMT",
     "server": "nginx/1.18.0 (Ubuntu)",
@@ -122,13 +122,6 @@
       "hostname": "telescoop.fr",
       "ip": "51.210.109.110",
       "geoip": {
-        "city": {
-          "geoname_id": 2986930,
-          "names": {
-            "en": "Plaisir",
-            "fr": "Plaisir"
-          }
-        },
         "continent": {
           "code": "EU",
           "geoname_id": 6255148,
@@ -160,12 +153,9 @@
         },
         "location": {
           "accuracy_radius": 1000,
-          "latitude": 48.8203,
-          "longitude": 1.9497,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
           "time_zone": "Europe/Paris"
-        },
-        "postal": {
-          "code": "78370"
         },
         "registered_country": {
           "geoname_id": 3017382,
@@ -181,45 +171,13 @@
             "ru": "Франция",
             "zh-CN": "法国"
           }
-        },
-        "subdivisions": [
-          {
-            "geoname_id": 3012874,
-            "iso_code": "IDF",
-            "names": {
-              "de": "Île-de-France",
-              "en": "Île-de-France",
-              "es": "Isla de Francia",
-              "fr": "Île-de-France",
-              "ja": "イル・ド・フランス",
-              "pt-BR": "Ilha de França",
-              "zh-CN": "法兰西岛"
-            }
-          },
-          {
-            "geoname_id": 2967196,
-            "iso_code": "78",
-            "names": {
-              "de": "Yvelines",
-              "en": "Yvelines",
-              "es": "Yvelines",
-              "fr": "Yvelines"
-            }
-          }
-        ]
+        }
       }
     },
     {
       "hostname": "www.telescoop.fr",
       "ip": "51.210.109.110",
       "geoip": {
-        "city": {
-          "geoname_id": 2986930,
-          "names": {
-            "en": "Plaisir",
-            "fr": "Plaisir"
-          }
-        },
         "continent": {
           "code": "EU",
           "geoname_id": 6255148,
@@ -251,12 +209,9 @@
         },
         "location": {
           "accuracy_radius": 1000,
-          "latitude": 48.8203,
-          "longitude": 1.9497,
+          "latitude": 48.8582,
+          "longitude": 2.3387,
           "time_zone": "Europe/Paris"
-        },
-        "postal": {
-          "code": "78370"
         },
         "registered_country": {
           "geoname_id": 3017382,
@@ -272,49 +227,18 @@
             "ru": "Франция",
             "zh-CN": "法国"
           }
-        },
-        "subdivisions": [
-          {
-            "geoname_id": 3012874,
-            "iso_code": "IDF",
-            "names": {
-              "de": "Île-de-France",
-              "en": "Île-de-France",
-              "es": "Isla de Francia",
-              "fr": "Île-de-France",
-              "ja": "イル・ド・フランス",
-              "pt-BR": "Ilha de França",
-              "zh-CN": "法兰西岛"
-            }
-          },
-          {
-            "geoname_id": 2967196,
-            "iso_code": "78",
-            "names": {
-              "de": "Yvelines",
-              "en": "Yvelines",
-              "es": "Yvelines",
-              "fr": "Yvelines"
-            }
-          }
-        ]
+        }
       }
     },
     {
       "hostname": "plausible.io",
-      "ip": "185.93.1.246",
+      "ip": "37.19.207.34",
       "geoip": {
         "city": {
-          "geoname_id": 4887398,
+          "geoname_id": 4744870,
           "names": {
-            "de": "Chicago",
-            "en": "Chicago",
-            "es": "Chicago",
-            "fr": "Chicago",
-            "ja": "シカゴ",
-            "pt-BR": "Chicago",
-            "ru": "Чикаго",
-            "zh-CN": "芝加哥"
+            "en": "Ashburn",
+            "ru": "Ашберн"
           }
         },
         "continent": {
@@ -347,41 +271,39 @@
         },
         "location": {
           "accuracy_radius": 20,
-          "latitude": 41.8874,
-          "longitude": -87.6318,
-          "metro_code": 602,
-          "time_zone": "America/Chicago"
+          "latitude": 39.0469,
+          "longitude": -77.4903,
+          "metro_code": 511,
+          "time_zone": "America/New_York"
         },
         "postal": {
-          "code": "60602"
+          "code": "20149"
         },
         "registered_country": {
-          "geoname_id": 3077311,
-          "is_in_european_union": true,
-          "iso_code": "CZ",
+          "geoname_id": 2635167,
+          "iso_code": "GB",
           "names": {
-            "de": "Tschechien",
-            "en": "Czechia",
-            "es": "Chequia",
-            "fr": "Tchéquie",
-            "ja": "チェコ共和国",
-            "pt-BR": "Chéquia",
-            "ru": "Чехия",
-            "zh-CN": "捷克"
+            "de": "UK",
+            "en": "United Kingdom",
+            "es": "Reino Unido",
+            "fr": "Royaume-Uni",
+            "ja": "英国",
+            "pt-BR": "Reino Unido",
+            "ru": "Британия",
+            "zh-CN": "英国"
           }
         },
         "subdivisions": [
           {
-            "geoname_id": 4896861,
-            "iso_code": "IL",
+            "geoname_id": 6254928,
+            "iso_code": "VA",
             "names": {
-              "en": "Illinois",
-              "es": "Illinois",
-              "fr": "Illinois",
-              "ja": "イリノイ州",
-              "pt-BR": "Ilinóis",
-              "ru": "Иллинойс",
-              "zh-CN": "伊利诺伊州"
+              "en": "Virginia",
+              "fr": "Virginie",
+              "ja": "バージニア州",
+              "pt-BR": "Virgínia",
+              "ru": "Вирджиния",
+              "zh-CN": "弗吉尼亚州"
             }
           }
         ]
