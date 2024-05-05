@@ -5,6 +5,14 @@
       "url": "https://www.telescoop.fr/"
     },
     {
+      "type": "google fonts",
+      "url": "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap",
+      "details": {
+        "id": "google fonts",
+        "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+      }
+    },
+    {
       "type": "unknown",
       "url": "https://www.telescoop.fr/css/style.min.css"
     },
@@ -34,10 +42,6 @@
     },
     {
       "type": "unknown",
-      "url": "https://www.telescoop.fr/img/svg/after-title.svg"
-    },
-    {
-      "type": "unknown",
       "url": "https://www.telescoop.fr/img/svg/service-public.svg"
     },
     {
@@ -50,35 +54,11 @@
     },
     {
       "type": "unknown",
-      "url": "https://www.telescoop.fr/img/svg/cartographie.svg"
-    },
-    {
-      "type": "unknown",
       "url": "https://www.telescoop.fr/img/svg/no-code.svg"
     },
     {
       "type": "unknown",
       "url": "https://www.telescoop.fr/img/svg/data.svg"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/values/gouvernance.svg"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/values/freedom.svg"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/values/remote.svg"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/values/80.svg"
-    },
-    {
-      "type": "unknown",
-      "url": "https://www.telescoop.fr/img/values/probono.svg"
     },
     {
       "type": "unknown",
@@ -98,11 +78,47 @@
     },
     {
       "type": "unknown",
+      "url": "https://www.telescoop.fr/img/svg/after-title.svg"
+    },
+    {
+      "type": "unknown",
       "url": "https://www.telescoop.fr/class=%22p-4%22"
     },
     {
       "type": "unknown",
       "url": "https://www.telescoop.fr/img/svg/bottom.svg"
+    },
+    {
+      "type": "google fonts",
+      "url": "https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2",
+      "details": {
+        "id": "google fonts",
+        "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+      }
+    },
+    {
+      "type": "google fonts",
+      "url": "https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2",
+      "details": {
+        "id": "google fonts",
+        "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+      }
+    },
+    {
+      "type": "google fonts",
+      "url": "https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2",
+      "details": {
+        "id": "google fonts",
+        "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+      }
+    },
+    {
+      "type": "google fonts",
+      "url": "https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2",
+      "details": {
+        "id": "google fonts",
+        "message": "Host the font locally with https://github.com/neverpanic/google-font-download or https://google-webfonts-helper.herokuapp.com/"
+      }
     }
   ],
   "cookies": [],
@@ -110,9 +126,9 @@
     "connection": "keep-alive",
     "content-encoding": "gzip",
     "content-type": "text/html",
-    "date": "Sun, 28 Apr 2024 00:21:22 GMT",
-    "etag": "W/\"65c9ffbb-3d41\"",
-    "last-modified": "Mon, 12 Feb 2024 11:23:39 GMT",
+    "date": "Sun, 05 May 2024 00:20:28 GMT",
+    "etag": "W/\"6630a55a-4137\"",
+    "last-modified": "Tue, 30 Apr 2024 08:01:30 GMT",
     "server": "nginx/1.18.0 (Ubuntu)",
     "transfer-encoding": "chunked",
     "vary": "Accept-Encoding"
@@ -231,20 +247,74 @@
       }
     },
     {
+      "hostname": "fonts.googleapis.com",
+      "ip": "172.253.122.95",
+      "geoip": {
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "USA",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 1000,
+          "latitude": 37.751,
+          "longitude": -97.822,
+          "time_zone": "America/Chicago"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "USA",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        }
+      }
+    },
+    {
       "hostname": "plausible.io",
-      "ip": "37.19.207.34",
+      "ip": "38.104.169.186",
       "geoip": {
         "city": {
-          "geoname_id": 4744870,
+          "geoname_id": 4460243,
           "names": {
-            "de": "Ashburn",
-            "en": "Ashburn",
-            "es": "Ashburn",
-            "fr": "Ashburn",
-            "ja": "アッシュバーン",
-            "pt-BR": "Ashburn",
-            "ru": "Ашберн",
-            "zh-CN": "阿什本"
+            "de": "Charlotte",
+            "en": "Charlotte",
+            "es": "Charlotte",
+            "fr": "Charlotte",
+            "ja": "シャーロット",
+            "pt-BR": "Charlotte",
+            "ru": "Шарлотт",
+            "zh-CN": "夏洛特"
           }
         },
         "continent": {
@@ -277,41 +347,121 @@
         },
         "location": {
           "accuracy_radius": 20,
-          "latitude": 39.0469,
-          "longitude": -77.4903,
-          "metro_code": 511,
+          "latitude": 35.2316,
+          "longitude": -80.8428,
+          "metro_code": 517,
           "time_zone": "America/New_York"
         },
         "postal": {
-          "code": "20149"
+          "code": "28202"
         },
         "registered_country": {
-          "geoname_id": 2635167,
-          "iso_code": "GB",
+          "geoname_id": 6252001,
+          "iso_code": "US",
           "names": {
-            "de": "UK",
-            "en": "United Kingdom",
-            "es": "Reino Unido",
-            "fr": "Royaume-Uni",
-            "ja": "英国",
-            "pt-BR": "Reino Unido",
-            "ru": "Британия",
-            "zh-CN": "英国"
+            "de": "USA",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
           }
         },
         "subdivisions": [
           {
-            "geoname_id": 6254928,
-            "iso_code": "VA",
+            "geoname_id": 4482348,
+            "iso_code": "NC",
             "names": {
-              "de": "Virginia",
-              "en": "Virginia",
-              "es": "Virginia",
-              "fr": "Virginie",
-              "ja": "バージニア州",
-              "pt-BR": "Virgínia",
-              "ru": "Вирджиния",
-              "zh-CN": "弗吉尼亚州"
+              "de": "North Carolina",
+              "en": "North Carolina",
+              "es": "Carolina del Norte",
+              "fr": "Caroline du Nord",
+              "ja": "ノースカロライナ州",
+              "pt-BR": "Carolina do Norte",
+              "ru": "Северная Каролина",
+              "zh-CN": "北卡罗来纳州"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "hostname": "fonts.gstatic.com",
+      "ip": "142.251.16.94",
+      "geoip": {
+        "city": {
+          "geoname_id": 5116931,
+          "names": {
+            "en": "Farmingdale"
+          }
+        },
+        "continent": {
+          "code": "NA",
+          "geoname_id": 6255149,
+          "names": {
+            "de": "Nordamerika",
+            "en": "North America",
+            "es": "Norteamérica",
+            "fr": "Amérique du Nord",
+            "ja": "北アメリカ",
+            "pt-BR": "América do Norte",
+            "ru": "Северная Америка",
+            "zh-CN": "北美洲"
+          }
+        },
+        "country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "USA",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "location": {
+          "accuracy_radius": 500,
+          "latitude": 40.7306,
+          "longitude": -73.4313,
+          "metro_code": 501,
+          "time_zone": "America/New_York"
+        },
+        "postal": {
+          "code": "11735"
+        },
+        "registered_country": {
+          "geoname_id": 6252001,
+          "iso_code": "US",
+          "names": {
+            "de": "USA",
+            "en": "United States",
+            "es": "Estados Unidos",
+            "fr": "États Unis",
+            "ja": "アメリカ",
+            "pt-BR": "EUA",
+            "ru": "США",
+            "zh-CN": "美国"
+          }
+        },
+        "subdivisions": [
+          {
+            "geoname_id": 5128638,
+            "iso_code": "NY",
+            "names": {
+              "de": "New York",
+              "en": "New York",
+              "es": "Nueva York",
+              "fr": "New York",
+              "ja": "ニューヨーク州",
+              "pt-BR": "Nova Iorque",
+              "ru": "Нью-Йорк",
+              "zh-CN": "纽约州"
             }
           }
         ]
