@@ -126,7 +126,7 @@
     "connection": "keep-alive",
     "content-encoding": "gzip",
     "content-type": "text/html",
-    "date": "Sun, 07 Jul 2024 00:24:42 GMT",
+    "date": "Sun, 14 Jul 2024 00:25:24 GMT",
     "etag": "W/\"665ed818-4137\"",
     "last-modified": "Tue, 04 Jun 2024 09:02:16 GMT",
     "server": "nginx/1.24.0 (Ubuntu)",
@@ -168,7 +168,7 @@
           }
         },
         "location": {
-          "accuracy_radius": 500,
+          "accuracy_radius": 1000,
           "latitude": 48.8582,
           "longitude": 2.3387,
           "time_zone": "Europe/Paris"
@@ -224,7 +224,7 @@
           }
         },
         "location": {
-          "accuracy_radius": 500,
+          "accuracy_radius": 1000,
           "latitude": 48.8582,
           "longitude": 2.3387,
           "time_zone": "Europe/Paris"
@@ -248,7 +248,7 @@
     },
     {
       "hostname": "fonts.googleapis.com",
-      "ip": "64.233.180.95",
+      "ip": "142.250.191.106",
       "geoip": {
         "continent": {
           "code": "NA",
@@ -302,18 +302,18 @@
     },
     {
       "hostname": "plausible.io",
-      "ip": "138.199.40.58",
+      "ip": "212.102.40.113",
       "geoip": {
         "city": {
-          "geoname_id": 5128581,
+          "geoname_id": 4684888,
           "names": {
-            "de": "New York City",
-            "en": "New York",
-            "es": "Nueva York",
-            "fr": "New York",
-            "ja": "ニューヨーク",
-            "pt-BR": "Nova Iorque",
-            "ru": "Нью-Йорк"
+            "de": "Dallas",
+            "en": "Dallas",
+            "es": "Dallas",
+            "fr": "Dallas",
+            "ja": "ダラス",
+            "pt-BR": "Dallas",
+            "ru": "Даллас"
           }
         },
         "continent": {
@@ -346,13 +346,13 @@
         },
         "location": {
           "accuracy_radius": 20,
-          "latitude": 40.7123,
-          "longitude": -74.0068,
-          "metro_code": 501,
-          "time_zone": "America/New_York"
+          "latitude": 32.7797,
+          "longitude": -96.8022,
+          "metro_code": 623,
+          "time_zone": "America/Chicago"
         },
         "postal": {
-          "code": "10118"
+          "code": "75270"
         },
         "registered_country": {
           "geoname_id": 2635167,
@@ -370,17 +370,17 @@
         },
         "subdivisions": [
           {
-            "geoname_id": 5128638,
-            "iso_code": "NY",
+            "geoname_id": 4736286,
+            "iso_code": "TX",
             "names": {
-              "de": "New York",
-              "en": "New York",
-              "es": "Nueva York",
-              "fr": "New York",
-              "ja": "ニューヨーク州",
-              "pt-BR": "Nova Iorque",
-              "ru": "Нью-Йорк",
-              "zh-CN": "纽约州"
+              "de": "Texas",
+              "en": "Texas",
+              "es": "Texas",
+              "fr": "Texas",
+              "ja": "テキサス州",
+              "pt-BR": "Texas",
+              "ru": "Техас",
+              "zh-CN": "得克萨斯州"
             }
           }
         ]
@@ -388,7 +388,7 @@
     },
     {
       "hostname": "fonts.gstatic.com",
-      "ip": "64.233.180.94",
+      "ip": "142.250.190.35",
       "geoip": {
         "continent": {
           "code": "NA",
