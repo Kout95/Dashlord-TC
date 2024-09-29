@@ -1,0 +1,1066 @@
+[
+  [
+    {
+      "template": "dns/caa-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/caa-fingerprint",
+      "template-id": "caa-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/caa-fingerprint.yaml",
+      "info": {
+        "name": "CAA Record",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "caa"
+        ],
+        "description": "A CAA record was discovered. A CAA record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain.",
+        "reference": [
+          "https://support.dnsimple.com/articles/caa-record/#whats-a-caa-record"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "telescoop.fr.",
+      "matched-at": "telescoop.fr",
+      "request": ";; opcode: QUERY, status: NOERROR, id: 48215\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;telescoop.fr.\tIN\t CAA\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 48215\n;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;telescoop.fr.\tIN\t CAA\n\n;; AUTHORITY SECTION:\ntelescoop.fr.\t300\tIN\tSOA\tdns110.ovh.net. tech.ovh.net. 2024092001 86400 3600 3600000 300\n",
+      "timestamp": "2024-09-29T00:29:54.800277677Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/spf-record-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/spf-record-detect",
+      "template-id": "spf-record-detect",
+      "template-path": "/home/runner/nuclei-templates/dns/spf-record-detect.yaml",
+      "info": {
+        "name": "SPF Record - Detection",
+        "author": [
+          "rxerium"
+        ],
+        "tags": [
+          "dns",
+          "spf"
+        ],
+        "description": "An SPF TXT record was detected\n",
+        "reference": [
+          "https://www.mimecast.com/content/how-to-create-an-spf-txt-record"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "dns",
+      "host": "telescoop.fr.",
+      "matched-at": "telescoop.fr",
+      "extracted-results": [
+        "v=spf1 include:_spf.ecomail.earth include:eu.mailgun.org ~all\""
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 61997\n;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;telescoop.fr.\tIN\t TXT\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 61997\n;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;telescoop.fr.\tIN\t TXT\n\n;; ANSWER SECTION:\ntelescoop.fr.\t3600\tIN\tTXT\t\"v=spf1 include:_spf.ecomail.earth include:eu.mailgun.org ~all\"\ntelescoop.fr.\t3600\tIN\tTXT\t\"google-site-verification=uL9WfZaJjiQLIfjf3YPhAeIMDXfmCPim_WYRLEz4bbA\"\ntelescoop.fr.\t3600\tIN\tTXT\t\"1|www.telescoop.fr\"\n",
+      "timestamp": "2024-09-29T00:29:54.80252056Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/txt-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/txt-fingerprint",
+      "template-id": "txt-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/txt-fingerprint.yaml",
+      "info": {
+        "name": "DNS TXT Record Detected",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "txt"
+        ],
+        "description": "A DNS TXT record was detected. The TXT record lets a domain admin leave notes on a DNS server.",
+        "reference": [
+          "https://www.netspi.com/blog/technical/network-penetration-testing/analyzing-dns-txt-records-to-fingerprint-service-providers/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "telescoop.fr.",
+      "matched-at": "telescoop.fr",
+      "extracted-results": [
+        "\"v=spf1 include:_spf.ecomail.earth include:eu.mailgun.org ~all\"",
+        "\"google-site-verification=uL9WfZaJjiQLIfjf3YPhAeIMDXfmCPim_WYRLEz4bbA\"",
+        "\"1|www.telescoop.fr\""
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 61997\n;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;telescoop.fr.\tIN\t TXT\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 61997\n;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 512\n\n;; QUESTION SECTION:\n;telescoop.fr.\tIN\t TXT\n\n;; ANSWER SECTION:\ntelescoop.fr.\t3600\tIN\tTXT\t\"v=spf1 include:_spf.ecomail.earth include:eu.mailgun.org ~all\"\ntelescoop.fr.\t3600\tIN\tTXT\t\"google-site-verification=uL9WfZaJjiQLIfjf3YPhAeIMDXfmCPim_WYRLEz4bbA\"\ntelescoop.fr.\t3600\tIN\tTXT\t\"1|www.telescoop.fr\"\n",
+      "timestamp": "2024-09-29T00:29:54.802576716Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/dmarc-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/dmarc-detect",
+      "template-id": "dmarc-detect",
+      "template-path": "/home/runner/nuclei-templates/dns/dmarc-detect.yaml",
+      "info": {
+        "name": "DNS DMARC - Detect",
+        "author": [
+          "juliosmelo"
+        ],
+        "tags": [
+          "dns",
+          "dmarc"
+        ],
+        "description": "DNS DMARC information was detected.\n",
+        "reference": [
+          "https://dmarc.org/",
+          "https://dmarc.org/wiki/faq#why_is_dmarc_important.3f"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ],
+          "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "type": "dns",
+      "host": "telescoop.fr.",
+      "matched-at": "_dmarc.telescoop.fr",
+      "extracted-results": [
+        "\"v=DMARC1; p=quarantine;\""
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 39201\n;; flags: rd ad; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;_dmarc.telescoop.fr.\tIN\t TXT\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 39201\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 1232\n\n;; QUESTION SECTION:\n;_dmarc.telescoop.fr.\tIN\t TXT\n\n;; ANSWER SECTION:\n_dmarc.telescoop.fr.\t3600\tIN\tTXT\t\"v=DMARC1; p=quarantine;\"\n",
+      "timestamp": "2024-09-29T00:29:54.869311507Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/mx-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/mx-fingerprint",
+      "template-id": "mx-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/mx-fingerprint.yaml",
+      "info": {
+        "name": "MX Record Detection",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "mx"
+        ],
+        "description": "An MX record was detected. MX records direct emails to a mail exchange server.",
+        "reference": [
+          "https://www.cloudflare.com/learning/dns/dns-records/dns-mx-record/",
+          "https://mxtoolbox.com/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "telescoop.fr.",
+      "matched-at": "telescoop.fr",
+      "extracted-results": [
+        "1 mx1.ecomail.earth."
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 3501\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;telescoop.fr.\tIN\t MX\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 3501\n;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 1232\n\n;; QUESTION SECTION:\n;telescoop.fr.\tIN\t MX\n\n;; ANSWER SECTION:\ntelescoop.fr.\t3600\tIN\tMX\t1 mx1.ecomail.earth.\n",
+      "timestamp": "2024-09-29T00:29:54.885201261Z",
+      "matcher-status": true
+    },
+    {
+      "template": "dns/nameserver-fingerprint.yaml",
+      "template-url": "https://templates.nuclei.sh/public/nameserver-fingerprint",
+      "template-id": "nameserver-fingerprint",
+      "template-path": "/home/runner/nuclei-templates/dns/nameserver-fingerprint.yaml",
+      "info": {
+        "name": "NS Record Detection",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "dns",
+          "ns"
+        ],
+        "description": "An NS record was detected. An NS record delegates a subdomain to a set of name servers.",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "type": "dns",
+      "host": "telescoop.fr.",
+      "matched-at": "telescoop.fr",
+      "extracted-results": [
+        "ns110.ovh.net.",
+        "dns110.ovh.net."
+      ],
+      "request": ";; opcode: QUERY, status: NOERROR, id: 56589\n;; flags: rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 4096\n\n;; QUESTION SECTION:\n;telescoop.fr.\tIN\t NS\n",
+      "response": ";; opcode: QUERY, status: NOERROR, id: 56589\n;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1\n\n;; OPT PSEUDOSECTION:\n; EDNS: version 0; flags:; udp: 1232\n\n;; QUESTION SECTION:\n;telescoop.fr.\tIN\t NS\n\n;; ANSWER SECTION:\ntelescoop.fr.\t3600\tIN\tNS\tns110.ovh.net.\ntelescoop.fr.\t3600\tIN\tNS\tdns110.ovh.net.\n",
+      "timestamp": "2024-09-29T00:29:55.872082761Z",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/tech-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tech-detect",
+      "template-id": "tech-detect",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/tech-detect.yaml",
+      "info": {
+        "name": "Wappalyzer Technology Detection",
+        "author": [
+          "hakluke",
+          "righettod"
+        ],
+        "tags": [
+          "tech"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "matcher-name": "nginx",
+      "type": "http",
+      "host": "https://telescoop.fr",
+      "matched-at": "https://telescoop.fr",
+      "request": "GET / HTTP/1.1\r\nHost: telescoop.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 301 Moved Permanently\r\nConnection: close\r\nContent-Length: 178\r\nContent-Type: text/html\r\nDate: Sun, 29 Sep 2024 00:30:32 GMT\r\nLocation: https://www.telescoop.fr\r\nServer: nginx/1.24.0 (Ubuntu)\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n",
+      "ip": "51.210.109.110",
+      "timestamp": "2024-09-29T00:30:33.085075265Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://telescoop.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/rdap-whois.yaml",
+      "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+      "template-id": "rdap-whois",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+      "info": {
+        "name": "RDAP WHOIS",
+        "author": [
+          "ricardomaia",
+          "sttlr"
+        ],
+        "tags": [
+          "miscellaneous",
+          "whois",
+          "rdap",
+          "osint",
+          "misc"
+        ],
+        "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+        "reference": [
+          "https://about.rdap.org/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1,
+          "verified": true
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ],
+          "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "extractor-name": "lastChangeDate",
+      "type": "http",
+      "host": "https://telescoop.fr",
+      "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+      "extracted-results": [
+        "2024-05-31T22:09:09.959314Z"
+      ],
+      "request": "GET /domain/telescoop.fr HTTP/1.1\r\nHost: www.rdap.net\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 \r\nConnection: close\r\nTransfer-Encoding: chunked\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nContent-Disposition: inline;filename=f.txt\r\nContent-Type: application/rdap+json\r\nDate: Sun, 29 Sep 2024 00:30:55 GMT\r\nExpires: 0\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=17280000;includeSubDomains;preload\r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1;mode=block\r\n\r\n{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_0\",\"icann_rdap_response_profile_0\"],\"objectClassName\":\"domain\",\"handle\":\"DOM000004517834-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR202-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-10-18T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-01T11:40:48.761912Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH\"],[\"tel\",{},\"text\",\"+33.899701761\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.320200958\"],[\"email\",{},\"text\",\"support@ovh.net\"],[\"url\",{},\"uri\",\"http://www.ovh.com\"],[\"x-complaint-phone\",{},\"unknown\",\"+33.899701761\"],[\"x-complaint-uri\",{},\"unknown\",\"abuse@ovh.net\"],[\"adr\",{},\"text\",[\"\",\"\",\"2 Rue Kellermann\",\"ROUBAIX\",\"\",\"59100\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"433\"}]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042102-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:24:31.28004Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"TelesCoop\"],[\"org\",{},\"text\",\"TelesCoop\"],[\"adr\",{},\"text\",[\"\",\"\",\"10 rue de Penthievre\",\"Paris\",\"\",\"75008\",\"FR\"]],[\"email\",{},\"text\",\"5fb7da9c-9921-4034-acc3-97e6fa5027d6@q.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"administrative\"]},{\"objectClassName\":\"entity\",\"handle\":\"OVH5-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-12-22T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-09-28T23:55:01.219469Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH NET\"],[\"org\",{},\"text\",\"\"],[\"adr\",{},\"text\",[\"\",\"\",[\"OVH\",\"140, quai du Sartel\"],\"Roubaix\",\"\",\"59100\",\"FR\"]],[\"email\",{},\"text\",\"tech@ovh.net\"],[\"tel\",{},\"text\",\"+33.899701761\"]]],\"roles\":[\"technical\"]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042085-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:21:35.142442Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Maxime Bellec\"],[\"org\",{},\"text\",\"Maxime Bellec\"],[\"adr\",{},\"text\",[\"\",\"\",\"15 rue Potard\",\"Vernon\",\"\",\"27200\",\"FR\"]],[\"email\",{},\"text\",\"akde8p76w3yswk4ejlmq@k.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"registrant\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2020-04-28T07:13:52Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2025-04-28T07:13:52Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-05-31T22:09:09.959314Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"value\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"rel\":\"self\"}],\"ldhName\":\"telescoop.fr\",\"whoisStatus\":\"ACTIVE\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78122-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"dns110.ovh.net\",\"ipAddresses\":{}},{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78123-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"ns110.ovh.net\",\"ipAddresses\":{}}]}",
+      "ip": "64.176.191.126",
+      "timestamp": "2024-09-29T00:30:55.435059342Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/rdap-whois.yaml",
+      "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+      "template-id": "rdap-whois",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+      "info": {
+        "name": "RDAP WHOIS",
+        "author": [
+          "ricardomaia",
+          "sttlr"
+        ],
+        "tags": [
+          "miscellaneous",
+          "whois",
+          "rdap",
+          "osint",
+          "misc"
+        ],
+        "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+        "reference": [
+          "https://about.rdap.org/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1,
+          "verified": true
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ],
+          "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "extractor-name": "expirationDate",
+      "type": "http",
+      "host": "https://telescoop.fr",
+      "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+      "extracted-results": [
+        "2025-04-28T07:13:52Z"
+      ],
+      "request": "GET /domain/telescoop.fr HTTP/1.1\r\nHost: www.rdap.net\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 \r\nConnection: close\r\nTransfer-Encoding: chunked\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nContent-Disposition: inline;filename=f.txt\r\nContent-Type: application/rdap+json\r\nDate: Sun, 29 Sep 2024 00:30:55 GMT\r\nExpires: 0\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=17280000;includeSubDomains;preload\r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1;mode=block\r\n\r\n{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_0\",\"icann_rdap_response_profile_0\"],\"objectClassName\":\"domain\",\"handle\":\"DOM000004517834-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR202-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-10-18T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-01T11:40:48.761912Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH\"],[\"tel\",{},\"text\",\"+33.899701761\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.320200958\"],[\"email\",{},\"text\",\"support@ovh.net\"],[\"url\",{},\"uri\",\"http://www.ovh.com\"],[\"x-complaint-phone\",{},\"unknown\",\"+33.899701761\"],[\"x-complaint-uri\",{},\"unknown\",\"abuse@ovh.net\"],[\"adr\",{},\"text\",[\"\",\"\",\"2 Rue Kellermann\",\"ROUBAIX\",\"\",\"59100\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"433\"}]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042102-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:24:31.28004Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"TelesCoop\"],[\"org\",{},\"text\",\"TelesCoop\"],[\"adr\",{},\"text\",[\"\",\"\",\"10 rue de Penthievre\",\"Paris\",\"\",\"75008\",\"FR\"]],[\"email\",{},\"text\",\"5fb7da9c-9921-4034-acc3-97e6fa5027d6@q.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"administrative\"]},{\"objectClassName\":\"entity\",\"handle\":\"OVH5-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-12-22T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-09-28T23:55:01.219469Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH NET\"],[\"org\",{},\"text\",\"\"],[\"adr\",{},\"text\",[\"\",\"\",[\"OVH\",\"140, quai du Sartel\"],\"Roubaix\",\"\",\"59100\",\"FR\"]],[\"email\",{},\"text\",\"tech@ovh.net\"],[\"tel\",{},\"text\",\"+33.899701761\"]]],\"roles\":[\"technical\"]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042085-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:21:35.142442Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Maxime Bellec\"],[\"org\",{},\"text\",\"Maxime Bellec\"],[\"adr\",{},\"text\",[\"\",\"\",\"15 rue Potard\",\"Vernon\",\"\",\"27200\",\"FR\"]],[\"email\",{},\"text\",\"akde8p76w3yswk4ejlmq@k.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"registrant\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2020-04-28T07:13:52Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2025-04-28T07:13:52Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-05-31T22:09:09.959314Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"value\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"rel\":\"self\"}],\"ldhName\":\"telescoop.fr\",\"whoisStatus\":\"ACTIVE\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78122-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"dns110.ovh.net\",\"ipAddresses\":{}},{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78123-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"ns110.ovh.net\",\"ipAddresses\":{}}]}",
+      "ip": "64.176.191.126",
+      "timestamp": "2024-09-29T00:30:55.435106891Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/rdap-whois.yaml",
+      "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+      "template-id": "rdap-whois",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+      "info": {
+        "name": "RDAP WHOIS",
+        "author": [
+          "ricardomaia",
+          "sttlr"
+        ],
+        "tags": [
+          "miscellaneous",
+          "whois",
+          "rdap",
+          "osint",
+          "misc"
+        ],
+        "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+        "reference": [
+          "https://about.rdap.org/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1,
+          "verified": true
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ],
+          "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "extractor-name": "registrantName",
+      "type": "http",
+      "host": "https://telescoop.fr",
+      "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+      "extracted-results": [
+        "Maxime Bellec"
+      ],
+      "request": "GET /domain/telescoop.fr HTTP/1.1\r\nHost: www.rdap.net\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 \r\nConnection: close\r\nTransfer-Encoding: chunked\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nContent-Disposition: inline;filename=f.txt\r\nContent-Type: application/rdap+json\r\nDate: Sun, 29 Sep 2024 00:30:55 GMT\r\nExpires: 0\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=17280000;includeSubDomains;preload\r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1;mode=block\r\n\r\n{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_0\",\"icann_rdap_response_profile_0\"],\"objectClassName\":\"domain\",\"handle\":\"DOM000004517834-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR202-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-10-18T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-01T11:40:48.761912Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH\"],[\"tel\",{},\"text\",\"+33.899701761\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.320200958\"],[\"email\",{},\"text\",\"support@ovh.net\"],[\"url\",{},\"uri\",\"http://www.ovh.com\"],[\"x-complaint-phone\",{},\"unknown\",\"+33.899701761\"],[\"x-complaint-uri\",{},\"unknown\",\"abuse@ovh.net\"],[\"adr\",{},\"text\",[\"\",\"\",\"2 Rue Kellermann\",\"ROUBAIX\",\"\",\"59100\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"433\"}]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042102-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:24:31.28004Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"TelesCoop\"],[\"org\",{},\"text\",\"TelesCoop\"],[\"adr\",{},\"text\",[\"\",\"\",\"10 rue de Penthievre\",\"Paris\",\"\",\"75008\",\"FR\"]],[\"email\",{},\"text\",\"5fb7da9c-9921-4034-acc3-97e6fa5027d6@q.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"administrative\"]},{\"objectClassName\":\"entity\",\"handle\":\"OVH5-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-12-22T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-09-28T23:55:01.219469Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH NET\"],[\"org\",{},\"text\",\"\"],[\"adr\",{},\"text\",[\"\",\"\",[\"OVH\",\"140, quai du Sartel\"],\"Roubaix\",\"\",\"59100\",\"FR\"]],[\"email\",{},\"text\",\"tech@ovh.net\"],[\"tel\",{},\"text\",\"+33.899701761\"]]],\"roles\":[\"technical\"]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042085-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:21:35.142442Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Maxime Bellec\"],[\"org\",{},\"text\",\"Maxime Bellec\"],[\"adr\",{},\"text\",[\"\",\"\",\"15 rue Potard\",\"Vernon\",\"\",\"27200\",\"FR\"]],[\"email\",{},\"text\",\"akde8p76w3yswk4ejlmq@k.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"registrant\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2020-04-28T07:13:52Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2025-04-28T07:13:52Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-05-31T22:09:09.959314Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"value\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"rel\":\"self\"}],\"ldhName\":\"telescoop.fr\",\"whoisStatus\":\"ACTIVE\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78122-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"dns110.ovh.net\",\"ipAddresses\":{}},{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78123-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"ns110.ovh.net\",\"ipAddresses\":{}}]}",
+      "ip": "64.176.191.126",
+      "timestamp": "2024-09-29T00:30:55.435136066Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/rdap-whois.yaml",
+      "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+      "template-id": "rdap-whois",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+      "info": {
+        "name": "RDAP WHOIS",
+        "author": [
+          "ricardomaia",
+          "sttlr"
+        ],
+        "tags": [
+          "miscellaneous",
+          "whois",
+          "rdap",
+          "osint",
+          "misc"
+        ],
+        "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+        "reference": [
+          "https://about.rdap.org/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1,
+          "verified": true
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ],
+          "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "extractor-name": "registrantOrg",
+      "type": "http",
+      "host": "https://telescoop.fr",
+      "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+      "extracted-results": [
+        "Maxime Bellec"
+      ],
+      "request": "GET /domain/telescoop.fr HTTP/1.1\r\nHost: www.rdap.net\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 \r\nConnection: close\r\nTransfer-Encoding: chunked\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nContent-Disposition: inline;filename=f.txt\r\nContent-Type: application/rdap+json\r\nDate: Sun, 29 Sep 2024 00:30:55 GMT\r\nExpires: 0\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=17280000;includeSubDomains;preload\r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1;mode=block\r\n\r\n{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_0\",\"icann_rdap_response_profile_0\"],\"objectClassName\":\"domain\",\"handle\":\"DOM000004517834-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR202-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-10-18T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-01T11:40:48.761912Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH\"],[\"tel\",{},\"text\",\"+33.899701761\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.320200958\"],[\"email\",{},\"text\",\"support@ovh.net\"],[\"url\",{},\"uri\",\"http://www.ovh.com\"],[\"x-complaint-phone\",{},\"unknown\",\"+33.899701761\"],[\"x-complaint-uri\",{},\"unknown\",\"abuse@ovh.net\"],[\"adr\",{},\"text\",[\"\",\"\",\"2 Rue Kellermann\",\"ROUBAIX\",\"\",\"59100\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"433\"}]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042102-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:24:31.28004Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"TelesCoop\"],[\"org\",{},\"text\",\"TelesCoop\"],[\"adr\",{},\"text\",[\"\",\"\",\"10 rue de Penthievre\",\"Paris\",\"\",\"75008\",\"FR\"]],[\"email\",{},\"text\",\"5fb7da9c-9921-4034-acc3-97e6fa5027d6@q.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"administrative\"]},{\"objectClassName\":\"entity\",\"handle\":\"OVH5-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-12-22T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-09-28T23:55:01.219469Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH NET\"],[\"org\",{},\"text\",\"\"],[\"adr\",{},\"text\",[\"\",\"\",[\"OVH\",\"140, quai du Sartel\"],\"Roubaix\",\"\",\"59100\",\"FR\"]],[\"email\",{},\"text\",\"tech@ovh.net\"],[\"tel\",{},\"text\",\"+33.899701761\"]]],\"roles\":[\"technical\"]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042085-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:21:35.142442Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Maxime Bellec\"],[\"org\",{},\"text\",\"Maxime Bellec\"],[\"adr\",{},\"text\",[\"\",\"\",\"15 rue Potard\",\"Vernon\",\"\",\"27200\",\"FR\"]],[\"email\",{},\"text\",\"akde8p76w3yswk4ejlmq@k.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"registrant\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2020-04-28T07:13:52Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2025-04-28T07:13:52Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-05-31T22:09:09.959314Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"value\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"rel\":\"self\"}],\"ldhName\":\"telescoop.fr\",\"whoisStatus\":\"ACTIVE\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78122-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"dns110.ovh.net\",\"ipAddresses\":{}},{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78123-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"ns110.ovh.net\",\"ipAddresses\":{}}]}",
+      "ip": "64.176.191.126",
+      "timestamp": "2024-09-29T00:30:55.435152857Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/rdap-whois.yaml",
+      "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+      "template-id": "rdap-whois",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+      "info": {
+        "name": "RDAP WHOIS",
+        "author": [
+          "ricardomaia",
+          "sttlr"
+        ],
+        "tags": [
+          "miscellaneous",
+          "whois",
+          "rdap",
+          "osint",
+          "misc"
+        ],
+        "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+        "reference": [
+          "https://about.rdap.org/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1,
+          "verified": true
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ],
+          "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "extractor-name": "registrantPhone",
+      "type": "http",
+      "host": "https://telescoop.fr",
+      "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+      "extracted-results": [
+        "+33.670584386"
+      ],
+      "request": "GET /domain/telescoop.fr HTTP/1.1\r\nHost: www.rdap.net\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 \r\nConnection: close\r\nTransfer-Encoding: chunked\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nContent-Disposition: inline;filename=f.txt\r\nContent-Type: application/rdap+json\r\nDate: Sun, 29 Sep 2024 00:30:55 GMT\r\nExpires: 0\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=17280000;includeSubDomains;preload\r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1;mode=block\r\n\r\n{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_0\",\"icann_rdap_response_profile_0\"],\"objectClassName\":\"domain\",\"handle\":\"DOM000004517834-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR202-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-10-18T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-01T11:40:48.761912Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH\"],[\"tel\",{},\"text\",\"+33.899701761\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.320200958\"],[\"email\",{},\"text\",\"support@ovh.net\"],[\"url\",{},\"uri\",\"http://www.ovh.com\"],[\"x-complaint-phone\",{},\"unknown\",\"+33.899701761\"],[\"x-complaint-uri\",{},\"unknown\",\"abuse@ovh.net\"],[\"adr\",{},\"text\",[\"\",\"\",\"2 Rue Kellermann\",\"ROUBAIX\",\"\",\"59100\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"433\"}]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042102-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:24:31.28004Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"TelesCoop\"],[\"org\",{},\"text\",\"TelesCoop\"],[\"adr\",{},\"text\",[\"\",\"\",\"10 rue de Penthievre\",\"Paris\",\"\",\"75008\",\"FR\"]],[\"email\",{},\"text\",\"5fb7da9c-9921-4034-acc3-97e6fa5027d6@q.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"administrative\"]},{\"objectClassName\":\"entity\",\"handle\":\"OVH5-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-12-22T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-09-28T23:55:01.219469Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH NET\"],[\"org\",{},\"text\",\"\"],[\"adr\",{},\"text\",[\"\",\"\",[\"OVH\",\"140, quai du Sartel\"],\"Roubaix\",\"\",\"59100\",\"FR\"]],[\"email\",{},\"text\",\"tech@ovh.net\"],[\"tel\",{},\"text\",\"+33.899701761\"]]],\"roles\":[\"technical\"]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042085-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:21:35.142442Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Maxime Bellec\"],[\"org\",{},\"text\",\"Maxime Bellec\"],[\"adr\",{},\"text\",[\"\",\"\",\"15 rue Potard\",\"Vernon\",\"\",\"27200\",\"FR\"]],[\"email\",{},\"text\",\"akde8p76w3yswk4ejlmq@k.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"registrant\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2020-04-28T07:13:52Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2025-04-28T07:13:52Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-05-31T22:09:09.959314Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"value\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"rel\":\"self\"}],\"ldhName\":\"telescoop.fr\",\"whoisStatus\":\"ACTIVE\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78122-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"dns110.ovh.net\",\"ipAddresses\":{}},{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78123-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"ns110.ovh.net\",\"ipAddresses\":{}}]}",
+      "ip": "64.176.191.126",
+      "timestamp": "2024-09-29T00:30:55.43518959Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/rdap-whois.yaml",
+      "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+      "template-id": "rdap-whois",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+      "info": {
+        "name": "RDAP WHOIS",
+        "author": [
+          "ricardomaia",
+          "sttlr"
+        ],
+        "tags": [
+          "miscellaneous",
+          "whois",
+          "rdap",
+          "osint",
+          "misc"
+        ],
+        "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+        "reference": [
+          "https://about.rdap.org/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1,
+          "verified": true
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ],
+          "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "extractor-name": "nameServers",
+      "type": "http",
+      "host": "https://telescoop.fr",
+      "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+      "extracted-results": [
+        "dns110.ovh.net",
+        "ns110.ovh.net"
+      ],
+      "request": "GET /domain/telescoop.fr HTTP/1.1\r\nHost: www.rdap.net\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 \r\nConnection: close\r\nTransfer-Encoding: chunked\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nContent-Disposition: inline;filename=f.txt\r\nContent-Type: application/rdap+json\r\nDate: Sun, 29 Sep 2024 00:30:55 GMT\r\nExpires: 0\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=17280000;includeSubDomains;preload\r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1;mode=block\r\n\r\n{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_0\",\"icann_rdap_response_profile_0\"],\"objectClassName\":\"domain\",\"handle\":\"DOM000004517834-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR202-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-10-18T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-01T11:40:48.761912Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH\"],[\"tel\",{},\"text\",\"+33.899701761\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.320200958\"],[\"email\",{},\"text\",\"support@ovh.net\"],[\"url\",{},\"uri\",\"http://www.ovh.com\"],[\"x-complaint-phone\",{},\"unknown\",\"+33.899701761\"],[\"x-complaint-uri\",{},\"unknown\",\"abuse@ovh.net\"],[\"adr\",{},\"text\",[\"\",\"\",\"2 Rue Kellermann\",\"ROUBAIX\",\"\",\"59100\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"433\"}]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042102-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:24:31.28004Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"TelesCoop\"],[\"org\",{},\"text\",\"TelesCoop\"],[\"adr\",{},\"text\",[\"\",\"\",\"10 rue de Penthievre\",\"Paris\",\"\",\"75008\",\"FR\"]],[\"email\",{},\"text\",\"5fb7da9c-9921-4034-acc3-97e6fa5027d6@q.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"administrative\"]},{\"objectClassName\":\"entity\",\"handle\":\"OVH5-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-12-22T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-09-28T23:55:01.219469Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH NET\"],[\"org\",{},\"text\",\"\"],[\"adr\",{},\"text\",[\"\",\"\",[\"OVH\",\"140, quai du Sartel\"],\"Roubaix\",\"\",\"59100\",\"FR\"]],[\"email\",{},\"text\",\"tech@ovh.net\"],[\"tel\",{},\"text\",\"+33.899701761\"]]],\"roles\":[\"technical\"]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042085-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:21:35.142442Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Maxime Bellec\"],[\"org\",{},\"text\",\"Maxime Bellec\"],[\"adr\",{},\"text\",[\"\",\"\",\"15 rue Potard\",\"Vernon\",\"\",\"27200\",\"FR\"]],[\"email\",{},\"text\",\"akde8p76w3yswk4ejlmq@k.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"registrant\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2020-04-28T07:13:52Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2025-04-28T07:13:52Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-05-31T22:09:09.959314Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"value\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"rel\":\"self\"}],\"ldhName\":\"telescoop.fr\",\"whoisStatus\":\"ACTIVE\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78122-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"dns110.ovh.net\",\"ipAddresses\":{}},{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78123-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"ns110.ovh.net\",\"ipAddresses\":{}}]}",
+      "ip": "64.176.191.126",
+      "timestamp": "2024-09-29T00:30:55.435209006Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/rdap-whois.yaml",
+      "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+      "template-id": "rdap-whois",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+      "info": {
+        "name": "RDAP WHOIS",
+        "author": [
+          "ricardomaia",
+          "sttlr"
+        ],
+        "tags": [
+          "miscellaneous",
+          "whois",
+          "rdap",
+          "osint",
+          "misc"
+        ],
+        "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+        "reference": [
+          "https://about.rdap.org/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1,
+          "verified": true
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ],
+          "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "extractor-name": "secureDNS",
+      "type": "http",
+      "host": "https://telescoop.fr",
+      "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+      "extracted-results": [
+        "false"
+      ],
+      "request": "GET /domain/telescoop.fr HTTP/1.1\r\nHost: www.rdap.net\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 \r\nConnection: close\r\nTransfer-Encoding: chunked\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nContent-Disposition: inline;filename=f.txt\r\nContent-Type: application/rdap+json\r\nDate: Sun, 29 Sep 2024 00:30:55 GMT\r\nExpires: 0\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=17280000;includeSubDomains;preload\r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1;mode=block\r\n\r\n{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_0\",\"icann_rdap_response_profile_0\"],\"objectClassName\":\"domain\",\"handle\":\"DOM000004517834-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR202-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-10-18T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-01T11:40:48.761912Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH\"],[\"tel\",{},\"text\",\"+33.899701761\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.320200958\"],[\"email\",{},\"text\",\"support@ovh.net\"],[\"url\",{},\"uri\",\"http://www.ovh.com\"],[\"x-complaint-phone\",{},\"unknown\",\"+33.899701761\"],[\"x-complaint-uri\",{},\"unknown\",\"abuse@ovh.net\"],[\"adr\",{},\"text\",[\"\",\"\",\"2 Rue Kellermann\",\"ROUBAIX\",\"\",\"59100\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"433\"}]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042102-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:24:31.28004Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"TelesCoop\"],[\"org\",{},\"text\",\"TelesCoop\"],[\"adr\",{},\"text\",[\"\",\"\",\"10 rue de Penthievre\",\"Paris\",\"\",\"75008\",\"FR\"]],[\"email\",{},\"text\",\"5fb7da9c-9921-4034-acc3-97e6fa5027d6@q.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"administrative\"]},{\"objectClassName\":\"entity\",\"handle\":\"OVH5-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-12-22T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-09-28T23:55:01.219469Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH NET\"],[\"org\",{},\"text\",\"\"],[\"adr\",{},\"text\",[\"\",\"\",[\"OVH\",\"140, quai du Sartel\"],\"Roubaix\",\"\",\"59100\",\"FR\"]],[\"email\",{},\"text\",\"tech@ovh.net\"],[\"tel\",{},\"text\",\"+33.899701761\"]]],\"roles\":[\"technical\"]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042085-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:21:35.142442Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Maxime Bellec\"],[\"org\",{},\"text\",\"Maxime Bellec\"],[\"adr\",{},\"text\",[\"\",\"\",\"15 rue Potard\",\"Vernon\",\"\",\"27200\",\"FR\"]],[\"email\",{},\"text\",\"akde8p76w3yswk4ejlmq@k.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"registrant\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2020-04-28T07:13:52Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2025-04-28T07:13:52Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-05-31T22:09:09.959314Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"value\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"rel\":\"self\"}],\"ldhName\":\"telescoop.fr\",\"whoisStatus\":\"ACTIVE\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78122-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"dns110.ovh.net\",\"ipAddresses\":{}},{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78123-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"ns110.ovh.net\",\"ipAddresses\":{}}]}",
+      "ip": "64.176.191.126",
+      "timestamp": "2024-09-29T00:30:55.435229364Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/rdap-whois.yaml",
+      "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+      "template-id": "rdap-whois",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+      "info": {
+        "name": "RDAP WHOIS",
+        "author": [
+          "ricardomaia",
+          "sttlr"
+        ],
+        "tags": [
+          "miscellaneous",
+          "whois",
+          "rdap",
+          "osint",
+          "misc"
+        ],
+        "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+        "reference": [
+          "https://about.rdap.org/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1,
+          "verified": true
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ],
+          "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "extractor-name": "status",
+      "type": "http",
+      "host": "https://telescoop.fr",
+      "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+      "extracted-results": [
+        "active"
+      ],
+      "request": "GET /domain/telescoop.fr HTTP/1.1\r\nHost: www.rdap.net\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 \r\nConnection: close\r\nTransfer-Encoding: chunked\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nContent-Disposition: inline;filename=f.txt\r\nContent-Type: application/rdap+json\r\nDate: Sun, 29 Sep 2024 00:30:55 GMT\r\nExpires: 0\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=17280000;includeSubDomains;preload\r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1;mode=block\r\n\r\n{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_0\",\"icann_rdap_response_profile_0\"],\"objectClassName\":\"domain\",\"handle\":\"DOM000004517834-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR202-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-10-18T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-01T11:40:48.761912Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH\"],[\"tel\",{},\"text\",\"+33.899701761\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.320200958\"],[\"email\",{},\"text\",\"support@ovh.net\"],[\"url\",{},\"uri\",\"http://www.ovh.com\"],[\"x-complaint-phone\",{},\"unknown\",\"+33.899701761\"],[\"x-complaint-uri\",{},\"unknown\",\"abuse@ovh.net\"],[\"adr\",{},\"text\",[\"\",\"\",\"2 Rue Kellermann\",\"ROUBAIX\",\"\",\"59100\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"433\"}]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042102-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:24:31.28004Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"TelesCoop\"],[\"org\",{},\"text\",\"TelesCoop\"],[\"adr\",{},\"text\",[\"\",\"\",\"10 rue de Penthievre\",\"Paris\",\"\",\"75008\",\"FR\"]],[\"email\",{},\"text\",\"5fb7da9c-9921-4034-acc3-97e6fa5027d6@q.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"administrative\"]},{\"objectClassName\":\"entity\",\"handle\":\"OVH5-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-12-22T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-09-28T23:55:01.219469Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH NET\"],[\"org\",{},\"text\",\"\"],[\"adr\",{},\"text\",[\"\",\"\",[\"OVH\",\"140, quai du Sartel\"],\"Roubaix\",\"\",\"59100\",\"FR\"]],[\"email\",{},\"text\",\"tech@ovh.net\"],[\"tel\",{},\"text\",\"+33.899701761\"]]],\"roles\":[\"technical\"]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042085-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:21:35.142442Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Maxime Bellec\"],[\"org\",{},\"text\",\"Maxime Bellec\"],[\"adr\",{},\"text\",[\"\",\"\",\"15 rue Potard\",\"Vernon\",\"\",\"27200\",\"FR\"]],[\"email\",{},\"text\",\"akde8p76w3yswk4ejlmq@k.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"registrant\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2020-04-28T07:13:52Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2025-04-28T07:13:52Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-05-31T22:09:09.959314Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"value\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"rel\":\"self\"}],\"ldhName\":\"telescoop.fr\",\"whoisStatus\":\"ACTIVE\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78122-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"dns110.ovh.net\",\"ipAddresses\":{}},{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78123-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"ns110.ovh.net\",\"ipAddresses\":{}}]}",
+      "ip": "64.176.191.126",
+      "timestamp": "2024-09-29T00:30:55.435246006Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/rdap-whois.yaml",
+      "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+      "template-id": "rdap-whois",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+      "info": {
+        "name": "RDAP WHOIS",
+        "author": [
+          "ricardomaia",
+          "sttlr"
+        ],
+        "tags": [
+          "miscellaneous",
+          "whois",
+          "rdap",
+          "osint",
+          "misc"
+        ],
+        "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+        "reference": [
+          "https://about.rdap.org/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1,
+          "verified": true
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ],
+          "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "extractor-name": "registrationDate",
+      "type": "http",
+      "host": "https://telescoop.fr",
+      "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+      "extracted-results": [
+        "2020-04-28T07:13:52Z"
+      ],
+      "request": "GET /domain/telescoop.fr HTTP/1.1\r\nHost: www.rdap.net\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 \r\nConnection: close\r\nTransfer-Encoding: chunked\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nContent-Disposition: inline;filename=f.txt\r\nContent-Type: application/rdap+json\r\nDate: Sun, 29 Sep 2024 00:30:55 GMT\r\nExpires: 0\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=17280000;includeSubDomains;preload\r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1;mode=block\r\n\r\n{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_0\",\"icann_rdap_response_profile_0\"],\"objectClassName\":\"domain\",\"handle\":\"DOM000004517834-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR202-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-10-18T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-01T11:40:48.761912Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH\"],[\"tel\",{},\"text\",\"+33.899701761\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.320200958\"],[\"email\",{},\"text\",\"support@ovh.net\"],[\"url\",{},\"uri\",\"http://www.ovh.com\"],[\"x-complaint-phone\",{},\"unknown\",\"+33.899701761\"],[\"x-complaint-uri\",{},\"unknown\",\"abuse@ovh.net\"],[\"adr\",{},\"text\",[\"\",\"\",\"2 Rue Kellermann\",\"ROUBAIX\",\"\",\"59100\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"433\"}]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042102-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:24:31.28004Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"TelesCoop\"],[\"org\",{},\"text\",\"TelesCoop\"],[\"adr\",{},\"text\",[\"\",\"\",\"10 rue de Penthievre\",\"Paris\",\"\",\"75008\",\"FR\"]],[\"email\",{},\"text\",\"5fb7da9c-9921-4034-acc3-97e6fa5027d6@q.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"administrative\"]},{\"objectClassName\":\"entity\",\"handle\":\"OVH5-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-12-22T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-09-28T23:55:01.219469Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH NET\"],[\"org\",{},\"text\",\"\"],[\"adr\",{},\"text\",[\"\",\"\",[\"OVH\",\"140, quai du Sartel\"],\"Roubaix\",\"\",\"59100\",\"FR\"]],[\"email\",{},\"text\",\"tech@ovh.net\"],[\"tel\",{},\"text\",\"+33.899701761\"]]],\"roles\":[\"technical\"]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042085-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:21:35.142442Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Maxime Bellec\"],[\"org\",{},\"text\",\"Maxime Bellec\"],[\"adr\",{},\"text\",[\"\",\"\",\"15 rue Potard\",\"Vernon\",\"\",\"27200\",\"FR\"]],[\"email\",{},\"text\",\"akde8p76w3yswk4ejlmq@k.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"registrant\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2020-04-28T07:13:52Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2025-04-28T07:13:52Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-05-31T22:09:09.959314Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"value\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"rel\":\"self\"}],\"ldhName\":\"telescoop.fr\",\"whoisStatus\":\"ACTIVE\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78122-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"dns110.ovh.net\",\"ipAddresses\":{}},{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78123-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"ns110.ovh.net\",\"ipAddresses\":{}}]}",
+      "ip": "64.176.191.126",
+      "timestamp": "2024-09-29T00:30:55.435259832Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/rdap-whois.yaml",
+      "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+      "template-id": "rdap-whois",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+      "info": {
+        "name": "RDAP WHOIS",
+        "author": [
+          "ricardomaia",
+          "sttlr"
+        ],
+        "tags": [
+          "miscellaneous",
+          "whois",
+          "rdap",
+          "osint",
+          "misc"
+        ],
+        "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+        "reference": [
+          "https://about.rdap.org/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1,
+          "verified": true
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ],
+          "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "extractor-name": "registrantEmail",
+      "type": "http",
+      "host": "https://telescoop.fr",
+      "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+      "extracted-results": [
+        "akde8p76w3yswk4ejlmq@k.o-w-o.info"
+      ],
+      "request": "GET /domain/telescoop.fr HTTP/1.1\r\nHost: www.rdap.net\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 \r\nConnection: close\r\nTransfer-Encoding: chunked\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nContent-Disposition: inline;filename=f.txt\r\nContent-Type: application/rdap+json\r\nDate: Sun, 29 Sep 2024 00:30:55 GMT\r\nExpires: 0\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=17280000;includeSubDomains;preload\r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1;mode=block\r\n\r\n{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_0\",\"icann_rdap_response_profile_0\"],\"objectClassName\":\"domain\",\"handle\":\"DOM000004517834-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR202-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-10-18T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-01T11:40:48.761912Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH\"],[\"tel\",{},\"text\",\"+33.899701761\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.320200958\"],[\"email\",{},\"text\",\"support@ovh.net\"],[\"url\",{},\"uri\",\"http://www.ovh.com\"],[\"x-complaint-phone\",{},\"unknown\",\"+33.899701761\"],[\"x-complaint-uri\",{},\"unknown\",\"abuse@ovh.net\"],[\"adr\",{},\"text\",[\"\",\"\",\"2 Rue Kellermann\",\"ROUBAIX\",\"\",\"59100\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"433\"}]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042102-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:24:31.28004Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"TelesCoop\"],[\"org\",{},\"text\",\"TelesCoop\"],[\"adr\",{},\"text\",[\"\",\"\",\"10 rue de Penthievre\",\"Paris\",\"\",\"75008\",\"FR\"]],[\"email\",{},\"text\",\"5fb7da9c-9921-4034-acc3-97e6fa5027d6@q.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"administrative\"]},{\"objectClassName\":\"entity\",\"handle\":\"OVH5-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-12-22T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-09-28T23:55:01.219469Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH NET\"],[\"org\",{},\"text\",\"\"],[\"adr\",{},\"text\",[\"\",\"\",[\"OVH\",\"140, quai du Sartel\"],\"Roubaix\",\"\",\"59100\",\"FR\"]],[\"email\",{},\"text\",\"tech@ovh.net\"],[\"tel\",{},\"text\",\"+33.899701761\"]]],\"roles\":[\"technical\"]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042085-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:21:35.142442Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Maxime Bellec\"],[\"org\",{},\"text\",\"Maxime Bellec\"],[\"adr\",{},\"text\",[\"\",\"\",\"15 rue Potard\",\"Vernon\",\"\",\"27200\",\"FR\"]],[\"email\",{},\"text\",\"akde8p76w3yswk4ejlmq@k.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"registrant\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2020-04-28T07:13:52Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2025-04-28T07:13:52Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-05-31T22:09:09.959314Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"value\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"rel\":\"self\"}],\"ldhName\":\"telescoop.fr\",\"whoisStatus\":\"ACTIVE\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78122-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"dns110.ovh.net\",\"ipAddresses\":{}},{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78123-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"ns110.ovh.net\",\"ipAddresses\":{}}]}",
+      "ip": "64.176.191.126",
+      "timestamp": "2024-09-29T00:30:55.435282204Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/rdap-whois.yaml",
+      "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+      "template-id": "rdap-whois",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+      "info": {
+        "name": "RDAP WHOIS",
+        "author": [
+          "ricardomaia",
+          "sttlr"
+        ],
+        "tags": [
+          "miscellaneous",
+          "whois",
+          "rdap",
+          "osint",
+          "misc"
+        ],
+        "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+        "reference": [
+          "https://about.rdap.org/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1,
+          "verified": true
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ],
+          "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "extractor-name": "registrantAddress",
+      "type": "http",
+      "host": "https://telescoop.fr",
+      "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+      "extracted-results": [
+        "27200",
+        "FR",
+        "15 rue Potard",
+        "Vernon"
+      ],
+      "request": "GET /domain/telescoop.fr HTTP/1.1\r\nHost: www.rdap.net\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 \r\nConnection: close\r\nTransfer-Encoding: chunked\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nContent-Disposition: inline;filename=f.txt\r\nContent-Type: application/rdap+json\r\nDate: Sun, 29 Sep 2024 00:30:55 GMT\r\nExpires: 0\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=17280000;includeSubDomains;preload\r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1;mode=block\r\n\r\n{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_0\",\"icann_rdap_response_profile_0\"],\"objectClassName\":\"domain\",\"handle\":\"DOM000004517834-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR202-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-10-18T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-01T11:40:48.761912Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH\"],[\"tel\",{},\"text\",\"+33.899701761\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.320200958\"],[\"email\",{},\"text\",\"support@ovh.net\"],[\"url\",{},\"uri\",\"http://www.ovh.com\"],[\"x-complaint-phone\",{},\"unknown\",\"+33.899701761\"],[\"x-complaint-uri\",{},\"unknown\",\"abuse@ovh.net\"],[\"adr\",{},\"text\",[\"\",\"\",\"2 Rue Kellermann\",\"ROUBAIX\",\"\",\"59100\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"433\"}]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042102-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:24:31.28004Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"TelesCoop\"],[\"org\",{},\"text\",\"TelesCoop\"],[\"adr\",{},\"text\",[\"\",\"\",\"10 rue de Penthievre\",\"Paris\",\"\",\"75008\",\"FR\"]],[\"email\",{},\"text\",\"5fb7da9c-9921-4034-acc3-97e6fa5027d6@q.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"administrative\"]},{\"objectClassName\":\"entity\",\"handle\":\"OVH5-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-12-22T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-09-28T23:55:01.219469Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH NET\"],[\"org\",{},\"text\",\"\"],[\"adr\",{},\"text\",[\"\",\"\",[\"OVH\",\"140, quai du Sartel\"],\"Roubaix\",\"\",\"59100\",\"FR\"]],[\"email\",{},\"text\",\"tech@ovh.net\"],[\"tel\",{},\"text\",\"+33.899701761\"]]],\"roles\":[\"technical\"]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042085-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:21:35.142442Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Maxime Bellec\"],[\"org\",{},\"text\",\"Maxime Bellec\"],[\"adr\",{},\"text\",[\"\",\"\",\"15 rue Potard\",\"Vernon\",\"\",\"27200\",\"FR\"]],[\"email\",{},\"text\",\"akde8p76w3yswk4ejlmq@k.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"registrant\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2020-04-28T07:13:52Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2025-04-28T07:13:52Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-05-31T22:09:09.959314Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"value\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"rel\":\"self\"}],\"ldhName\":\"telescoop.fr\",\"whoisStatus\":\"ACTIVE\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78122-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"dns110.ovh.net\",\"ipAddresses\":{}},{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78123-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"ns110.ovh.net\",\"ipAddresses\":{}}]}",
+      "ip": "64.176.191.126",
+      "timestamp": "2024-09-29T00:30:55.435297663Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/miscellaneous/rdap-whois.yaml",
+      "template-url": "https://templates.nuclei.sh/public/rdap-whois",
+      "template-id": "rdap-whois",
+      "template-path": "/home/runner/nuclei-templates/http/miscellaneous/rdap-whois.yaml",
+      "info": {
+        "name": "RDAP WHOIS",
+        "author": [
+          "ricardomaia",
+          "sttlr"
+        ],
+        "tags": [
+          "miscellaneous",
+          "whois",
+          "rdap",
+          "osint",
+          "misc"
+        ],
+        "description": "RDAP (Registration Data Access Protocol) is a standard defined by the IETF to replace the whois protocol\nin queries for information about Internet resource records such as domain names, IP addresses, and ASNs.\n",
+        "reference": [
+          "https://about.rdap.org/"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1,
+          "verified": true
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ],
+          "cvss-metrics": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N"
+        }
+      },
+      "extractor-name": "registrantCountry",
+      "type": "http",
+      "host": "https://telescoop.fr",
+      "matched-at": "https://rdap.nic.fr/domain/telescoop.fr",
+      "extracted-results": [
+        "FR"
+      ],
+      "request": "GET /domain/telescoop.fr HTTP/1.1\r\nHost: www.rdap.net\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept: */*\r\nAccept-Language: en\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 \r\nConnection: close\r\nTransfer-Encoding: chunked\r\nCache-Control: no-cache, no-store, max-age=0, must-revalidate\r\nContent-Disposition: inline;filename=f.txt\r\nContent-Type: application/rdap+json\r\nDate: Sun, 29 Sep 2024 00:30:55 GMT\r\nExpires: 0\r\nPragma: no-cache\r\nStrict-Transport-Security: max-age=17280000;includeSubDomains;preload\r\nVary: Origin\r\nVary: Access-Control-Request-Method\r\nVary: Access-Control-Request-Headers\r\nX-Content-Type-Options: nosniff\r\nX-Frame-Options: DENY\r\nX-Xss-Protection: 1;mode=block\r\n\r\n{\"rdapConformance\":[\"rdap_level_0\",\"icann_rdap_technical_implementation_guide_0\",\"icann_rdap_response_profile_0\"],\"objectClassName\":\"domain\",\"handle\":\"DOM000004517834-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR202-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-10-18T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-01T11:40:48.761912Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR202-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH\"],[\"tel\",{},\"text\",\"+33.899701761\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.320200958\"],[\"email\",{},\"text\",\"support@ovh.net\"],[\"url\",{},\"uri\",\"http://www.ovh.com\"],[\"x-complaint-phone\",{},\"unknown\",\"+33.899701761\"],[\"x-complaint-uri\",{},\"unknown\",\"abuse@ovh.net\"],[\"adr\",{},\"text\",[\"\",\"\",\"2 Rue Kellermann\",\"ROUBAIX\",\"\",\"59100\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"433\"}]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042102-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:24:31.28004Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042102-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"TelesCoop\"],[\"org\",{},\"text\",\"TelesCoop\"],[\"adr\",{},\"text\",[\"\",\"\",\"10 rue de Penthievre\",\"Paris\",\"\",\"75008\",\"FR\"]],[\"email\",{},\"text\",\"5fb7da9c-9921-4034-acc3-97e6fa5027d6@q.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"administrative\"]},{\"objectClassName\":\"entity\",\"handle\":\"OVH5-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"1999-12-22T00:00:00Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-09-28T23:55:01.219469Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/OVH5-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"OVH NET\"],[\"org\",{},\"text\",\"\"],[\"adr\",{},\"text\",[\"\",\"\",[\"OVH\",\"140, quai du Sartel\"],\"Roubaix\",\"\",\"59100\",\"FR\"]],[\"email\",{},\"text\",\"tech@ovh.net\"],[\"tel\",{},\"text\",\"+33.899701761\"]]],\"roles\":[\"technical\"]},{\"objectClassName\":\"entity\",\"handle\":\"CTC3042085-FRNIC\",\"remarks\":[{\"type\":\"contact restricted publication\",\"description\":[\"NO\"]},{\"type\":\"contact obsolete\",\"description\":[\"NO\"]},{\"type\":\"contact type\",\"description\":[\"ORGANIZATION\"]},{\"type\":\"reachable\",\"description\":[\"NO\"]},{\"type\":\"eligibility status\",\"description\":[\"NotIdentified\"]},{\"type\":\"registrar name\",\"description\":[\"OVH\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2024-02-26T16:21:35.142442Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/CTC3042085-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Maxime Bellec\"],[\"org\",{},\"text\",\"Maxime Bellec\"],[\"adr\",{},\"text\",[\"\",\"\",\"15 rue Potard\",\"Vernon\",\"\",\"27200\",\"FR\"]],[\"email\",{},\"text\",\"akde8p76w3yswk4ejlmq@k.o-w-o.info\"],[\"tel\",{},\"text\",\"+33.670584386\"]]],\"roles\":[\"registrant\"]}],\"status\":[\"active\"],\"port43\":\"whois.ovh.com\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2020-04-28T07:13:52Z\"},{\"eventAction\":\"expiration\",\"eventDate\":\"2025-04-28T07:13:52Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2024-05-31T22:09:09.959314Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"value\":\"https://rdap.nic.fr/domain/telescoop.fr\",\"rel\":\"self\"}],\"ldhName\":\"telescoop.fr\",\"whoisStatus\":\"ACTIVE\",\"nameservers\":[{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78122-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/dns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"dns110.ovh.net\",\"ipAddresses\":{}},{\"objectClassName\":\"nameserver\",\"handle\":\"HOST78123-FRNIC\",\"entities\":[{\"objectClassName\":\"entity\",\"handle\":\"RAR939-FRNIC\",\"remarks\":[{\"type\":\"registrar restricted publication\",\"description\":[\"No\"]}],\"status\":[\"active\"],\"port43\":\"whois.nic.fr\",\"events\":[{\"eventAction\":\"registration\",\"eventDate\":\"2014-07-29T15:35:33Z\"},{\"eventAction\":\"last changed\",\"eventDate\":\"2022-10-12T18:54:01.785057Z\"}],\"links\":[{\"href\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"value\":\"https://rdap.nic.fr/entity/RAR939-FRNIC\",\"rel\":\"self\"}],\"vcardArray\":[\"vcard\",[[\"version\",{},\"text\",\"4.0\"],[\"fn\",{},\"text\",\"Registry Operations\"],[\"tel\",{},\"text\",\"+33.139308300\"],[\"tel\",{\"type\":\"fax\"},\"text\",\"+33.139308301\"],[\"email\",{},\"text\",\"support@afnic.fr\"],[\"url\",{},\"uri\",\"https://www.afnic.fr\"],[\"adr\",{},\"text\",[\"\",\"\",[\"AFNIC\",\"immeuble le Stephenson\",\"1, rue Stephenson\"],\"Montigny-Le-Bretonneux\",\"\",\"78180\",\"FR\"]]]],\"roles\":[\"registrar\",\"sponsor\"],\"publicIds\":[{\"type\":\"IANA Registrar ID\",\"identifier\":\"9999\"}]}],\"remarks\":[{\"title\":\"result set truncated due to authorization\",\"description\":[\"The list of results does not contain all results due to lack of authorization.\",\"This may indicate to some clients that proper authorization will yield a longer result set.\"]}],\"status\":[\"associated\",\"active\"],\"port43\":\"whois.nic.fr\",\"links\":[{\"href\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"value\":\"https://rdap.nic.fr/nameserver/ns110.ovh.net\",\"rel\":\"self\"}],\"ldhName\":\"ns110.ovh.net\",\"ipAddresses\":{}}]}",
+      "ip": "64.176.191.126",
+      "timestamp": "2024-09-29T00:30:55.435323181Z",
+      "curl-command": "curl -X 'GET' -H 'Accept: */*' -H 'Accept-Language: en' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://www.rdap.net/domain/telescoop.fr'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/misconfiguration/missing-sri.yaml",
+      "template-url": "https://templates.nuclei.sh/public/missing-sri",
+      "template-id": "missing-sri",
+      "template-path": "/home/runner/nuclei-templates/http/misconfiguration/missing-sri.yaml",
+      "info": {
+        "name": "Missing Subresource Integrity",
+        "author": [
+          "lucky0x0d",
+          "pulsesecurity.co.nz",
+          "sullo"
+        ],
+        "tags": [
+          "compliance",
+          "js",
+          "sri",
+          "misconfig"
+        ],
+        "description": "Checks if script tags within the HTML response have Subresource Integrity implemented via the integrity attribute.\n",
+        "reference": [
+          "https://cheatsheetseries.owasp.org/cheatsheets/third_party_javascript_management_cheat_sheet.html#subresource-integrity",
+          "https://developer.mozilla.org/en-us/docs/web/security/subresource_integrity"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "http",
+      "host": "https://telescoop.fr",
+      "matched-at": "https://www.telescoop.fr",
+      "extracted-results": [
+        "https://plausible.io/js/plausible.js"
+      ],
+      "request": "GET / HTTP/1.1\r\nHost: telescoop.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nAccept-Encoding: gzip\r\n\r\n",
+      "response": "HTTP/1.1 200 OK\r\nConnection: close\r\nTransfer-Encoding: chunked\r\nContent-Type: text/html\r\nDate: Sun, 29 Sep 2024 00:30:59 GMT\r\nEtag: W/\"66dffec6-4aee\"\r\nLast-Modified: Tue, 10 Sep 2024 08:09:42 GMT\r\nServer: nginx/1.24.0 (Ubuntu)\r\nVary: Accept-Encoding\r\n\r\n<!DOCTYPE html>\n<html lang=\"fr\">\n\n<head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <link\n        href=\"https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap\"\n        rel=\"stylesheet\"\n    />\n    <title>\n        \n            TelesCoop - Accueil\n        \n    </title>\n    <meta name=\"description\" content=\"Telescoop développe des outils pour répondre aux problématiques sociales et environnementales de notre société.\"/>\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"/css/style.min.css\" />\n\n    <!-- Favicon -->\n    \n    <link rel=\"icon\" type=\"image/png\" sizes=\"64x64\" href=\"/img/logo_square.png\" />\n    \n    <link rel=\"manifest\" href=\"/img/favicon/site.webmanifest\" />\n    \n    \n    <meta name=\"msapplication-TileColor\" content=\"#ffc40d\" />\n    <meta name=\"msapplication-config\" content=\"/img/favicon/browserconfig.xml\" />\n    <meta name=\"theme-color\" content=\"#ffffff\" />\n    <!-- End Favicon -->\n\n    <!-- Open graph protocol (Facebook) -->\n    <meta property=\"og:title\" content=\"Telescoop - Agence de développement applicatif durable\" />\n    <meta property=\"og:type\" content=\"website\" />\n    <meta property=\"og:url\" content=\"http://telescoop.fr/\" />\n    <meta property=\"og:image\" content=\"http://telescoop.fr/img/logo.svg\" />\n    <meta property=\"og:description\" content=\"Telescoop développe des outils pour répondre aux problématiques sociales et environnementales de notre société.\" />\n    <!-- End Open graph protocol (Facebook) -->\n\n    <!-- Twitter -->\n    <meta name=\"twitter:card\" content=\"summary\" />\n    <meta name=\"twitter:title\" content=\"Telescoop - Agence de développement applicatif durable\" />\n    <meta name=\"twitter:description\" content=\"Telescoop développe des outils pour répondre aux problématiques sociales et environnementales de notre société.\" />\n    <meta name=\"twitter:image\" content=\"http://telescoop.fr/img/logo.svg\" />\n    <!-- End Twitter -->\n    <script data-domain=\"telescoop.fr\" src=\"/js/telescoop.js\"></script>\n    <script defer data-domain=\"telescoop.fr\" src=\"https://plausible.io/js/plausible.js\"></script>\n</head>\n\n<body>\n<nav class=\"navbar is-fixed-top\">\n    <div class=\"container\">\n        \n        <div class=\"is-hidden-desktop\" style=\"flex-grow: 1; flex-basis: 0\"></div>\n        <div class=\"navbar-brand is-hidden-desktop py-4 px-4\">\n            <a class=\"navbar-item\" href=\"/\">\n                <img src=\"/img/svg/logo.svg\" alt=\"TelesCoop - Accueil\">\n            </a>\n            <a role=\"button\" class=\"navbar-burger\" aria-label=\"menu\" aria-expanded=\"false\" data-target=\"main-navigation\">\n                <span aria-hidden=\"true\"></span>\n                <span aria-hidden=\"true\"></span>\n                <span aria-hidden=\"true\"></span>\n            </a>\n        </div>\n        <div id=\"main-navigation\" class=\"navbar-menu\" style=\"flex-basis: 0\">\n            <div class=\"navbar-end\">\n                <a class=\"navbar-item\" href=\"/coopérative\">\n                    La coopérative\n                    <div class=\"bottom left blue\"></div>\n                </a>\n                <a class=\"navbar-item\" href=\"/projets\">\n                    Nos projets\n                    <div class=\"bottom green\"></div>\n                </a>\n                <a class=\"navbar-item\" href=\"mailto:contact@telescoop.fr\">\n                    Nous contacter\n                    <div class=\"bottom right yellow\"></div>\n                </a>\n            </div>\n        </div>\n    </div>\n</nav>\n\n<div>\n    \n<div\n    class=\"layout h-screen gap-4 is-flex has-text-centered is-flex-direction-column is-justify-content-center is-relative\">\n    <a class=\"\" href=\"/\">\n        <img src=\"/img/svg/logo.svg\" alt=\"TelesCoop - Accueil\">\n    </a>\n    <h1 class=\"intro-heading\">\n        Coopérative de développement pour des\n        <span class=\"has-background-black has-text-beige top-5\" style=\"padding: 5px 8px\">projets engagés</span>\n        <img src=\"../../img/svg/illustration-top-right.svg\" class=\"home-illustration-top-right\" alt=\"\">\n\n    </h1>\n    <span class=\"is-size-4\">\n        Nous développons des sites web et des outils numériques positifs\n    </span>\n    <div class=\"is-flex is-justify-content-center\">\n        <a class=\"main-button \"  href=\"mailto:contact@telescoop.fr\">\n    <span class=\" text\">Contactez-nous</span>\n</a>\n\n    </div>\n    <img src=\"../../img/svg/illustration-left.svg\" class=\"home-illustration-left\" alt=\"\">\n    <img src=\"../../img/svg/illustration-right.svg\" class=\"home-illustration-right\" alt=\"\">\n</div>\n\n<section class=\"default-wrapper gap-1 is-flex-direction-column is-size-4\">\n  <div class=\"is-flex\">\n    <div class=\"is-flex\">\n  <div class=\"tag is-size-4 has-background-orange-light py-2 px-5 has-text-weight-bold\t\">À propos de nous</div>\n</div>\n\n  </div>\n  <p>\n    Fondée en 2020, TelesCoop est une <strong>société coopérative</strong> spécialisée dans l’accompagnement et le développement de sites web, d’outils métier et d’applications basés principalement sur des technologies open-source.\n  </p>\n  <p>\n    Nous sommes expert·e·s du développement web et des projets data et IA.\n  </p>\n  <p>\n    Nous sommes uni·e·s et engagé·e·s autour de valeurs communes <strong>– écologie, justice sociale, sobriété –</strong> et d'une volonté de mettre en commun nos expériences individuelles au service d'un <strong>projet collectif.</strong>\n  </p>\n</section>\n\n<section class=\"default-wrapper gap-2 is-flex-direction-column\">\n    <div class=\"is-flex\">\n  <div class=\"tag is-size-4 has-background-orange-light py-2 px-5 has-text-weight-bold\t\">Notre offre</div>\n</div>\n\n\n    <div class=\"wrapper-skills\">\n        \n      <div class=\"is-flex is-flex-direction-column p-4\">\n        <img src=./img/svg/service-public.svg alt=\"\" style=\"width: 250px; height: 175px;\">\n        <span class=\"is-size-2 has-text-weight-bold has-text-orange\">\n          1\n        </span>\n        <h3 class=\"is-size-6 is-uppercase has-text-weight-bold\">\n        Conseil\n        </h3>\n        <p>\n          Nous vous accompagnons dans la définition de votre stratégie technologique et dans la mise en place de vos projets digitaux. Nous croyons en la co-construction et en la collaboration pour créer des produits qui répondent à vos besoins et à ceux de vos utilisateur·s et utilisatrices.\n        </p>\n      </div>\n      \n      <div class=\"is-flex is-flex-direction-column p-4\">\n        <img src=./img/svg/development-tool.svg alt=\"\" style=\"width: 250px; height: 175px;\">\n        <span class=\"is-size-2 has-text-weight-bold has-text-orange\">\n          2\n        </span>\n        <h3 class=\"is-size-6 is-uppercase has-text-weight-bold\">\n        Développement de solutions\n        </h3>\n        <p>\n          Nous développons des solutions sur-mesure pour répondre à vos besoins spécifiques. Nous croyons en la co-construction et en la collaboration pour créer des produits qui répondent à vos besoins et à ceux de vos utilisateur·s et utilisatrices. Nous aimons travailler sur des projets qui ont du sens et qui ont un impact positif sur la société.\n        </p>\n      </div>\n      \n      <div class=\"is-flex is-flex-direction-column p-4\">\n        <img src=./img/svg/website.svg alt=\"\" style=\"width: 250px; height: 175px;\">\n        <span class=\"is-size-2 has-text-weight-bold has-text-orange\">\n          3\n        </span>\n        <h3 class=\"is-size-6 is-uppercase has-text-weight-bold\">\n        Maintenance et hébergement\n        </h3>\n        <p>\n          Une fois votre projet développé, nous continuons à vous accompagner et à faire vivre votre produit grâce à nos offres d’hébergement et de maintenance. Dans une logique de respect de la planète et des humains nous aimons concevoir des solutions évolutives et maintenables.\n        </p>\n      </div>\n      \n      <div class=\"is-flex is-flex-direction-column p-4\">\n        <img src=./img/svg/no-code.svg alt=\"\" style=\"width: 250px; height: 175px;\">\n        <span class=\"is-size-2 has-text-weight-bold has-text-orange\">\n          4\n        </span>\n        <h3 class=\"is-size-6 is-uppercase has-text-weight-bold\">\n        No code\n        </h3>\n        <p>\n          Nous croyons en la démocratisation de la technologie et en la possibilité pour chacun·e de créer des applications web et mobile sans compétences techniques. Nous vous accompagnons dans la création de votre application sans code, de la conception à la mise en production.\n        </p>\n      </div>\n      \n      <div class=\"is-flex is-flex-direction-column p-4\">\n        <img src=./img/svg/data.svg alt=\"\" style=\"width: 250px; height: 175px;\">\n        <span class=\"is-size-2 has-text-weight-bold has-text-orange\">\n          5\n        </span>\n        <h3 class=\"is-size-6 is-uppercase has-text-weight-bold\">\n        Data science\n        </h3>\n        <p>\n          Nous vous accompagnons dans la mise en place de votre projet data, de la collecte des données à la mise en production de vos modèles de machine learning. Nous croyons en la démocratisation de la data science et en la possibilité pour chacun·e de tirer parti de ses données pour améliorer ses processus métiers.\n        </p>\n      </div>\n      \n      <div class=\"is-flex is-flex-direction-column p-4\">\n        <img src=./img/svg/service-public.svg alt=\"\" style=\"width: 250px; height: 175px;\">\n        <span class=\"is-size-2 has-text-weight-bold has-text-orange\">\n          6\n        </span>\n        <h3 class=\"is-size-6 is-uppercase has-text-weight-bold\">\n        Service public\n        </h3>\n        <p>\n          Nous accompagnons les acteurs publics dans leur transformation numérique et dans le développement de services numériques accessibles à toutes et tous.\n        </p>\n      </div>\n      \n    </div>\n</section>\n\n<section class=\"default-wrapper extra-container\">\n  <div class=\"wrapper-extra-text\">\n    <div class=\"is-flex\">\n  <div class=\"tag is-size-4 has-background-orange-light py-2 px-5 has-text-weight-bold\t\">Notre méthode</div>\n</div>\n\n    <p class=\"is-size-5\">\n      En adoptant une approche agile, nous nous engageons à rester flexibles et réactifs tout au long du processus de développement, en mettant l'utilisateur·rice final·e au centre de notre réflexion. Nous nous efforçons également de concevoir des solutions accessibles à tous·tes, en intégrant dès le début des normes d'accessibilité pour garantir une expérience utilisateur optimale pour chacun. La co-création avec nos clients nous permet de comprendre en profondeur les besoins et les objectifs afin de concevoir des solutions parfaitement adaptées. Enfin, notre engagement envers l'éco-conception se traduit par une attention particulière portée à la réduction de notre empreinte environnementale tout au long du cycle de vie de nos produits.\n    </p>\n    <div class=\"is-flex is-justify-content-center mt-2\">\n      <a class=\"main-button \"  href=\"mailto:contact@telescoop.fr\">\n    <span class=\" text\">Contactez-nous</span>\n</a>\n\n    </div>\n  </div>\n  <div class=\"wrapper-extra\">\n        \n        <div class=\"card-container\">\n          <div class=\"card\">\n            <img src=./img/svg/accessibility.svg class=\"p-4\" alt=\"\">\n            <h3>Accessibilité</h3>\n            <p>\n              Concevoir des produits accessibles à toutes et tous\n            </p>\n          </div>\n        </div>\n        \n        <div class=\"card-container\">\n          <div class=\"card\">\n            <img src=./img/svg/rgpd.svg class=\"p-4\" alt=\"\">\n            <h3>Respect du RGPD</h3>\n            <p>\n              Accompagner les entreprises dans la mise en conformité avec le RGPD\n            </p>\n          </div>\n        </div>\n        \n        <div class=\"card-container\">\n          <div class=\"card\">\n            <img src=./img/svg/project-management.svg class=\"p-4\" alt=\"\">\n            <h3>Co-construction</h3>\n            <p>\n              Co-construire des produits numériques avec les utilisateur·ices\n            </p>\n          </div>\n        </div>\n        \n        <div class=\"card-container\">\n          <div class=\"card\">\n            <img src=./img/svg/eco-conception.svg class=\"p-4\" alt=\"\">\n            <h3>Éco-conception</h3>\n            <p>\n              Concevoir des produits numériques éco-responsables\n            </p>\n          </div>\n        </div>\n        \n    </div>\n</section>\n\n\n\n<section class=\"default-wrapper gap-2 is-flex-direction-column\">\n  <div class=\"is-flex\">\n  <div class=\"tag is-size-4 has-background-orange-light py-2 px-5 has-text-weight-bold\t\">Nos mesures d'impact</div>\n</div>\n\n  <div class=\"wrapper-measures\">\n    \n    <div class=\"is-flex is-flex-direction-column p-4\">\n      <span class=\"is-size-1 has-text-weight-bold has-text-orange\">\n          + 14,165.86€\n        </span>\n      <span class=\"is-size-4\">\n        de dons à des associations depuis notre création\n      </span>\n    </div>\n    \n    <div class=\"is-flex is-flex-direction-column p-4\">\n      <span class=\"is-size-1 has-text-weight-bold has-text-orange\">\n          + 90 jours\n        </span>\n      <span class=\"is-size-4\">\n        de travail bénévole pour des structures ou associations depuis notre création\n      </span>\n    </div>\n    \n    <div class=\"is-flex is-flex-direction-column p-4\">\n      <span class=\"is-size-1 has-text-weight-bold has-text-orange\">\n          + 5\n        </span>\n      <span class=\"is-size-4\">\n        associations ou structures aidées avec du bénévolat\n      </span>\n    </div>\n    \n  </div>\n</section>\n\n<section class=\"default-wrapper gap-2 is-flex is-flex-direction-column has-text-centered\">\n    <div>\n    <h2>\n        Ce que nos clients disent de nous\n    </h2>\n    <img class=\"after-title\" src=\"/img/svg/after-title.svg\" alt=\"\">\n</div>\n\n    <ul class=\"wrapper-clients\">\n        \n        <li style=\"border-top: 5px solid #ff8714;\" class=\"is-flex is-flex-direction-column gap-1 has-text-left\">\n            \n<img src= class=\"p-4\" alt=\"\">\n<h3>Open Food Facts, Alex</h3>\n<p>La relation avec TelesCoop a été immédiate, peut être grâce à l'alignement sur les valeurs et la mission. Nous avons très rapidement été dans un climat de confiance, nous avons pu exprimer notre problématique et TelesCoop nous a présenté des profils et leur disponibilité. Nous avons pu nous mettre rapidement au travail, avec des développeurs d'un très bon niveau technique, à l'écoute de nos exigences et une montée en compétence rapide dans la compréhension du besoin.</p>\n\n\n        </li>\n        \n        <li style=\"border-top: 5px solid #C00D0D;\" class=\"is-flex is-flex-direction-column gap-1 has-text-left\">\n            \n<img src= class=\"p-4\" alt=\"\">\n<h3>Terre de Liens, Clara Cohen</h3>\n<p>Nous avons sollicité Telescoop pour développer une landing page pour une des campagnes de collecte de notre association. Ils ont tout de suite répondu présents en pro bono et ont monté cette page en deux temps trois mouvements en comprenant très bien où on voulait aller et dans un timing serré. Incroyable de voir ce type de mobilisation ! Et ca a été un vrai plaisir de travailler ensemble !</p>\n\n\n        </li>\n        \n        <li style=\"border-top: 5px solid #60E093;\" class=\"is-flex is-flex-direction-column gap-1 has-text-left\">\n            \n<img src= class=\"p-4\" alt=\"\">\n<h3>Anthakarana, Olivier Malignaud</h3>\n<p>Nous avions besoin d'une solution efficace avec un budget maîtrisé. L'interface utilisateur étant importante pour ce projet, nous avons choisi de faire un développement sur-mesure. Teles.coop a pu développer en quelques jours le projet, et nous sommes très heureux du résultat, notamment de l'ergonomie. La borne carbone a aujourd'hui été utilisée avec succès par des milliers de personnes lors de la tournée, ce qui nous a permis de préciser les modes de déplacements et les impacts associés de l'ensemble des spectateurs. Merci Telescoop !</p>\n\n\n        </li>\n        \n        <li style=\"border-top: 5px solid #ffcd4e;\" class=\"is-flex is-flex-direction-column gap-1 has-text-left\">\n            \n<img src= class=\"p-4\" alt=\"\">\n<h3>Les Etablis, Juliette Karpa & Corinne Ngotat</h3>\n<p>Étant une toute jeune entreprise, notre budget était trop serré pour financer un logiciel en propre, TelesCoop a été la seule structure parmi celles solicités, à nous proposer une solution à partir d'une plateforme collaborative tout en intégrant un développement qui puisse répondre à notre cahier des charges. Un immense MERCI !!</p>\n\n\n        </li>\n        \n        <li style=\"border-top: 5px solid #005281;\" class=\"is-flex is-flex-direction-column gap-1 has-text-left\">\n            \n<img src= class=\"p-4\" alt=\"\">\n<h3>Médecins sans frontières, Domitille Duverne</h3>\n<p>Collaboration très agréable avec une équipe experte, professionnelle et efficace, dans le respect des délais. Rien à redire !</p>\n\n\n        </li>\n        \n    </ul>\n    <div class=\"is-flex is-flex-direction-column is-align-items-center gap-2 mt-6\">\n    <span class=\"is-3\">\n        Votre projet vous paraît cohérent avec nos valeurs ?\n        <span class=\"has-text-weight-bold\">\n            Ecrivez nous !\n        </span>\n    </span>\n        <a class=\"main-button \"  href=\"mailto:contact@telescoop.fr\">\n    <span class=\" text\">Contactez-nous</span>\n</a>\n\n    </div>\n\n</section>\n\n\n</div>\n<footer class=\"footer\">\n    <div style=\"display: flex; justify-content: end\" class=\"is-hidden-mobile has-border-bottom-grey\">\n        <div style=\"margin-right: 5vw\">\n            <img src=\"/img/svg/bottom.svg\" alt=\"\">\n        </div>\n    </div>\n    <div class=\"has-border-bottom-grey py-6\">\n        <div class=\"container\">\n            <div class=\"columns\">\n                <div class=\"column is-9 is-flex is-align-items-center is-flex-direction-column\" style=\"display: flex; align-items: center\">\n                    <img src=\"/img/svg/logo.svg\" alt=\"\">\n                    <p class=\"ml-5\">Coopérative de développement pour des projets engagés</p>\n                </div>\n                <div class=\"column is-3\" style=\"text-align: right\">\n                    <p>\n                        <a href=\"/mentions-legales\">Mentions légales</a>\n                    </p>\n                    <!--<p class=\"mt-1\">\n                        <a href=\"/plan-du-site\">Plan du site</a>\n                    </p>-->\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"container\">\n        <div class=\"columns mt-0\">\n            <div class=\"column is-3 bottom-left\">\n                <p class=\"is-size-7\">\n                    Direction artistique et maquettes par\n                    <a href=\"https://www.lacooperativedesinternets.fr/\">La Coopérative des Internets</a>\n                </p>\n            </div>\n            <div class=\"column is-9\">\n                <div style=\"text-align: right\">\n                    <p class=\"has-text-weight-bold is-family-code\">\n                        Ce site internet est écoconçu\n                    </p>\n                    <p>\n                        Il vise à réduire son impact environnemental.\n                        \n                </div>\n            </div>\n        </div>\n    </div>\n</footer>\n\n</body>\n\n</html>\n",
+      "ip": "51.210.109.110",
+      "timestamp": "2024-09-29T00:30:59.152302612Z",
+      "curl-command": "curl -X 'GET' -d '' -H 'Host: telescoop.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://telescoop.fr/'",
+      "matcher-status": true
+    },
+    {
+      "template": "http/technologies/waf-detect.yaml",
+      "template-url": "https://templates.nuclei.sh/public/waf-detect",
+      "template-id": "waf-detect",
+      "template-path": "/home/runner/nuclei-templates/http/technologies/waf-detect.yaml",
+      "info": {
+        "name": "WAF Detection",
+        "author": [
+          "dwisiswant0",
+          "lu4nx"
+        ],
+        "tags": [
+          "waf",
+          "tech",
+          "misc"
+        ],
+        "description": "A web application firewall was detected.",
+        "reference": [
+          "https://github.com/ekultek/whatwaf"
+        ],
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        },
+        "classification": {
+          "cve-id": null,
+          "cwe-id": [
+            "cwe-200"
+          ]
+        }
+      },
+      "matcher-name": "nginxgeneric",
+      "type": "http",
+      "host": "https://telescoop.fr",
+      "matched-at": "https://telescoop.fr/",
+      "request": "POST / HTTP/1.1\r\nHost: telescoop.fr\r\nUser-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)\r\nConnection: close\r\nContent-Length: 27\r\nContent-Type: application/x-www-form-urlencoded\r\nAccept-Encoding: gzip\r\n\r\n_=<script>alert(1)</script>",
+      "response": "HTTP/1.1 301 Moved Permanently\r\nConnection: close\r\nContent-Length: 178\r\nContent-Type: text/html\r\nDate: Sun, 29 Sep 2024 00:31:06 GMT\r\nLocation: https://www.telescoop.fr\r\nServer: nginx/1.24.0 (Ubuntu)\r\n\r\n<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body>\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>nginx/1.24.0 (Ubuntu)</center>\r\n</body>\r\n</html>\r\n",
+      "ip": "51.210.109.110",
+      "timestamp": "2024-09-29T00:31:06.176283992Z",
+      "curl-command": "curl -X 'POST' -d '_=<script>alert(1)</script>' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Host: telescoop.fr' -H 'User-Agent: Nuclei - Open-source project (github.com/projectdiscovery/nuclei)' 'https://telescoop.fr/'",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/detect-ssl-issuer.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-issuer",
+      "template-id": "ssl-issuer",
+      "template-path": "/home/runner/nuclei-templates/ssl/detect-ssl-issuer.yaml",
+      "info": {
+        "name": "Detect SSL Certificate Issuer",
+        "author": [
+          "lingtren"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the issuer's organization from the target's certificate. Issuers are entities which sign and distribute certificates.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "telescoop.fr",
+      "matched-at": "telescoop.fr:443",
+      "extracted-results": [
+        "Let's Encrypt"
+      ],
+      "ip": "51.210.109.110",
+      "timestamp": "2024-09-29T00:31:28.766473574Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/ssl-dns-names.yaml",
+      "template-url": "https://templates.nuclei.sh/public/ssl-dns-names",
+      "template-id": "ssl-dns-names",
+      "template-path": "/home/runner/nuclei-templates/ssl/ssl-dns-names.yaml",
+      "info": {
+        "name": "SSL DNS Names",
+        "author": [
+          "pdteam"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "Extract the Subject Alternative Name (SAN) from the target's certificate. SAN facilitates the usage of additional hostnames with the same certificate.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 1
+        }
+      },
+      "type": "ssl",
+      "host": "telescoop.fr",
+      "matched-at": "telescoop.fr:443",
+      "extracted-results": [
+        "telescoop.fr",
+        "www.telescoop.fr"
+      ],
+      "ip": "51.210.109.110",
+      "timestamp": "2024-09-29T00:31:28.766597006Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "telescoop.fr",
+      "matched-at": "telescoop.fr:443",
+      "extracted-results": [
+        "tls12"
+      ],
+      "ip": "51.210.109.110",
+      "timestamp": "2024-09-29T00:31:30.669868957Z",
+      "matcher-status": true
+    },
+    {
+      "template": "ssl/tls-version.yaml",
+      "template-url": "https://templates.nuclei.sh/public/tls-version",
+      "template-id": "tls-version",
+      "template-path": "/home/runner/nuclei-templates/ssl/tls-version.yaml",
+      "info": {
+        "name": "TLS Version - Detect",
+        "author": [
+          "pdteam",
+          "pussycat0x"
+        ],
+        "tags": [
+          "ssl",
+          "tls"
+        ],
+        "description": "TLS version detection is a security process used to determine the version of the Transport Layer Security (TLS) protocol used by a computer or server.\nIt is important to detect the TLS version in order to ensure secure communication between two computers or servers.\n",
+        "severity": "info",
+        "metadata": {
+          "max-request": 4
+        }
+      },
+      "type": "ssl",
+      "host": "telescoop.fr",
+      "matched-at": "telescoop.fr:443",
+      "extracted-results": [
+        "tls13"
+      ],
+      "ip": "51.210.109.110",
+      "timestamp": "2024-09-29T00:31:30.858619287Z",
+      "matcher-status": true
+    }
+  ]
+]
